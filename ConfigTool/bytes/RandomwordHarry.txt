@@ -1,0 +1,40 @@
+data {
+  id: 1
+  word: "你要耽误人家约会啦！"
+}
+data {
+  id: 2
+  word: "哪个单位的这么慢！"
+}
+data {
+  id: 3
+  word: "别划水啊！"
+}
+data {
+  id: 4
+  word: "睡着了？"
+}
+data {
+  id: 5
+  word: "等到裂开..."
+}
+data {
+  id: 6
+  word: "在吗？"
+}
+data {
+  id: 7
+  word: "人呢？"
+}
+data {
+  id: 8
+  word: "CPU干烧了？"
+}
+data {
+  id: 9
+  word: "好慢..."
+}
+data {
+  id: 10
+  word: "等到花都谢了..."
+}

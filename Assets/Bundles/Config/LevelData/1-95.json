@@ -1,0 +1,341 @@
+{
+    "size": 8,
+    "cells": [
+        {
+            "color": 23,
+            "item": 2,
+            "bUsed": 0
+        },
+        {
+            "color": 2,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 23,
+            "item": 2,
+            "bUsed": 0
+        },
+        {
+            "color": 2,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 23,
+            "item": 2,
+            "bUsed": 0
+        },
+        {
+            "color": 2,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 3,
+            "item": 4,
+            "bUsed": 0
+        },
+        {
+            "color": 4,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 3,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 4,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 3,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 4,
+            "item": 7,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 2,
+            "item": 5,
+            "bUsed": 0
+        },
+        {
+            "color": 5,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 2,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 5,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 2,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 5,
+            "item": 4,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 1,
+            "item": 2,
+            "bUsed": 0
+        },
+        {
+            "color": 21,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 1,
+            "item": 2,
+            "bUsed": 0
+        },
+        {
+            "color": 21,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 1,
+            "item": 2,
+            "bUsed": 0
+        },
+        {
+            "color": 21,
+            "item": 1,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 1
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        },
+        {
+            "color": 0,
+            "item": 0,
+            "bUsed": 0
+        }
+    ],
+    "masks": [
+        {
+            "PosX": 6,
+            "PosY": 0,
+            "Length": 2,
+            "Width": 2,
+            "Type": 1
+        },
+        {
+            "PosX": 0,
+            "PosY": 6,
+            "Length": 2,
+            "Width": 2,
+            "Type": 1
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+ID,图片URL,分享文本,是否进入随机分享池
+id,share_img_url,share_text,is_random_pool
+int,string,string,int
+10001,https://mmocgame.qpic.cn/wechatgame/wbaic5RnxOc0Sd7zP81WpfFPFHu7TRTNWvf8zTbB30G2IuxiapzO1ZQKfW3wLgYd7ic/0,练习时长两年半，就差一块了！,1
+10002,https://mmocgame.qpic.cn/wechatgame/35QtSvYvCJvyxico9ia942QYDj8plujB9L3IrhibhmkzKpRoiao0wTAAx2Av3SzzWiasf/0,雪豹闭嘴！你来你也过不了。,1

@@ -1,0 +1,32 @@
+【步骤一：下载Python】
+打开这个链接https://www.python.org/downloads/release/python-3130/?featured_on=pythonbytes，去Python官网下载313版本的安装包。
+
+
+【步骤二：安装和设置变量】
+运行 Python 安装程序（如 python-3.1.3-amd64.exe）。
+在安装向导中，勾选 Add Python.exe to PATH 选项。
+按提示完成安装。此方法会自动将 Python 路径添加到环境变量中（如果忘了，网上搜下一下Python设置环境变量）。
+如果电脑内安装了其他版本的Python，最好卸载掉，在原始状态下安装。
+
+
+【步骤三：安装支持库】
+打开Win+S搜索CMD，打开CMD，逐行复制粘贴下面的命令并运行（下面括号内的中文是备注，不要复制粘贴进去）。
+安装支持库的时候要开VPN。
+
+python -m pip install xlrd==1.2.0
+（xlsx文件读取库,新版本的库不支持xlsx文件读取，这里指定用1.2.0的版本）
+python -m pip install protobuf
+（安装protobuf库）
+python -m pip install google
+（安装google支持库）
+python -m pip install numpy
+（支持int64）
+python -m pip install chardet
+（获取文件编码）
+python -m pip install openpyxl
+（打开xlsx）
+
+
+【步骤四：开始打表】
+修改了ConfigTool\Xlsx文件夹里面的表过后，运行ConfigTool文件夹下的XlsxToCsv.py文件。
+搞定。

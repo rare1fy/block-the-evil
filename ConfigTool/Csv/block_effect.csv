@@ -1,0 +1,11 @@
+ID,名称,颜色图片,特效,描述
+id,name,img,fx,desc
+int,string,string,string,string
+1,单锁,UI_zdn_img_bingdong03,FX_Frame_White,null
+2,双锁,UI_zdn_img_bingdong02,FX_Frame_White,null
+3,三锁,UI_zdn_img_bingdong,FX_Frame_White,null
+4,冰桶,UI_zdn_tsdj_bingtong,FX_Frame_White,null
+5,物品桶,UI_zdn_tsdj_zyxiangzi,FX_Frame_White,null
+6,炸弹,UI_zdn_tsdj_zhadan,FX_Frame_White,null
+7,道具宝箱,UI_zdn_tsdj_xianshibx,FX_Frame_White,null
+55,香槟,Icon_order_xiangbin,null,开启气泡的黄金庆典！

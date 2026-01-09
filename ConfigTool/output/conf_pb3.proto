@@ -1,0 +1,630 @@
+/*
+* @file:   conf_pb3.proto
+* @brief:  这个文件是通过工具自动生成的，建议不要手动修改
+*/
+
+
+syntax = "proto3";
+
+package pb;
+
+message AdDesc
+{
+     int32 id = 1;                  //ID
+     string ad = 2;                 //广告内容
+
+}
+
+message AdDescConfig
+{
+	repeated AdDesc data = 1;
+}
+
+message BlockBase
+{
+     int32 id = 1;                  //ID
+     string block = 2;                 //方块形状
+     int32 length = 3;                  //横
+     int32 width = 4;                  //竖
+     int32 normal = 5;                  //常规刷新
+     int32 weight = 6;                  //权重
+     int32 difficulty = 7;                  //难度
+
+}
+
+message BlockBaseConfig
+{
+	repeated BlockBase data = 1;
+}
+
+message BlockColor
+{
+     int32 id = 1;                  //ID
+     string name = 2;                 //名称
+     string img = 3;                 //颜色图片
+     string img1 = 4;                 //透明底图
+     string fx = 5;                 //特效
+     string fx_putdown = 6;                 //放下特效
+     string desc = 7;                 //描述
+     int32 background = 8;                  //是否需要背景
+
+}
+
+message BlockColorConfig
+{
+	repeated BlockColor data = 1;
+}
+
+message BlockEffect
+{
+     int32 id = 1;                  //ID
+     string name = 2;                 //名称
+     string img = 3;                 //颜色图片
+     string fx = 4;                 //特效
+     string desc = 5;                 //描述
+
+}
+
+message BlockEffectConfig
+{
+	repeated BlockEffect data = 1;
+}
+
+message BlockLibrary
+{
+     int32 id = 1;                  //难度ID
+     string block_pool = 2;                 //方块池
+
+}
+
+message BlockLibraryConfig
+{
+	repeated BlockLibrary data = 1;
+}
+
+message BuildBase
+{
+     int32 id = 1;                  //ID
+     int32 group = 2;                  //所属章节
+     int32 batch = 3;                  //批次
+     string name = 4;                 //名称
+     string image = 5;                 //缩略图
+     string needglod = 6;                 //消耗
+     int32 unlocklevel = 7;                  //解锁关卡
+     string reward = 8;                 //挂机收益
+     string buildnod = 9;                 //场景节点
+     int32 unlockchatid = 10;                  //解锁对话id
+     string tips = 11;                 //解锁对话提示
+     string camera_set = 12;                 //建造摄像机坐标
+     string camera_Zoom = 13;                 //建造摄像机缩放
+
+}
+
+message BuildBaseConfig
+{
+	repeated BuildBase data = 1;
+}
+
+message CallwordBase
+{
+     int32 id = 1;                  //id
+     int32 dialogue_type = 2;                  //类型（1npc2主角3通话结束）
+     string txt1 = 3;                 //文本1
+     string vioce = 4;                 //语音1
+     int32 next = 5;                  //非双选按钮文本导向
+     string button1 = 6;                 //选项1文本
+     string button2 = 7;                 //选项2文本
+     int32 button1to = 8;                  //按钮1通往id
+     int32 button2to = 9;                  //按钮2通往id
+     string reward = 10;                 //奖励
+
+}
+
+message CallwordBaseConfig
+{
+	repeated CallwordBase data = 1;
+}
+
+message CallwordLibrary
+{
+     int32 id = 1;                  //id
+     int32 npc_id = 2;                  //所属角色
+     int32 goodfeellv = 3;                  //解锁好感度等级
+     int32 callto = 4;                  //对话导入
+     int32 level = 5;                  //解锁关卡
+
+}
+
+message CallwordLibraryConfig
+{
+	repeated CallwordLibrary data = 1;
+}
+
+message ChapterBase
+{
+     int32 id = 1;                  //ID章节
+     int32 lvmin = 2;                  //解锁关卡
+     int32 lvmax = 3;                  //关卡最大值
+     string reward = 4;                 //奖励
+     string background = 5;                 //背景
+     int32 hide = 6;                  //是否显示
+     string name_prefab = 7;                 //预制体名称
+
+}
+
+message ChapterBaseConfig
+{
+	repeated ChapterBase data = 1;
+}
+
+message DefineError
+{
+     int32 id = 1;                  //错误码id
+     string errorDes = 2;                 //错误码描述
+
+}
+
+message DefineErrorConfig
+{
+	repeated DefineError data = 1;
+}
+
+message FightchatBase
+{
+     int32 id = 1;                  //id
+     int32 dialogue_type = 2;                  //类型
+     int32 npcid = 3;                  //npcid
+     string txt1 = 4;                 //文本1
+     int32 next = 5;                  //非双选按钮文本导向
+     string button1 = 6;                 //选项1文本
+     string button2 = 7;                 //选项2文本
+     int32 button1to = 8;                  //按钮1通往id
+     int32 button2to = 9;                  //按钮2通往id
+     string goodfeel_reward = 10;                 //好感度奖励
+     int32 music = 11;                  //音乐播放
+     string audio = 12;                 //npc配音
+
+}
+
+message FightchatBaseConfig
+{
+	repeated FightchatBase data = 1;
+}
+
+message FightchatLibrary
+{
+     int32 id = 1;                  //id
+     int32 npcid = 2;                  //所属角色
+     int32 order = 3;                  //解锁需求订单数
+     int32 wordto = 4;                  //对话触发
+     int32 level = 5;                  //最小关卡
+
+}
+
+message FightchatLibraryConfig
+{
+	repeated FightchatLibrary data = 1;
+}
+
+message FighteffectBase
+{
+     int32 id = 1;                  //ID
+     int32 type = 2;                  //类型
+     int32 num = 3;                  //值
+     string img = 4;                 //效果图
+     string audio = 5;                 //音效
+     int32 reward = 6;                  //消除额外奖励金币数量
+     int32 score = 7;                  //消除得分
+     string color = 8;                 //色彩
+
+}
+
+message FighteffectBaseConfig
+{
+	repeated FighteffectBase data = 1;
+}
+
+message GdConstant
+{
+     int32 id = 1;                  //id
+     int32 num = 2;                  //å€¼
+
+}
+
+message GdConstantConfig
+{
+	repeated GdConstant data = 1;
+}
+
+message GiftBase
+{
+     int32 id = 1;                  //id
+     string img = 2;                 //图片
+     int32 good_feeling = 3;                  //提供好感
+     int32 npcId = 4;                  //专属npc
+     int32 exclusive_addition = 5;                  //专属加成
+     string price = 6;                 //价格
+     int32 unlockgoodfeel = 7;                  //解锁好感等级
+     int32 unlocklevel = 8;                  //解锁关卡
+     int32 buytimes = 9;                  //每日限购购买次数
+     string txtid = 10;                 //对话角色与对话id
+
+}
+
+message GiftBaseConfig
+{
+	repeated GiftBase data = 1;
+}
+
+message GoodfeelLv
+{
+     int32 lv = 1;                  //等级
+     int32 exp = 2;                  //每一级需求经验
+     int32 max = 3;                  //是否最大值
+
+}
+
+message GoodfeelLvConfig
+{
+	repeated GoodfeelLv data = 1;
+}
+
+message GoodfeelNpc
+{
+     int32 id = 1;                  //ID
+     int32 goodfeelnpc = 2;                  //好感度角色id
+
+}
+
+message GoodfeelNpcConfig
+{
+	repeated GoodfeelNpc data = 1;
+}
+
+message GuildGroup
+{
+     int32 id = 1;                  //剧本组id
+     int32 level = 2;                  //触发关卡完成
+     int32 place = 3;                  //演出地点
+     string music = 4;                 //剧情音乐
+
+}
+
+message GuildGroupConfig
+{
+	repeated GuildGroup data = 1;
+}
+
+message GuildPerform
+{
+     int32 id = 1;                  //id
+     int32 group = 2;                  //组
+     int32 type = 3;                  //类型
+     string num = 4;                 //值
+     string audio = 5;                 //音效
+
+}
+
+message GuildPerformConfig
+{
+	repeated GuildPerform data = 1;
+}
+
+message GuildWord
+{
+     int32 id = 1;                  //id
+     string npcid = 2;                 //npc名称
+     int32 talkside = 3;                  //对话位置
+     string txt1 = 4;                 //对话文本
+     string img = 5;                 //立绘配图
+     string audio = 6;                 //对话配音
+
+}
+
+message GuildWordConfig
+{
+	repeated GuildWord data = 1;
+}
+
+message ItemBase
+{
+     int32 id = 1;                  //ID
+     string item_name = 2;                 //道具名称
+     string img = 3;                 //道具图片
+
+}
+
+message ItemBaseConfig
+{
+	repeated ItemBase data = 1;
+}
+
+message LanguageConfig
+{
+     int32 id = 1;                  //表頭id
+     string complexFont = 2;                 //繁體
+     string english = 3;                 //英語
+
+}
+
+message LanguageConfigConfig
+{
+	repeated LanguageConfig data = 1;
+}
+
+message LevelBase
+{
+     int32 id = 1;                  //关卡
+     int32 modle = 2;                  //模式（1订单2得分）
+     int32 modletarget = 3;                  //目标
+     string initial_block = 4;                 //初始方块与颜色
+     string color_unlock = 5;                 //本关订单开始数与色彩解锁
+     string base_color = 6;                 //色彩
+     string base_item = 7;                 //初始物品库（色彩库）
+     int32 block_pool = 8;                  //难度池（elo专用）
+     int32 item_percent = 9;                  //物品生成概率（百分）
+     string simple = 10;                 //过于简单时难度与权重
+     string normal = 11;                 //普通难度时难度与权重
+     string hard = 12;                 //过于困难时难度与权重
+     int32 elo_star = 13;                  //elo检测阈值（已有块）
+     int32 elo_percent = 14;                  //elo基础概率（百分）
+     int32 elo_dead = 15;                  //复活elo增值
+     string reward = 16;                 //通关奖励
+     int32 payorder = 17;                  //是否开启付费订单位
+     int32 adsorder = 18;                  //是否开启广告订单位
+     string level_map = 19;                 //关卡预设
+     int32 payorder_need = 20;                  //金币位消耗
+     int32 boss = 21;                  //boss关标记
+     int32 mechanism = 22;                  //机制弹窗
+
+}
+
+message LevelBaseConfig
+{
+	repeated LevelBase data = 1;
+}
+
+message LevelOrder
+{
+     int32 id = 1;                  //订单id
+     int32 level = 2;                  //所属关卡
+     int32 npc = 3;                  //npc库
+     int32 npcitem = 4;                  //订单需求库
+
+}
+
+message LevelOrderConfig
+{
+	repeated LevelOrder data = 1;
+}
+
+message LevelTreasurechest
+{
+     int32 id = 1;                  //id
+     int32 type = 2;                  //宝箱类型
+     string num = 3;                 //宝箱值
+     int32 weight = 4;                  //权重
+
+}
+
+message LevelTreasurechestConfig
+{
+	repeated LevelTreasurechest data = 1;
+}
+
+message LevelWujingModle
+{
+     int32 id = 1;                  //关卡id
+     int32 sp_npc = 2;                  //解锁npcid
+     int32 npc = 3;                  //npc需求分数
+
+}
+
+message LevelWujingModleConfig
+{
+	repeated LevelWujingModle data = 1;
+}
+
+message MechanismGuild
+{
+     int32 id = 1;                  //ID
+     string img = 2;                 //机制图片
+     string name = 3;                 //机制名称
+     string desc = 4;                 //机制描述
+
+}
+
+message MechanismGuildConfig
+{
+	repeated MechanismGuild data = 1;
+}
+
+message MusicPlayer
+{
+     int32 id = 1;                  //ID
+     string music = 2;                 //解锁音乐
+     string img = 3;                 //音乐配图
+     string consume = 4;                 //消耗
+     string beats_ani = 5;                 //节拍动画战斗
+     string beats_ani_main_dj = 6;                 //节拍动画主界面DJ
+     string beats_ani_main_kala = 7;                 //节拍动画主界面小卡拉米
+     string beats_ani_main_sp = 8;                 //节拍动画主界面大咖
+
+}
+
+message MusicPlayerConfig
+{
+	repeated MusicPlayer data = 1;
+}
+
+message NpcitemLibrary
+{
+     int32 id = 1;                  //åº“ID
+     string npcid = 2;                 //npcitemid
+
+}
+
+message NpcitemLibraryConfig
+{
+	repeated NpcitemLibrary data = 1;
+}
+
+message NpcBase
+{
+     int32 id = 1;                  //id
+     string img1 = 2;                 //npc头像
+     string img2 = 3;                 //npc立绘
+     string img3 = 4;                 //npc通讯录
+     string img4 = 5;                 //npc半身
+     string npcname = 6;                 //npc名称
+     int32 special = 7;                  //是否为特殊npc
+     string voice1 = 8;                 //完成音效
+     string vioce2 = 9;                 //提醒音效
+     string word = 10;                 //出场台词
+
+}
+
+message NpcBaseConfig
+{
+	repeated NpcBase data = 1;
+}
+
+message NpcLibrary
+{
+     int32 id = 1;                  //åº“ID
+     string npcid = 2;                 //npcid
+
+}
+
+message NpcLibraryConfig
+{
+	repeated NpcLibrary data = 1;
+}
+
+message NpcUnlock
+{
+     int32 id = 1;                  //解锁排序
+     string npcname = 2;                 //npc名称
+     int32 npcid = 3;                  //npcid
+
+}
+
+message NpcUnlockConfig
+{
+	repeated NpcUnlock data = 1;
+}
+
+message OrderBlock
+{
+     int32 id = 1;                  //物品
+     string block = 2;                 //组成方块(色彩#数量)
+     string name = 3;                 //名称
+     string img = 4;                 //图片
+     string reward = 5;                 //收益
+
+}
+
+message OrderBlockConfig
+{
+	repeated OrderBlock data = 1;
+}
+
+message OutworldLibrary
+{
+     int32 id = 1;                  //id
+     int32 playerId = 2;                  //所属角色
+     int32 level = 3;                  //解锁好感度等级
+     int32 wordto = 4;                  //对话触发
+     int32 leavl = 5;                  //解锁关卡
+
+}
+
+message OutworldLibraryConfig
+{
+	repeated OutworldLibrary data = 1;
+}
+
+message OutWord
+{
+     int32 id = 1;                  //id
+     int32 dialogue_type = 2;                  //类型
+     int32 typeid = 3;                  //类型id（类型为1时填入npcid）
+     string txt1 = 4;                 //文本1
+     int32 next = 5;                  //非双选按钮文本导向
+     string button1 = 6;                 //选项1文本
+     string button2 = 7;                 //选项2文本
+     int32 button1to = 8;                  //按钮1通往id
+     int32 button2to = 9;                  //按钮2通往id
+     string reward1 = 10;                 //道具奖励
+     string goodfeel_reward = 11;                 //好感度奖励
+
+}
+
+message OutWordConfig
+{
+	repeated OutWord data = 1;
+}
+
+message RandomwordComplete
+{
+     int32 id = 1;                  //ID
+     string word = 2;                 //对话文本
+
+}
+
+message RandomwordCompleteConfig
+{
+	repeated RandomwordComplete data = 1;
+}
+
+message RandomwordHarry
+{
+     int32 id = 1;                  //ID
+     string word = 2;                 //对话文本
+
+}
+
+message RandomwordHarryConfig
+{
+	repeated RandomwordHarry data = 1;
+}
+
+message RankWujing
+{
+     int32 id = 1;                  //ID
+     int32 score = 2;                  //分数下限
+     int32 rank = 3;                  //排名
+
+}
+
+message RankWujingConfig
+{
+	repeated RankWujing data = 1;
+}
+
+message ShareWechatImage
+{
+     int32 id = 1;                  //ID
+     string share_img_url = 2;                 //图片URL
+     string share_text = 3;                 //分享文本
+     int32 is_random_pool = 4;                  //是否进入随机分享池
+
+}
+
+message ShareWechatImageConfig
+{
+	repeated ShareWechatImage data = 1;
+}
+
+message SighinBase
+{
+     int32 id = 1;                  //ID
+     string num = 2;                 //基础奖励内容
+
+}
+
+message SighinBaseConfig
+{
+	repeated SighinBase data = 1;
+}
+

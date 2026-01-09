@@ -1,0 +1,85 @@
+data {
+  id: 1
+  item_name: "金币"
+  img: "UI_ty_icon_qian"
+}
+data {
+  id: 2
+  item_name: "星星"
+  img: "UI_ty_icon_xinxin"
+}
+data {
+  id: 3
+  item_name: "充气锤"
+  img: "UI_ty_icon_mf01"
+}
+data {
+  id: 4
+  item_name: "香槟"
+  img: "UI_ty_icon_qws01"
+}
+data {
+  id: 5
+  item_name: "调酒壶"
+  img: "UI_ty_icon_yqt01"
+}
+data {
+  id: 6
+  item_name: "道具6"
+}
+data {
+  id: 7
+  item_name: "道具7"
+}
+data {
+  id: 8
+  item_name: "道具8"
+}
+data {
+  id: 9
+  item_name: "道具9"
+}
+data {
+  id: 10
+  item_name: "道具10"
+}
+data {
+  id: 11
+  item_name: "道具11"
+}
+data {
+  id: 12
+  item_name: "道具12"
+}
+data {
+  id: 13
+  item_name: "道具13"
+}
+data {
+  id: 14
+  item_name: "道具14"
+}
+data {
+  id: 15
+  item_name: "道具15"
+}
+data {
+  id: 16
+  item_name: "道具16"
+}
+data {
+  id: 17
+  item_name: "道具17"
+}
+data {
+  id: 18
+  item_name: "道具18"
+}
+data {
+  id: 19
+  item_name: "道具19"
+}
+data {
+  id: 20
+  item_name: "道具20"
+}

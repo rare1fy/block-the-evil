@@ -1,0 +1,118 @@
+data {
+  id: 1
+  group: 1
+  batch: 1
+  name: "修草坪"
+  image: "build_small_1"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Bulid_Grass"
+}
+data {
+  id: 2
+  group: 1
+  batch: 1
+  name: "修理围墙"
+  image: "build_small_2"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Bulid_Wall"
+}
+data {
+  id: 3
+  group: 1
+  batch: 1
+  name: "修房子"
+  image: "build_small_3"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_House"
+  camera_set: "0#3.3"
+  camera_Zoom: "-6"
+}
+data {
+  id: 4
+  group: 1
+  batch: 2
+  name: "修剪杂草"
+  image: "build_small_4"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_CleanWeed"
+}
+data {
+  id: 5
+  group: 1
+  batch: 2
+  name: "种树通海滩"
+  image: "build_small_5"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_TreeAndRock"
+}
+data {
+  id: 6
+  group: 1
+  batch: 2
+  name: "修泳池"
+  image: "build_small_6"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_Pool"
+  camera_set: "2.06#0.13"
+  camera_Zoom: "-4.36"
+}
+data {
+  id: 7
+  group: 1
+  batch: 3
+  name: "添置设备"
+  image: "build_small_7"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_Equipment"
+  camera_set: "2.06#0.13"
+  camera_Zoom: "-5.14"
+}
+data {
+  id: 8
+  group: 1
+  batch: 3
+  name: "添置食物"
+  image: "build_small_8"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_Food"
+}
+data {
+  id: 9
+  group: 1
+  batch: 4
+  name: "派对必需品"
+  image: "build_small_9"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_PartyNeed"
+}
+data {
+  id: 10
+  group: 1
+  batch: 4
+  name: "欢迎装饰"
+  image: "build_small_10"
+  needglod: "2#1"
+  unlocklevel: 1
+  reward: "1#100"
+  buildnod: "Chapter1_Build_Welcome"
+  camera_set: "0#0.98"
+  camera_Zoom: "-5.06"
+}

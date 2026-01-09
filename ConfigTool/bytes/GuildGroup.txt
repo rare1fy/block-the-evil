@@ -1,0 +1,23 @@
+data {
+  id: 1
+  place: 1
+  music: "bgm_loser_back_home.ogg"
+}
+data {
+  id: 2
+  level: 1
+  place: 1
+  music: "bgm_loser_back_home.ogg"
+}
+data {
+  id: 3
+  level: 2
+  place: 1
+  music: "bgm_loser_back_home.ogg"
+}
+data {
+  id: 4
+  level: 3
+  place: 1
+  music: "bgm_long_time_no_see.ogg"
+}

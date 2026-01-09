@@ -1,0 +1,4770 @@
+data {
+  id: 1
+  level: 1
+  npc: 1
+  npcitem: 1
+}
+data {
+  id: 2
+  level: 1
+  npc: 2
+  npcitem: 1
+}
+data {
+  id: 3
+  level: 1
+  npc: 3
+  npcitem: 1
+}
+data {
+  id: 4
+  level: 2
+  npc: 3
+  npcitem: 1
+}
+data {
+  id: 5
+  level: 2
+  npc: 3
+  npcitem: 1
+}
+data {
+  id: 6
+  level: 2
+  npc: 3
+  npcitem: 10002
+}
+data {
+  id: 7
+  level: 2
+  npc: 3
+  npcitem: 2
+}
+data {
+  id: 8
+  level: 2
+  npc: 3
+  npcitem: 2
+}
+data {
+  id: 9
+  level: 3
+  npc: 3
+  npcitem: 2
+}
+data {
+  id: 10
+  level: 3
+  npc: 3
+  npcitem: 2
+}
+data {
+  id: 11
+  level: 3
+  npc: 3
+  npcitem: 10003
+}
+data {
+  id: 12
+  level: 3
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 13
+  level: 3
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 14
+  level: 3
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 15
+  level: 3
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 16
+  level: 3
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 17
+  level: 4
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 18
+  level: 4
+  npc: 3
+  npcitem: 3
+}
+data {
+  id: 19
+  level: 4
+  npc: 3
+  npcitem: 10004
+}
+data {
+  id: 20
+  level: 4
+  npc: 3
+  npcitem: 4
+}
+data {
+  id: 21
+  level: 4
+  npc: 3
+  npcitem: 4
+}
+data {
+  id: 22
+  level: 4
+  npc: 3
+  npcitem: 4
+}
+data {
+  id: 23
+  level: 4
+  npc: 3
+  npcitem: 4
+}
+data {
+  id: 24
+  level: 4
+  npc: 3
+  npcitem: 4
+}
+data {
+  id: 25
+  level: 5
+  npc: 4
+  npcitem: 4
+}
+data {
+  id: 26
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 27
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 28
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 29
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 30
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 31
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 32
+  level: 5
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 33
+  level: 6
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 34
+  level: 6
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 35
+  level: 6
+  npc: 5
+  npcitem: 4
+}
+data {
+  id: 36
+  level: 6
+  npc: 5
+  npcitem: 10005
+}
+data {
+  id: 37
+  level: 6
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 38
+  level: 6
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 39
+  level: 6
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 40
+  level: 6
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 41
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 42
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 43
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 44
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 45
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 46
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 47
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 48
+  level: 7
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 49
+  level: 8
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 50
+  level: 8
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 51
+  level: 8
+  npc: 5
+  npcitem: 5
+}
+data {
+  id: 52
+  level: 8
+  npc: 5
+  npcitem: 10006
+}
+data {
+  id: 53
+  level: 8
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 54
+  level: 8
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 55
+  level: 8
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 56
+  level: 8
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 57
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 58
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 59
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 60
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 61
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 62
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 63
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 64
+  level: 9
+  npc: 5
+  npcitem: 6
+}
+data {
+  id: 65
+  level: 10
+  npc: 6
+  npcitem: 6
+}
+data {
+  id: 66
+  level: 10
+  npc: 7
+  npcitem: 6
+}
+data {
+  id: 67
+  level: 10
+  npc: 7
+  npcitem: 6
+}
+data {
+  id: 68
+  level: 10
+  npc: 7
+  npcitem: 10007
+}
+data {
+  id: 69
+  level: 10
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 70
+  level: 10
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 71
+  level: 10
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 72
+  level: 10
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 73
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 74
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 75
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 76
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 77
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 78
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 79
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 80
+  level: 11
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 81
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 82
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 83
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 84
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 85
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 86
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 87
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 88
+  level: 12
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 89
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 90
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 91
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 92
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 93
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 94
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 95
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 96
+  level: 13
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 97
+  level: 14
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 98
+  level: 14
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 99
+  level: 14
+  npc: 7
+  npcitem: 7
+}
+data {
+  id: 100
+  level: 14
+  npc: 7
+  npcitem: 10008
+}
+data {
+  id: 101
+  level: 14
+  npc: 7
+  npcitem: 8
+}
+data {
+  id: 102
+  level: 14
+  npc: 7
+  npcitem: 8
+}
+data {
+  id: 103
+  level: 14
+  npc: 7
+  npcitem: 8
+}
+data {
+  id: 104
+  level: 14
+  npc: 7
+  npcitem: 8
+}
+data {
+  id: 105
+  level: 15
+  npc: 8
+  npcitem: 8
+}
+data {
+  id: 106
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 107
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 108
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 109
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 110
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 111
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 112
+  level: 15
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 113
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 114
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 115
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 116
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 117
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 118
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 119
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 120
+  level: 16
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 121
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 122
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 123
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 124
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 125
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 126
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 127
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 128
+  level: 17
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 129
+  level: 18
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 130
+  level: 18
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 131
+  level: 18
+  npc: 9
+  npcitem: 8
+}
+data {
+  id: 132
+  level: 18
+  npc: 9
+  npcitem: 10009
+}
+data {
+  id: 133
+  level: 18
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 134
+  level: 18
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 135
+  level: 18
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 136
+  level: 18
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 137
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 138
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 139
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 140
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 141
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 142
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 143
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 144
+  level: 19
+  npc: 9
+  npcitem: 9
+}
+data {
+  id: 145
+  level: 20
+  npc: 10
+  npcitem: 9
+}
+data {
+  id: 146
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 147
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 148
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 149
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 150
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 151
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 152
+  level: 20
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 153
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 154
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 155
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 156
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 157
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 158
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 159
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 160
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 161
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 162
+  level: 21
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 163
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 164
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 165
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 166
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 167
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 168
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 169
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 170
+  level: 22
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 171
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 172
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 173
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 174
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 175
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 176
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 177
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 178
+  level: 23
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 179
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 180
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 181
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 182
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 183
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 184
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 185
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 186
+  level: 24
+  npc: 11
+  npcitem: 9
+}
+data {
+  id: 187
+  level: 25
+  npc: 12
+  npcitem: 9
+}
+data {
+  id: 188
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 189
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 190
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 191
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 192
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 193
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 194
+  level: 25
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 195
+  level: 26
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 196
+  level: 26
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 197
+  level: 26
+  npc: 13
+  npcitem: 9
+}
+data {
+  id: 198
+  level: 26
+  npc: 13
+  npcitem: 10010
+}
+data {
+  id: 199
+  level: 26
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 200
+  level: 26
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 201
+  level: 26
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 202
+  level: 26
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 203
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 204
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 205
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 206
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 207
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 208
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 209
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 210
+  level: 27
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 211
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 212
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 213
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 214
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 215
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 216
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 217
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 218
+  level: 28
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 219
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 220
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 221
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 222
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 223
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 224
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 225
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 226
+  level: 29
+  npc: 13
+  npcitem: 10
+}
+data {
+  id: 227
+  level: 30
+  npc: 14
+  npcitem: 10
+}
+data {
+  id: 228
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 229
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 230
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 231
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 232
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 233
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 234
+  level: 30
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 235
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 236
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 237
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 238
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 239
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 240
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 241
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 242
+  level: 31
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 243
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 244
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 245
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 246
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 247
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 248
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 249
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 250
+  level: 32
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 251
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 252
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 253
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 254
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 255
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 256
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 257
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 258
+  level: 33
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 259
+  level: 34
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 260
+  level: 34
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 261
+  level: 34
+  npc: 15
+  npcitem: 10
+}
+data {
+  id: 262
+  level: 34
+  npc: 15
+  npcitem: 10011
+}
+data {
+  id: 263
+  level: 34
+  npc: 15
+  npcitem: 11
+}
+data {
+  id: 264
+  level: 34
+  npc: 15
+  npcitem: 11
+}
+data {
+  id: 265
+  level: 34
+  npc: 15
+  npcitem: 11
+}
+data {
+  id: 266
+  level: 34
+  npc: 15
+  npcitem: 11
+}
+data {
+  id: 267
+  level: 35
+  npc: 16
+  npcitem: 11
+}
+data {
+  id: 268
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 269
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 270
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 271
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 272
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 273
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 274
+  level: 35
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 275
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 276
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 277
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 278
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 279
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 280
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 281
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 282
+  level: 36
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 283
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 284
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 285
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 286
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 287
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 288
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 289
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 290
+  level: 37
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 291
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 292
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 293
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 294
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 295
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 296
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 297
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 298
+  level: 38
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 299
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 300
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 301
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 302
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 303
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 304
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 305
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 306
+  level: 39
+  npc: 17
+  npcitem: 11
+}
+data {
+  id: 307
+  level: 40
+  npc: 18
+  npcitem: 11
+}
+data {
+  id: 308
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 309
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 310
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 311
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 312
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 313
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 314
+  level: 40
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 315
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 316
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 317
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 318
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 319
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 320
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 321
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 322
+  level: 41
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 323
+  level: 42
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 324
+  level: 42
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 325
+  level: 42
+  npc: 19
+  npcitem: 11
+}
+data {
+  id: 326
+  level: 42
+  npc: 19
+  npcitem: 10012
+}
+data {
+  id: 327
+  level: 42
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 328
+  level: 42
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 329
+  level: 42
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 330
+  level: 42
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 331
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 332
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 333
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 334
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 335
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 336
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 337
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 338
+  level: 43
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 339
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 340
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 341
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 342
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 343
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 344
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 345
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 346
+  level: 44
+  npc: 19
+  npcitem: 12
+}
+data {
+  id: 347
+  level: 45
+  npc: 20
+  npcitem: 12
+}
+data {
+  id: 348
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 349
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 350
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 351
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 352
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 353
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 354
+  level: 45
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 355
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 356
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 357
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 358
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 359
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 360
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 361
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 362
+  level: 46
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 363
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 364
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 365
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 366
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 367
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 368
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 369
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 370
+  level: 47
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 371
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 372
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 373
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 374
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 375
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 376
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 377
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 378
+  level: 48
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 379
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 380
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 381
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 382
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 383
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 384
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 385
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 386
+  level: 49
+  npc: 21
+  npcitem: 12
+}
+data {
+  id: 387
+  level: 50
+  npc: 22
+  npcitem: 12
+}
+data {
+  id: 388
+  level: 50
+  npc: 23
+  npcitem: 12
+}
+data {
+  id: 389
+  level: 50
+  npc: 23
+  npcitem: 12
+}
+data {
+  id: 390
+  level: 50
+  npc: 23
+  npcitem: 10013
+}
+data {
+  id: 391
+  level: 50
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 392
+  level: 50
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 393
+  level: 50
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 394
+  level: 50
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 395
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 396
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 397
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 398
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 399
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 400
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 401
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 402
+  level: 51
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 403
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 404
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 405
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 406
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 407
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 408
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 409
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 410
+  level: 52
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 411
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 412
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 413
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 414
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 415
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 416
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 417
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 418
+  level: 53
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 419
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 420
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 421
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 422
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 423
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 424
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 425
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 426
+  level: 54
+  npc: 23
+  npcitem: 13
+}
+data {
+  id: 427
+  level: 55
+  npc: 24
+  npcitem: 13
+}
+data {
+  id: 428
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 429
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 430
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 431
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 432
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 433
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 434
+  level: 55
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 435
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 436
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 437
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 438
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 439
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 440
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 441
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 442
+  level: 56
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 443
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 444
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 445
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 446
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 447
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 448
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 449
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 450
+  level: 57
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 451
+  level: 58
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 452
+  level: 58
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 453
+  level: 58
+  npc: 25
+  npcitem: 13
+}
+data {
+  id: 454
+  level: 58
+  npc: 25
+  npcitem: 10014
+}
+data {
+  id: 455
+  level: 58
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 456
+  level: 58
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 457
+  level: 58
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 458
+  level: 58
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 459
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 460
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 461
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 462
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 463
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 464
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 465
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 466
+  level: 59
+  npc: 25
+  npcitem: 14
+}
+data {
+  id: 467
+  level: 60
+  npc: 26
+  npcitem: 14
+}
+data {
+  id: 468
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 469
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 470
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 471
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 472
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 473
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 474
+  level: 60
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 475
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 476
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 477
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 478
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 479
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 480
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 481
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 482
+  level: 61
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 483
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 484
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 485
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 486
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 487
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 488
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 489
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 490
+  level: 62
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 491
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 492
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 493
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 494
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 495
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 496
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 497
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 498
+  level: 63
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 499
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 500
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 501
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 502
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 503
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 504
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 505
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 506
+  level: 64
+  npc: 27
+  npcitem: 14
+}
+data {
+  id: 507
+  level: 65
+  npc: 28
+  npcitem: 14
+}
+data {
+  id: 508
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 509
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 510
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 511
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 512
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 513
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 514
+  level: 65
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 515
+  level: 66
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 516
+  level: 66
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 517
+  level: 66
+  npc: 29
+  npcitem: 14
+}
+data {
+  id: 518
+  level: 66
+  npc: 29
+  npcitem: 10015
+}
+data {
+  id: 519
+  level: 66
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 520
+  level: 66
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 521
+  level: 66
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 522
+  level: 66
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 523
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 524
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 525
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 526
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 527
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 528
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 529
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 530
+  level: 67
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 531
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 532
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 533
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 534
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 535
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 536
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 537
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 538
+  level: 68
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 539
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 540
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 541
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 542
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 543
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 544
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 545
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 546
+  level: 69
+  npc: 29
+  npcitem: 15
+}
+data {
+  id: 547
+  level: 70
+  npc: 30
+  npcitem: 15
+}
+data {
+  id: 548
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 549
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 550
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 551
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 552
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 553
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 554
+  level: 70
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 555
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 556
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 557
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 558
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 559
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 560
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 561
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 562
+  level: 71
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 563
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 564
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 565
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 566
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 567
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 568
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 569
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 570
+  level: 72
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 571
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 572
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 573
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 574
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 575
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 576
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 577
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 578
+  level: 73
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 579
+  level: 74
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 580
+  level: 74
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 581
+  level: 74
+  npc: 31
+  npcitem: 15
+}
+data {
+  id: 582
+  level: 74
+  npc: 31
+  npcitem: 10016
+}
+data {
+  id: 583
+  level: 74
+  npc: 31
+  npcitem: 16
+}
+data {
+  id: 584
+  level: 74
+  npc: 31
+  npcitem: 16
+}
+data {
+  id: 585
+  level: 74
+  npc: 31
+  npcitem: 16
+}
+data {
+  id: 586
+  level: 74
+  npc: 31
+  npcitem: 16
+}
+data {
+  id: 587
+  level: 75
+  npc: 32
+  npcitem: 16
+}
+data {
+  id: 588
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 589
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 590
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 591
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 592
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 593
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 594
+  level: 75
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 595
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 596
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 597
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 598
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 599
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 600
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 601
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 602
+  level: 76
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 603
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 604
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 605
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 606
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 607
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 608
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 609
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 610
+  level: 77
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 611
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 612
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 613
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 614
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 615
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 616
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 617
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 618
+  level: 78
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 619
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 620
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 621
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 622
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 623
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 624
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 625
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 626
+  level: 79
+  npc: 33
+  npcitem: 16
+}
+data {
+  id: 627
+  level: 80
+  npc: 34
+  npcitem: 16
+}
+data {
+  id: 628
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 629
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 630
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 631
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 632
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 633
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 634
+  level: 80
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 635
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 636
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 637
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 638
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 639
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 640
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 641
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 642
+  level: 81
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 643
+  level: 82
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 644
+  level: 82
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 645
+  level: 82
+  npc: 35
+  npcitem: 16
+}
+data {
+  id: 646
+  level: 82
+  npc: 35
+  npcitem: 10017
+}
+data {
+  id: 647
+  level: 82
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 648
+  level: 82
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 649
+  level: 82
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 650
+  level: 82
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 651
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 652
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 653
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 654
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 655
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 656
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 657
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 658
+  level: 83
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 659
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 660
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 661
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 662
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 663
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 664
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 665
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 666
+  level: 84
+  npc: 35
+  npcitem: 17
+}
+data {
+  id: 667
+  level: 85
+  npc: 36
+  npcitem: 17
+}
+data {
+  id: 668
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 669
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 670
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 671
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 672
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 673
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 674
+  level: 85
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 675
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 676
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 677
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 678
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 679
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 680
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 681
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 682
+  level: 86
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 683
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 684
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 685
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 686
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 687
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 688
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 689
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 690
+  level: 87
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 691
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 692
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 693
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 694
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 695
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 696
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 697
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 698
+  level: 88
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 699
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 700
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 701
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 702
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 703
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 704
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 705
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 706
+  level: 89
+  npc: 37
+  npcitem: 17
+}
+data {
+  id: 707
+  level: 90
+  npc: 38
+  npcitem: 17
+}
+data {
+  id: 708
+  level: 90
+  npc: 39
+  npcitem: 17
+}
+data {
+  id: 709
+  level: 90
+  npc: 39
+  npcitem: 17
+}
+data {
+  id: 710
+  level: 90
+  npc: 39
+  npcitem: 10018
+}
+data {
+  id: 711
+  level: 90
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 712
+  level: 90
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 713
+  level: 90
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 714
+  level: 90
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 715
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 716
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 717
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 718
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 719
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 720
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 721
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 722
+  level: 91
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 723
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 724
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 725
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 726
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 727
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 728
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 729
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 730
+  level: 92
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 731
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 732
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 733
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 734
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 735
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 736
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 737
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 738
+  level: 93
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 739
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 740
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 741
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 742
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 743
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 744
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 745
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 746
+  level: 94
+  npc: 39
+  npcitem: 18
+}
+data {
+  id: 747
+  level: 95
+  npc: 40
+  npcitem: 18
+}
+data {
+  id: 748
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 749
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 750
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 751
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 752
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 753
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 754
+  level: 95
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 755
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 756
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 757
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 758
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 759
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 760
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 761
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 762
+  level: 96
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 763
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 764
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 765
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 766
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 767
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 768
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 769
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 770
+  level: 97
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 771
+  level: 98
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 772
+  level: 98
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 773
+  level: 98
+  npc: 41
+  npcitem: 18
+}
+data {
+  id: 774
+  level: 98
+  npc: 41
+  npcitem: 10019
+}
+data {
+  id: 775
+  level: 98
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 776
+  level: 98
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 777
+  level: 98
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 778
+  level: 98
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 779
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 780
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 781
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 782
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 783
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 784
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 785
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 786
+  level: 99
+  npc: 41
+  npcitem: 19
+}
+data {
+  id: 787
+  level: 100
+  npc: 42
+  npcitem: 19
+}
+data {
+  id: 788
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 789
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 790
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 791
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 792
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 793
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 794
+  level: 100
+  npc: 43
+  npcitem: 19
+}
+data {
+  id: 795
+  level: 1
+  npc: 3
+  npcitem: 1
+}

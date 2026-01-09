@@ -1,0 +1,7 @@
+剧本组id,触发关卡完成,演出地点,剧情音乐
+id,level,place,music
+int,int,int,string
+1,0,1,bgm_loser_back_home.ogg
+2,1,1,bgm_loser_back_home.ogg
+3,2,1,bgm_loser_back_home.ogg
+4,3,1,bgm_long_time_no_see.ogg

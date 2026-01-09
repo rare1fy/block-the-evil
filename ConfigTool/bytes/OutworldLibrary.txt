@@ -1,0 +1,77 @@
+data {
+  id: 1
+  playerId: 1
+  level: 1
+  wordto: 1
+  leavl: 1
+}
+data {
+  id: 2
+  playerId: 1
+  level: 2
+  wordto: 92
+  leavl: 5
+}
+data {
+  id: 3
+  playerId: 1
+  level: 3
+  wordto: 129
+  leavl: 8
+}
+data {
+  id: 4
+  playerId: 2
+  level: 1
+  wordto: 29
+  leavl: 1
+}
+data {
+  id: 5
+  playerId: 2
+  level: 3
+  wordto: 98
+  leavl: 4
+}
+data {
+  id: 6
+  playerId: 3
+  level: 1
+  wordto: 53
+  leavl: 2
+}
+data {
+  id: 7
+  playerId: 3
+  level: 2
+  wordto: 104
+  leavl: 6
+}
+data {
+  id: 8
+  playerId: 4
+  level: 1
+  wordto: 64
+  leavl: 3
+}
+data {
+  id: 9
+  playerId: 5
+  level: 1
+  wordto: 78
+  leavl: 4
+}
+data {
+  id: 10
+  playerId: 5
+  level: 2
+  wordto: 119
+  leavl: 7
+}
+data {
+  id: 11
+  playerId: 5
+  level: 3
+  wordto: 142
+  leavl: 9
+}

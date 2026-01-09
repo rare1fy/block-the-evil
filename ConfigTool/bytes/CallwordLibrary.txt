@@ -1,0 +1,14 @@
+data {
+  id: 1
+  npc_id: 1
+  goodfeellv: 1
+  callto: 1
+  level: 1
+}
+data {
+  id: 2
+  npc_id: 1
+  goodfeellv: 2
+  callto: 11
+  level: 2
+}

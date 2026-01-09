@@ -1,0 +1,488 @@
+data {
+  id: 1
+  group: 1
+  type: 2
+  num: "Story01_001"
+  audio: "Story01_001_audio.ogg"
+}
+data {
+  id: 2
+  group: 1
+  type: 1
+  num: "1"
+}
+data {
+  id: 3
+  group: 1
+  type: 2
+  num: "Story01_002"
+  audio: "Story01_002_audio.ogg"
+}
+data {
+  id: 4
+  group: 1
+  type: 1
+  num: "2"
+}
+data {
+  id: 5
+  group: 1
+  type: 2
+  num: "Story01_003"
+  audio: "Story01_003_audio.ogg"
+}
+data {
+  id: 6
+  group: 1
+  type: 1
+  num: "3"
+}
+data {
+  id: 7
+  group: 1
+  type: 1
+  num: "4"
+}
+data {
+  id: 8
+  group: 1
+  type: 1
+  num: "5"
+}
+data {
+  id: 9
+  group: 1
+  type: 1
+  num: "6"
+}
+data {
+  id: 10
+  group: 1
+  type: 1
+  num: "7"
+}
+data {
+  id: 11
+  group: 1
+  type: 1
+  num: "8"
+}
+data {
+  id: 12
+  group: 1
+  type: 1
+  num: "9"
+}
+data {
+  id: 13
+  group: 1
+  type: 1
+  num: "10"
+}
+data {
+  id: 14
+  group: 1
+  type: 1
+  num: "11"
+}
+data {
+  id: 15
+  group: 1
+  type: 2
+  num: "Story01_004"
+  audio: "Story01_004_audio.ogg"
+}
+data {
+  id: 16
+  group: 1
+  type: 5
+  num: "bgm_long_time_no_see.ogg"
+}
+data {
+  id: 17
+  group: 1
+  type: 3
+  num: "2"
+}
+data {
+  id: 18
+  group: 1
+  type: 2
+  num: "Story02_001"
+  audio: "Story02_001_audio.ogg"
+}
+data {
+  id: 19
+  group: 1
+  type: 1
+  num: "12"
+}
+data {
+  id: 20
+  group: 1
+  type: 2
+  num: "Story02_002"
+  audio: "Story02_002_audio.ogg"
+}
+data {
+  id: 21
+  group: 1
+  type: 1
+  num: "13"
+}
+data {
+  id: 22
+  group: 1
+  type: 1
+  num: "14"
+}
+data {
+  id: 23
+  group: 1
+  type: 1
+  num: "15"
+}
+data {
+  id: 24
+  group: 1
+  type: 1
+  num: "16"
+}
+data {
+  id: 25
+  group: 1
+  type: 1
+  num: "17"
+}
+data {
+  id: 26
+  group: 1
+  type: 4
+  num: "1"
+}
+data {
+  id: 27
+  group: 1
+  type: 3
+  num: "1"
+}
+data {
+  id: 28
+  group: 2
+  type: 2
+  num: "Story03_001_02"
+}
+data {
+  id: 29
+  group: 2
+  type: 1
+  num: "18"
+}
+data {
+  id: 30
+  group: 2
+  type: 1
+  num: "19"
+}
+data {
+  id: 31
+  group: 2
+  type: 1
+  num: "20"
+}
+data {
+  id: 32
+  group: 2
+  type: 2
+  num: "Story03_001"
+  audio: "Story03_001_002_003_audio.ogg"
+}
+data {
+  id: 33
+  group: 3
+  type: 2
+  num: "Story03_002"
+  audio: "Story03_001_002_003_audio.ogg"
+}
+data {
+  id: 34
+  group: 3
+  type: 2
+  num: "Story03_003"
+  audio: "Story03_001_002_003_audio.ogg"
+}
+data {
+  id: 35
+  group: 3
+  type: 1
+  num: "21"
+}
+data {
+  id: 36
+  group: 3
+  type: 1
+  num: "22"
+}
+data {
+  id: 37
+  group: 3
+  type: 1
+  num: "23"
+}
+data {
+  id: 38
+  group: 3
+  type: 1
+  num: "24"
+}
+data {
+  id: 39
+  group: 3
+  type: 2
+  num: "Story03_004"
+  audio: "Story03_004_audio.ogg"
+}
+data {
+  id: 40
+  group: 3
+  type: 1
+  num: "25"
+}
+data {
+  id: 41
+  group: 3
+  type: 1
+  num: "26"
+}
+data {
+  id: 42
+  group: 3
+  type: 1
+  num: "27"
+}
+data {
+  id: 43
+  group: 3
+  type: 1
+  num: "28"
+}
+data {
+  id: 44
+  group: 3
+  type: 5
+  num: "bgm_long_time_no_see.ogg"
+}
+data {
+  id: 45
+  group: 3
+  type: 3
+  num: "2"
+}
+data {
+  id: 46
+  group: 3
+  type: 2
+  num: "Story04_001_Chapter2"
+  audio: "Story04_001_audio.ogg"
+}
+data {
+  id: 47
+  group: 3
+  type: 1
+  num: "29"
+}
+data {
+  id: 48
+  group: 3
+  type: 1
+  num: "30"
+}
+data {
+  id: 49
+  group: 3
+  type: 1
+  num: "31"
+}
+data {
+  id: 50
+  group: 3
+  type: 1
+  num: "32"
+}
+data {
+  id: 51
+  group: 3
+  type: 1
+  num: "33"
+}
+data {
+  id: 52
+  group: 3
+  type: 1
+  num: "34"
+}
+data {
+  id: 53
+  group: 3
+  type: 3
+  num: "1"
+}
+data {
+  id: 54
+  group: 4
+  type: 3
+  num: "2"
+}
+data {
+  id: 55
+  group: 4
+  type: 2
+  num: "Story04_002_Chapter2"
+  audio: "Story04_002_004_audio.ogg"
+}
+data {
+  id: 56
+  group: 4
+  type: 3
+  num: "2"
+}
+data {
+  id: 57
+  group: 4
+  type: 1
+  num: "35"
+}
+data {
+  id: 58
+  group: 4
+  type: 1
+  num: "36"
+}
+data {
+  id: 59
+  group: 4
+  type: 1
+  num: "37"
+}
+data {
+  id: 60
+  group: 4
+  type: 1
+  num: "38"
+}
+data {
+  id: 61
+  group: 4
+  type: 1
+  num: "39"
+}
+data {
+  id: 62
+  group: 4
+  type: 1
+  num: "40"
+}
+data {
+  id: 63
+  group: 4
+  type: 2
+  num: "Story04_003_Chapter2"
+  audio: "Story04_003_audio.ogg"
+}
+data {
+  id: 64
+  group: 4
+  type: 1
+  num: "41"
+}
+data {
+  id: 65
+  group: 4
+  type: 1
+  num: "42"
+}
+data {
+  id: 66
+  group: 4
+  type: 1
+  num: "43"
+}
+data {
+  id: 67
+  group: 4
+  type: 1
+  num: "44"
+}
+data {
+  id: 68
+  group: 4
+  type: 1
+  num: "45"
+}
+data {
+  id: 69
+  group: 4
+  type: 1
+  num: "46"
+}
+data {
+  id: 70
+  group: 4
+  type: 1
+  num: "47"
+}
+data {
+  id: 71
+  group: 4
+  type: 1
+  num: "48"
+}
+data {
+  id: 72
+  group: 4
+  type: 1
+  num: "49"
+}
+data {
+  id: 73
+  group: 4
+  type: 1
+  num: "50"
+}
+data {
+  id: 74
+  group: 4
+  type: 1
+  num: "51"
+}
+data {
+  id: 75
+  group: 4
+  type: 1
+  num: "52"
+}
+data {
+  id: 76
+  group: 4
+  type: 1
+  num: "53"
+}
+data {
+  id: 77
+  group: 4
+  type: 1
+  num: "54"
+}
+data {
+  id: 78
+  group: 4
+  type: 2
+  num: "Story04_004_Chapter2"
+  audio: "Story04_002_004_audio.ogg"
+}
+data {
+  id: 79
+  group: 4
+  type: 3
+  num: "1"
+}

@@ -1,0 +1,5 @@
+id,所属角色,解锁好感度等级,对话导入,解锁关卡
+id,npc_id,goodfeellv,callto,level
+int,int,int,int,int
+1,1,1,1,1
+2,1,2,11,2

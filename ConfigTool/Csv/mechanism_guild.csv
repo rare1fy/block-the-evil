@@ -1,0 +1,12 @@
+ID,机制图片,机制名称,机制描述
+id,img,name,desc
+int,string,string,string
+1,UI_zdn_tsdj_xianshibx,道具宝箱,在<color=#FF6300>倒数</color>结束前消除，获得<color=#FF6300>强力道具</color>！
+2,UI_zdn_img_bingdong02,坚冰,更坚硬的<color=#FF6300>冰块</color>。需要<color=#FF6300>额外</color>的消除！
+3,UI_zdn_xjz_zhezhao02_128,沙块,糟糕...该缴纳<color=#FF6300>清洁费用</color>了！
+4,UI_zdn_xjz_jiqi_xg,得分赛,消除开始<color=#FF6300>获得分数</color>，新的得分记录在哪里？
+5,UI_zdn_tsdj_zhadan,炸弹,Boom! 消除后<color=#FF6300>炸掉</color>周围的一切东西！
+6,UI_zdn_tsdj_bingtong,冰桶,消除它只会带来<color=#FF6300>寒冷的麻烦</color>！
+7,UI_zdn_tsdj_zyxiangzi,快递包裹,消除它，会给你带来<color=#FF6300>更多物品</color>！
+999,UI_zdn_wj_jige,大咖模式,达到分数即可解锁<color=#FF6300>今日大咖</color>~
+8,UI_zdn_img_bingdong04,冰块,与其他方块<color=#FF6300>一起消除</color>来<color=#FF6300>解冻</color>！

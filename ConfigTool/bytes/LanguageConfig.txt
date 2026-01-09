@@ -1,0 +1,1915 @@
+data {
+  id: 1
+  complexFont: "红色"
+  english: "[LID:1]"
+}
+data {
+  id: 2
+  complexFont: "蓝色"
+  english: "[LID:2]"
+}
+data {
+  id: 3
+  complexFont: "绿色"
+  english: "[LID:3]"
+}
+data {
+  id: 4
+  complexFont: "黄色"
+  english: "[LID:4]"
+}
+data {
+  id: 5
+  complexFont: "青色"
+  english: "[LID:5]"
+}
+data {
+  id: 6
+  complexFont: "果汁潘趣酒"
+  english: "[LID:6]"
+}
+data {
+  id: 7
+  complexFont: "披萨切片"
+  english: "[LID:7]"
+}
+data {
+  id: 8
+  complexFont: "野格"
+  english: "[LID:8]"
+}
+data {
+  id: 9
+  complexFont: "炸薯条"
+  english: "[LID:9]"
+}
+data {
+  id: 10
+  complexFont: "派对王冠​"
+  english: "[LID:10]"
+}
+data {
+  id: 11
+  complexFont: "朗姆酒"
+  english: "[LID:11]"
+}
+data {
+  id: 12
+  complexFont: "拍立得​"
+  english: "[LID:12]"
+}
+data {
+  id: 13
+  complexFont: "经典可乐"
+  english: "[LID:13]"
+}
+data {
+  id: 14
+  complexFont: "骰子​"
+  english: "[LID:14]"
+}
+data {
+  id: 15
+  complexFont: "莫吉托"
+  english: "[LID:15]"
+}
+data {
+  id: 16
+  complexFont: "玩具手铐"
+  english: "[LID:16]"
+}
+data {
+  id: 17
+  complexFont: "龙舌兰Shots"
+  english: "[LID:17]"
+}
+data {
+  id: 18
+  complexFont: "充电宝"
+  english: "[LID:18]"
+}
+data {
+  id: 19
+  complexFont: "高端白酒"
+  english: "[LID:19]"
+}
+data {
+  id: 20
+  complexFont: "鬼脸面具"
+  english: "[LID:20]"
+}
+data {
+  id: 21
+  complexFont: "星空“飓风”"
+  english: "[LID:21]"
+}
+data {
+  id: 22
+  complexFont: "一次性手套"
+  english: "[LID:22]"
+}
+data {
+  id: 23
+  complexFont: "苏打水​"
+  english: "[LID:23]"
+}
+data {
+  id: 24
+  complexFont: "小红杯"
+  english: "[LID:24]"
+}
+data {
+  id: 25
+  complexFont: "麦克风​"
+  english: "[LID:25]"
+}
+data {
+  id: 26
+  complexFont: "威士忌"
+  english: "[LID:26]"
+}
+data {
+  id: 27
+  complexFont: "尤克里里"
+  english: "[LID:27]"
+}
+data {
+  id: 28
+  complexFont: "香槟"
+  english: "[LID:28]"
+}
+data {
+  id: 29
+  complexFont: "桶装啤酒"
+  english: "[LID:29]"
+}
+data {
+  id: 30
+  complexFont: "伏特加"
+  english: "[LID:30]"
+}
+data {
+  id: 31
+  complexFont: "透明"
+  english: "[LID:31]"
+}
+data {
+  id: 32
+  complexFont: "甜蜜爆表！"
+  english: "[LID:32]"
+}
+data {
+  id: 33
+  complexFont: "芝士就是力量！"
+  english: "[LID:33]"
+}
+data {
+  id: 34
+  complexFont: "野兽启动按钮！"
+  english: "[LID:34]"
+}
+data {
+  id: 35
+  complexFont: "今晚盐值担当！"
+  english: "[LID:35]"
+}
+data {
+  id: 36
+  complexFont: "戴上即主角"
+  english: "[LID:36]"
+}
+data {
+  id: 37
+  complexFont: "海盗船长！嘿咻嘿咻~"
+  english: "[LID:37]"
+}
+data {
+  id: 38
+  complexFont: "三秒出片，终身社死。"
+  english: "[LID:38]"
+}
+data {
+  id: 39
+  complexFont: "爷青回的气泡。"
+  english: "[LID:39]"
+}
+data {
+  id: 40
+  complexFont: "今日欧非判定器。"
+  english: "[LID:40]"
+}
+data {
+  id: 41
+  complexFont: "“麻烦给我的爱人来一杯...”"
+  english: "[LID:41]"
+}
+data {
+  id: 42
+  complexFont: "行动-1，心动+1"
+  english: "[LID:42]"
+}
+data {
+  id: 43
+  complexFont: "舔、嚼、吞！"
+  english: "[LID:43]"
+}
+data {
+  id: 44
+  complexFont: "不专心跳舞的家伙们..."
+  english: "[LID:44]"
+}
+data {
+  id: 45
+  complexFont: "“十二岁酒壮怂人胆”"
+  english: "[LID:45]"
+}
+data {
+  id: 46
+  complexFont: "吓唬谁呢？"
+  english: "[LID:46]"
+}
+data {
+  id: 47
+  complexFont: "三秒卷走烦恼！"
+  english: "[LID:47]"
+}
+data {
+  id: 48
+  complexFont: "这真是小龙虾手套！"
+  english: "[LID:48]"
+}
+data {
+  id: 49
+  complexFont: "酒精过敏就不能参加派对？"
+  english: "[LID:49]"
+}
+data {
+  id: 50
+  complexFont: "派对游戏C位！"
+  english: "[LID:50]"
+}
+data {
+  id: 51
+  complexFont: "“给我一个把世界都毁掉的高音”"
+  english: "[LID:51]"
+}
+data {
+  id: 52
+  complexFont: "摇摇晃摇~"
+  english: "[LID:52]"
+}
+data {
+  id: 53
+  complexFont: "才华搭配可爱，不赖！"
+  english: "[LID:53]"
+}
+data {
+  id: 54
+  complexFont: "开心开心开香槟"
+  english: "[LID:54]"
+}
+data {
+  id: 55
+  complexFont: "欢乐时光~就要开始了！"
+  english: "[LID:55]"
+}
+data {
+  id: 56
+  complexFont: "无味的坏主意发生器。"
+  english: "[LID:56]"
+}
+data {
+  id: 57
+  complexFont: "嘿~宝贝！给我来<color=#FF6300>几杯酒</color>！"
+  english: "[LID:57]"
+}
+data {
+  id: 58
+  complexFont: "把方块填满<color=#FF6300>1行</color>或<color=#FF6300>1列</color>进行<color=#FF6300>消除</color>，我会拿走需要的东西！"
+  english: "[LID:58]"
+}
+data {
+  id: 59
+  complexFont: "这里也太安静了！<color=#FF6300>拿酒来</color>，我去收拾一下DJ台！"
+  english: "[LID:59]"
+}
+data {
+  id: 60
+  complexFont: "搞定！现在才有点派对的样子！"
+  english: "[LID:60]"
+}
+data {
+  id: 61
+  complexFont: "我要让派对再次伟大！"
+  english: "[LID:61]"
+}
+data {
+  id: 62
+  complexFont: "我会建一堵墙！"
+  english: "[LID:62]"
+}
+data {
+  id: 63
+  complexFont: "我会把没喝醉的家伙扔出去！"
+  english: "[LID:63]"
+}
+data {
+  id: 64
+  complexFont: "哎呀！你干嘛~"
+  english: "[LID:64]"
+}
+data {
+  id: 65
+  complexFont: "我在展示我的性感舞蹈！"
+  english: "[LID:65]"
+}
+data {
+  id: 66
+  complexFont: "这叫铁山靠！"
+  english: "[LID:66]"
+}
+data {
+  id: 67
+  complexFont: "我要在派对上找一位新男友！"
+  english: "[LID:67]"
+}
+data {
+  id: 68
+  complexFont: "灵感来了，被用来写歌了。"
+  english: "[LID:68]"
+}
+data {
+  id: 69
+  complexFont: "吃我水枪biubiubiu~"
+  english: "[LID:69]"
+}
+data {
+  id: 70
+  complexFont: "想去选角参与雷神的，结果失败了！"
+  english: "[LID:70]"
+}
+data {
+  id: 71
+  complexFont: "你的蛋糕非常没有品味！"
+  english: "[LID:71]"
+}
+data {
+  id: 72
+  complexFont: "要是你在上面咬一口，我的粉丝会买1000万份！"
+  english: "[LID:72]"
+}
+data {
+  id: 73
+  complexFont: "快给我满上！"
+  english: "[LID:73]"
+}
+data {
+  id: 74
+  complexFont: "才18杯!"
+  english: "[LID:74]"
+}
+data {
+  id: 75
+  complexFont: "这场派对简直是“火星”级的！"
+  english: "[LID:75]"
+}
+data {
+  id: 76
+  complexFont: "如果你愿意替我去踢一脚建国的屁股！"
+  english: "[LID:76]"
+}
+data {
+  id: 77
+  complexFont: "Man！"
+  english: "[LID:77]"
+}
+data {
+  id: 78
+  complexFont: "动作要快！姿势要帅！就像上篮一样！"
+  english: "[LID:78]"
+}
+data {
+  id: 79
+  complexFont: "能快一点吗？"
+  english: "[LID:79]"
+}
+data {
+  id: 80
+  complexFont: "不，我着急去厕所！"
+  english: "[LID:80]"
+}
+data {
+  id: 81
+  complexFont: "大部分情况下是因为裤子太紧了..."
+  english: "[LID:81]"
+}
+data {
+  id: 82
+  complexFont: "我准备用肉来编织新的裙子"
+  english: "[LID:82]"
+}
+data {
+  id: 83
+  complexFont: "那我就当你同意了！"
+  english: "[LID:83]"
+}
+data {
+  id: 84
+  complexFont: "我和时间老人做了一笔生意~"
+  english: "[LID:84]"
+}
+data {
+  id: 85
+  complexFont: "当然，而且我只和他签了一份老将底薪合同。"
+  english: "[LID:85]"
+}
+data {
+  id: 86
+  complexFont: "你为什么不准我抽烟！"
+  english: "[LID:86]"
+}
+data {
+  id: 87
+  complexFont: "我这是电子烟！"
+  english: "[LID:87]"
+}
+data {
+  id: 88
+  complexFont: "你觉得派对最大的难点是什么？"
+  english: "[LID:88]"
+}
+data {
+  id: 89
+  complexFont: "酒精是不长眼的，音乐是要手动切的，游泳池是要放水的！"
+  english: "[LID:89]"
+}
+data {
+  id: 90
+  complexFont: "昨天我被恶魔附身了！"
+  english: "[LID:90]"
+}
+data {
+  id: 91
+  complexFont: "但它重量太低了，还不够我做硬拉。"
+  english: "[LID:91]"
+}
+data {
+  id: 92
+  complexFont: "你知道我为什么要随身带着道具枪吗？"
+  english: "[LID:92]"
+}
+data {
+  id: 93
+  complexFont: "这样我不用说话也能让孩子们写作业。"
+  english: "[LID:93]"
+}
+data {
+  id: 94
+  complexFont: "我们活在虚拟世界，美梦转瞬即逝。"
+  english: "[LID:94]"
+}
+data {
+  id: 95
+  complexFont: "夜之城太寡淡了，不如你这里最烈的酒。"
+  english: "[LID:95]"
+}
+data {
+  id: 96
+  complexFont: "你这个地方太适合拍电影了！"
+  english: "[LID:96]"
+}
+data {
+  id: 97
+  complexFont: "混乱的派对与血腥的枪战是绝配！"
+  english: "[LID:97]"
+}
+data {
+  id: 98
+  complexFont: "我本是辅助，今晚来打野！"
+  english: "[LID:98]"
+}
+data {
+  id: 99
+  complexFont: "如何呢？又能怎！"
+  english: "[LID:99]"
+}
+data {
+  id: 100
+  complexFont: "能不能动作快点？"
+  english: "[LID:100]"
+}
+data {
+  id: 101
+  complexFont: "全世界为我都等了你一分钟，这是一种犯罪！"
+  english: "[LID:101]"
+}
+data {
+  id: 102
+  complexFont: "他们都叫我狗爷。M3~"
+  english: "[LID:102]"
+}
+data {
+  id: 103
+  complexFont: "从你出生到现在，我就没下过榜单。M3~"
+  english: "[LID:103]"
+}
+data {
+  id: 104
+  complexFont: "For sure bro! 你妈当年放的胎教曲里都有我。"
+  english: "[LID:104]"
+}
+data {
+  id: 105
+  complexFont: "不喜欢酒精，水才是我的饮品。"
+  english: "[LID:105]"
+}
+data {
+  id: 106
+  complexFont: "沉迷酒水只会让人虚度光阴！"
+  english: "[LID:106]"
+}
+data {
+  id: 107
+  complexFont: "这个派对实在是太短暂了！"
+  english: "[LID:107]"
+}
+data {
+  id: 108
+  complexFont: "时间是相对的，美好总是短暂！"
+  english: "[LID:108]"
+}
+data {
+  id: 109
+  complexFont: "为了帝国干杯！"
+  english: "[LID:109]"
+}
+data {
+  id: 110
+  complexFont: "呃，好吧为了我还活着干杯！"
+  english: "[LID:110]"
+}
+data {
+  id: 111
+  complexFont: "你应该去当个律师或者医生，而不是在这里虚度时间！"
+  english: "[LID:111]"
+}
+data {
+  id: 112
+  complexFont: "我只是在这里寻找万中无一的武林高手！"
+  english: "[LID:112]"
+}
+data {
+  id: 113
+  complexFont: "啊啊啊啊啊！"
+  english: "[LID:113]"
+}
+data {
+  id: 114
+  complexFont: "我要喝手磨咖啡！！！"
+  english: "[LID:114]"
+}
+data {
+  id: 115
+  complexFont: "你这里服务费怎么收？"
+  english: "[LID:115]"
+}
+data {
+  id: 116
+  complexFont: "我看你是真的想和我拼一下子！"
+  english: "[LID:116]"
+}
+data {
+  id: 117
+  complexFont: "我今天要穿迷你裙还是吊带袜？"
+  english: "[LID:117]"
+}
+data {
+  id: 118
+  complexFont: "你们这些年轻人真是不懂欣赏！"
+  english: "[LID:118]"
+}
+data {
+  id: 119
+  complexFont: "成功返回坐标！"
+  english: "[LID:119]"
+}
+data {
+  id: 120
+  complexFont: "来参加天网毁灭人类前最好的派对！"
+  english: "[LID:120]"
+}
+data {
+  id: 121
+  complexFont: "我今天美吗？"
+  english: "[LID:121]"
+}
+data {
+  id: 122
+  complexFont: "因为这是品如的衣服~"
+  english: "[LID:122]"
+}
+data {
+  id: 123
+  complexFont: "我该怎么做？"
+  english: "[LID:123]"
+}
+data {
+  id: 124
+  complexFont: "知道了！"
+  english: "[LID:124]"
+}
+data {
+  id: 125
+  complexFont: "交给你了！"
+  english: "[LID:125]"
+}
+data {
+  id: 126
+  complexFont: "那就开始狂欢吧！"
+  english: "[LID:126]"
+}
+data {
+  id: 127
+  complexFont: "你要怎么做？"
+  english: "[LID:127]"
+}
+data {
+  id: 128
+  complexFont: "用来隔离闹事的家伙？"
+  english: "[LID:128]"
+}
+data {
+  id: 129
+  complexFont: "不愧是懂王！"
+  english: "[LID:129]"
+}
+data {
+  id: 130
+  complexFont: "这是在干什么？"
+  english: "[LID:130]"
+}
+data {
+  id: 131
+  complexFont: "看上去像是某种篮球动作！"
+  english: "[LID:131]"
+}
+data {
+  id: 132
+  complexFont: "至少得练两年半！"
+  english: "[LID:132]"
+}
+data {
+  id: 133
+  complexFont: "那你前男友呢？"
+  english: "[LID:133]"
+}
+data {
+  id: 134
+  complexFont: "这算是某种消耗品吗..."
+  english: "[LID:134]"
+}
+data {
+  id: 135
+  complexFont: "你怎么胖成这样？"
+  english: "[LID:135]"
+}
+data {
+  id: 136
+  complexFont: "那你得赶快把多余的“神力”减掉！"
+  english: "[LID:136]"
+}
+data {
+  id: 137
+  complexFont: "有什么问题吗？"
+  english: "[LID:137]"
+}
+data {
+  id: 138
+  complexFont: "这不是重点吧！"
+  english: "[LID:138]"
+}
+data {
+  id: 139
+  complexFont: "哇，你喝了多少！"
+  english: "[LID:139]"
+}
+data {
+  id: 140
+  complexFont: "家具很贵的，您小心点！"
+  english: "[LID:140]"
+}
+data {
+  id: 141
+  complexFont: "这是一种赞美吗？"
+  english: "[LID:141]"
+}
+data {
+  id: 142
+  complexFont: "你还是自己去吧！"
+  english: "[LID:142]"
+}
+data {
+  id: 143
+  complexFont: "吓我一跳！"
+  english: "[LID:143]"
+}
+data {
+  id: 144
+  complexFont: "把你胳膊收起来，肘到别的客人了"
+  english: "[LID:144]"
+}
+data {
+  id: 145
+  complexFont: "你急着上台跳舞吗？"
+  english: "[LID:145]"
+}
+data {
+  id: 146
+  complexFont: "还以为你摸裆是在舞蹈练习呢..."
+  english: "[LID:146]"
+}
+data {
+  id: 147
+  complexFont: "真是尴尬~"
+  english: "[LID:147]"
+}
+data {
+  id: 148
+  complexFont: "除了味儿大以外没别的毛病！"
+  english: "[LID:148]"
+}
+data {
+  id: 149
+  complexFont: "不准进我的厨房！"
+  english: "[LID:149]"
+}
+data {
+  id: 150
+  complexFont: "他决定继续让你永葆青春？"
+  english: "[LID:150]"
+}
+data {
+  id: 151
+  complexFont: "天生的生意人！"
+  english: "[LID:151]"
+}
+data {
+  id: 152
+  complexFont: "抽烟去室外！"
+  english: "[LID:152]"
+}
+data {
+  id: 153
+  complexFont: "什么烟都不行!"
+  english: "[LID:153]"
+}
+data {
+  id: 154
+  complexFont: "我不知道..."
+  english: "[LID:154]"
+}
+data {
+  id: 155
+  complexFont: "呃，说点大家不知道的..."
+  english: "[LID:155]"
+}
+data {
+  id: 156
+  complexFont: "什么鬼胆子那么大！"
+  english: "[LID:156]"
+}
+data {
+  id: 157
+  complexFont: "你应该去兼职做驱魔师..."
+  english: "[LID:157]"
+}
+data {
+  id: 158
+  complexFont: "有人觊觎你的美貌？"
+  english: "[LID:158]"
+}
+data {
+  id: 159
+  complexFont: "硬核教育家！"
+  english: "[LID:159]"
+}
+data {
+  id: 160
+  complexFont: "强尼，你怎么不留在夜之城？"
+  english: "[LID:160]"
+}
+data {
+  id: 161
+  complexFont: "我会让你醉倒！"
+  english: "[LID:161]"
+}
+data {
+  id: 162
+  complexFont: "为什么！"
+  english: "[LID:162]"
+}
+data {
+  id: 163
+  complexFont: "你别把我客人吓跑了！"
+  english: "[LID:163]"
+}
+data {
+  id: 164
+  complexFont: "你喝迷糊了？"
+  english: "[LID:164]"
+}
+data {
+  id: 165
+  complexFont: "真是奔放的表达..."
+  english: "[LID:165]"
+}
+data {
+  id: 166
+  complexFont: "别急，马上就好"
+  english: "[LID:166]"
+}
+data {
+  id: 167
+  complexFont: "心急吃不了热豆腐！"
+  english: "[LID:167]"
+}
+data {
+  id: 168
+  complexFont: "但你看上去很年轻啊？"
+  english: "[LID:168]"
+}
+data {
+  id: 169
+  complexFont: "尊嘟假嘟？"
+  english: "[LID:169]"
+}
+data {
+  id: 170
+  complexFont: "Damn!"
+  english: "[LID:170]"
+}
+data {
+  id: 171
+  complexFont: "这样也太无趣了！"
+  english: "[LID:171]"
+}
+data {
+  id: 172
+  complexFont: "但人生苦短，何不对酒当歌？"
+  english: "[LID:172]"
+}
+data {
+  id: 173
+  complexFont: "但我们已经狂欢了好几个钟头了呀？"
+  english: "[LID:173]"
+}
+data {
+  id: 174
+  complexFont: "就像工作的时间永远漫长！"
+  english: "[LID:174]"
+}
+data {
+  id: 175
+  complexFont: "帝国允许你们来参加派对？"
+  english: "[LID:175]"
+}
+data {
+  id: 176
+  complexFont: "你还真是现实主义~"
+  english: "[LID:176]"
+}
+data {
+  id: 177
+  complexFont: "嘿！那你为什么在这?"
+  english: "[LID:177]"
+}
+data {
+  id: 178
+  complexFont: "我觉得你只能找到\"舞林高手\"！"
+  english: "[LID:178]"
+}
+data {
+  id: 179
+  complexFont: "老先生你怎么了！"
+  english: "[LID:179]"
+}
+data {
+  id: 180
+  complexFont: "您吓我一跳！"
+  english: "[LID:180]"
+}
+data {
+  id: 181
+  complexFont: "二十一位！"
+  english: "[LID:181]"
+}
+data {
+  id: 182
+  complexFont: "开个玩笑！免费，免费！"
+  english: "[LID:182]"
+}
+data {
+  id: 183
+  complexFont: "老人家您不要说笑~"
+  english: "[LID:183]"
+}
+data {
+  id: 184
+  complexFont: "您开心就好！"
+  english: "[LID:184]"
+}
+data {
+  id: 185
+  complexFont: "哇！大块头，什么风把你吹来了!"
+  english: "[LID:185]"
+}
+data {
+  id: 186
+  complexFont: "等等，难道你失败了吗？"
+  english: "[LID:186]"
+}
+data {
+  id: 187
+  complexFont: "衣服不太合身..."
+  english: "[LID:187]"
+}
+data {
+  id: 188
+  complexFont: "你好烧啊！"
+  english: "[LID:188]"
+}
+data {
+  id: 189
+  complexFont: "金币"
+  english: "[LID:189]"
+}
+data {
+  id: 190
+  complexFont: "星星"
+  english: "[LID:190]"
+}
+data {
+  id: 191
+  complexFont: "充气锤"
+  english: "[LID:191]"
+}
+data {
+  id: 192
+  complexFont: "香槟"
+  english: "[LID:192]"
+}
+data {
+  id: 193
+  complexFont: "调酒壶"
+  english: "[LID:193]"
+}
+data {
+  id: 194
+  complexFont: "道具宝箱"
+  english: "[LID:194]"
+}
+data {
+  id: 195
+  complexFont: "坚冰"
+  english: "[LID:195]"
+}
+data {
+  id: 196
+  complexFont: "沙块"
+  english: "[LID:196]"
+}
+data {
+  id: 197
+  complexFont: "得分赛"
+  english: "[LID:197]"
+}
+data {
+  id: 198
+  complexFont: "炸弹"
+  english: "[LID:198]"
+}
+data {
+  id: 199
+  complexFont: "冰桶"
+  english: "[LID:199]"
+}
+data {
+  id: 200
+  complexFont: "快递包裹"
+  english: "[LID:200]"
+}
+data {
+  id: 201
+  complexFont: "大咖模式"
+  english: "[LID:201]"
+}
+data {
+  id: 202
+  complexFont: "冰块"
+  english: "[LID:202]"
+}
+data {
+  id: 203
+  complexFont: "在<color=#FF6300>倒数</color>结束前消除，获得<color=#FF6300>强力道具</color>！"
+  english: "[LID:203]"
+}
+data {
+  id: 204
+  complexFont: "更坚硬的<color=#FF6300>冰块</color>。需要<color=#FF6300>额外</color>的消除！"
+  english: "[LID:204]"
+}
+data {
+  id: 205
+  complexFont: "糟糕...该缴纳<color=#FF6300>清洁费用</color>了！"
+  english: "[LID:205]"
+}
+data {
+  id: 206
+  complexFont: "消除开始<color=#FF6300>获得分数</color>，新的得分记录在哪里？"
+  english: "[LID:206]"
+}
+data {
+  id: 207
+  complexFont: "Boom! 消除后<color=#FF6300>炸掉</color>周围的一切东西！"
+  english: "[LID:207]"
+}
+data {
+  id: 208
+  complexFont: "消除它只会带来<color=#FF6300>寒冷的麻烦</color>！"
+  english: "[LID:208]"
+}
+data {
+  id: 209
+  complexFont: "消除它，会给你带来<color=#FF6300>更多物品</color>！"
+  english: "[LID:209]"
+}
+data {
+  id: 210
+  complexFont: "达到分数即可解锁<color=#FF6300>今日大咖</color>~"
+  english: "[LID:210]"
+}
+data {
+  id: 211
+  complexFont: "与其他方块<color=#FF6300>一起消除</color>来<color=#FF6300>解冻</color>！"
+  english: "[LID:211]"
+}
+data {
+  id: 212
+  complexFont: "主角"
+  english: "[LID:212]"
+}
+data {
+  id: 213
+  complexFont: "妮娜"
+  english: "[LID:213]"
+}
+data {
+  id: 214
+  complexFont: "建国"
+  english: "[LID:214]"
+}
+data {
+  id: 215
+  complexFont: "鸡哥"
+  english: "[LID:215]"
+}
+data {
+  id: 216
+  complexFont: "小霉"
+  english: "[LID:216]"
+}
+data {
+  id: 217
+  complexFont: "小李子"
+  english: "[LID:217]"
+}
+data {
+  id: 218
+  complexFont: "乔帮主"
+  english: "[LID:218]"
+}
+data {
+  id: 219
+  complexFont: "龙哥"
+  english: "[LID:219]"
+}
+data {
+  id: 220
+  complexFont: "钢丝客"
+  english: "[LID:220]"
+}
+data {
+  id: 221
+  complexFont: "曼巴哥"
+  english: "[LID:221]"
+}
+data {
+  id: 222
+  complexFont: "流行之王"
+  english: "[LID:222]"
+}
+data {
+  id: 223
+  complexFont: "扑克脸女王"
+  english: "[LID:223]"
+}
+data {
+  id: 224
+  complexFont: "Taco哥"
+  english: "[LID:224]"
+}
+data {
+  id: 225
+  complexFont: "纯真哥"
+  english: "[LID:225]"
+}
+data {
+  id: 226
+  complexFont: "兵王"
+  english: "[LID:226]"
+}
+data {
+  id: 227
+  complexFont: "石头哥"
+  english: "[LID:227]"
+}
+data {
+  id: 228
+  complexFont: "劳拉"
+  english: "[LID:228]"
+}
+data {
+  id: 229
+  complexFont: "强尼金手"
+  english: "[LID:229]"
+}
+data {
+  id: 230
+  complexFont: "纽碧导演"
+  english: "[LID:230]"
+}
+data {
+  id: 231
+  complexFont: "打野歌后"
+  english: "[LID:231]"
+}
+data {
+  id: 232
+  complexFont: "碧局长"
+  english: "[LID:232]"
+}
+data {
+  id: 233
+  complexFont: "狗爷"
+  english: "[LID:233]"
+}
+data {
+  id: 234
+  complexFont: "Clara"
+  english: "[LID:234]"
+}
+data {
+  id: 235
+  complexFont: "Zaza"
+  english: "[LID:235]"
+}
+data {
+  id: 236
+  complexFont: "Ah Hu"
+  english: "[LID:236]"
+}
+data {
+  id: 237
+  complexFont: "路人1"
+  english: "[LID:237]"
+}
+data {
+  id: 238
+  complexFont: "路人2"
+  english: "[LID:238]"
+}
+data {
+  id: 239
+  complexFont: "路人3"
+  english: "[LID:239]"
+}
+data {
+  id: 240
+  complexFont: "路人4"
+  english: "[LID:240]"
+}
+data {
+  id: 241
+  complexFont: "路人5"
+  english: "[LID:241]"
+}
+data {
+  id: 242
+  complexFont: "路人6"
+  english: "[LID:242]"
+}
+data {
+  id: 243
+  complexFont: "路人7"
+  english: "[LID:243]"
+}
+data {
+  id: 244
+  complexFont: "路人8"
+  english: "[LID:244]"
+}
+data {
+  id: 245
+  complexFont: "路人9"
+  english: "[LID:245]"
+}
+data {
+  id: 246
+  complexFont: "路人10"
+  english: "[LID:246]"
+}
+data {
+  id: 247
+  complexFont: "路人11"
+  english: "[LID:247]"
+}
+data {
+  id: 248
+  complexFont: "路人12"
+  english: "[LID:248]"
+}
+data {
+  id: 249
+  complexFont: "路人13"
+  english: "[LID:249]"
+}
+data {
+  id: 250
+  complexFont: "阿宅"
+  english: "[LID:250]"
+}
+data {
+  id: 251
+  complexFont: "路人15"
+  english: "[LID:251]"
+}
+data {
+  id: 252
+  complexFont: "路人16"
+  english: "[LID:252]"
+}
+data {
+  id: 253
+  complexFont: "李小尤"
+  english: "[LID:253]"
+}
+data {
+  id: 254
+  complexFont: "爱因斯坦"
+  english: "[LID:254]"
+}
+data {
+  id: 255
+  complexFont: "风暴兵"
+  english: "[LID:255]"
+}
+data {
+  id: 256
+  complexFont: "包租婆"
+  english: "[LID:256]"
+}
+data {
+  id: 257
+  complexFont: "苏老强"
+  english: "[LID:257]"
+}
+data {
+  id: 258
+  complexFont: "华弓虽"
+  english: "[LID:258]"
+}
+data {
+  id: 259
+  complexFont: "娟儿"
+  english: "[LID:259]"
+}
+data {
+  id: 260
+  complexFont: "州长"
+  english: "[LID:260]"
+}
+data {
+  id: 261
+  complexFont: "刺激姐"
+  english: "[LID:261]"
+}
+data {
+  id: 262
+  complexFont: "路人17"
+  english: "[LID:262]"
+}
+data {
+  id: 263
+  complexFont: "路人18"
+  english: "[LID:263]"
+}
+data {
+  id: 264
+  complexFont: "路人19"
+  english: "[LID:264]"
+}
+data {
+  id: 265
+  complexFont: "路人20"
+  english: "[LID:265]"
+}
+data {
+  id: 266
+  complexFont: "路人21"
+  english: "[LID:266]"
+}
+data {
+  id: 267
+  complexFont: "路人22"
+  english: "[LID:267]"
+}
+data {
+  id: 268
+  complexFont: "路人23"
+  english: "[LID:268]"
+}
+data {
+  id: 269
+  complexFont: "路人24"
+  english: "[LID:269]"
+}
+data {
+  id: 270
+  complexFont: "路人25"
+  english: "[LID:270]"
+}
+data {
+  id: 271
+  complexFont: "路人26"
+  english: "[LID:271]"
+}
+data {
+  id: 272
+  complexFont: "M!A!G!A!"
+  english: "[LID:272]"
+}
+data {
+  id: 273
+  complexFont: "唱跳RAP样样行!"
+  english: "[LID:273]"
+}
+data {
+  id: 274
+  complexFont: "灵感永不枯竭!"
+  english: "[LID:274]"
+}
+data {
+  id: 275
+  complexFont: "我的奥斯卡呢?"
+  english: "[LID:275]"
+}
+data {
+  id: 276
+  complexFont: "一天一个苹果"
+  english: "[LID:276]"
+}
+data {
+  id: 277
+  complexFont: "Duang!"
+  english: "[LID:277]"
+}
+data {
+  id: 278
+  complexFont: "立志要当火星人"
+  english: "[LID:278]"
+}
+data {
+  id: 279
+  complexFont: "曼巴奥特!"
+  english: "[LID:279]"
+}
+data {
+  id: 280
+  complexFont: "地球当前版本唯一真神"
+  english: "[LID:280]"
+}
+data {
+  id: 281
+  complexFont: "每天造型不重样"
+  english: "[LID:281]"
+}
+data {
+  id: 282
+  complexFont: "G!O!A!T!"
+  english: "[LID:282]"
+}
+data {
+  id: 283
+  complexFont: "芝士雪豹~"
+  english: "[LID:283]"
+}
+data {
+  id: 284
+  complexFont: "坦克是没有后视镜的~"
+  english: "[LID:284]"
+}
+data {
+  id: 285
+  complexFont: "一拳打死一头牛"
+  english: "[LID:285]"
+}
+data {
+  id: 286
+  complexFont: "皮特你人呢?"
+  english: "[LID:286]"
+}
+data {
+  id: 287
+  complexFont: "没人比我更懂子弹时间"
+  english: "[LID:287]"
+}
+data {
+  id: 288
+  complexFont: "暴力美学缔造者!"
+  english: "[LID:288]"
+}
+data {
+  id: 289
+  complexFont: "如何呢?又能怎?"
+  english: "[LID:289]"
+}
+data {
+  id: 290
+  complexFont: "没人敢说我坏话!"
+  english: "[LID:290]"
+}
+data {
+  id: 291
+  complexFont: "我玩儿的就是西海岸"
+  english: "[LID:291]"
+}
+data {
+  id: 292
+  complexFont: "啊~打打打打!"
+  english: "[LID:292]"
+}
+data {
+  id: 293
+  complexFont: "派对时间也是相对的"
+  english: "[LID:293]"
+}
+data {
+  id: 294
+  complexFont: "今天不用吃原力"
+  english: "[LID:294]"
+}
+data {
+  id: 295
+  complexFont: "该交水费啦!"
+  english: "[LID:295]"
+}
+data {
+  id: 296
+  complexFont: "我要喝手磨咖啡!"
+  english: "[LID:296]"
+}
+data {
+  id: 297
+  complexFont: "这瓜保熟吗?"
+  english: "[LID:297]"
+}
+data {
+  id: 298
+  complexFont: "好烦，到了富婆的年纪~"
+  english: "[LID:298]"
+}
+data {
+  id: 299
+  complexFont: "我会回来的!"
+  english: "[LID:299]"
+}
+data {
+  id: 300
+  complexFont: "我知道你想说什么"
+  english: "[LID:300]"
+}
+data {
+  id: 301
+  complexFont: "你要耽误人家约会啦！"
+  english: "[LID:301]"
+}
+data {
+  id: 302
+  complexFont: "哪个单位的这么慢！"
+  english: "[LID:302]"
+}
+data {
+  id: 303
+  complexFont: "别划水啊！"
+  english: "[LID:303]"
+}
+data {
+  id: 304
+  complexFont: "睡着了？"
+  english: "[LID:304]"
+}
+data {
+  id: 305
+  complexFont: "等到裂开..."
+  english: "[LID:305]"
+}
+data {
+  id: 306
+  complexFont: "在吗？"
+  english: "[LID:306]"
+}
+data {
+  id: 307
+  complexFont: "人呢？"
+  english: "[LID:307]"
+}
+data {
+  id: 308
+  complexFont: "CPU干烧了？"
+  english: "[LID:308]"
+}
+data {
+  id: 309
+  complexFont: "好慢..."
+  english: "[LID:309]"
+}
+data {
+  id: 310
+  complexFont: "等到花都谢了..."
+  english: "[LID:310]"
+}
+data {
+  id: 311
+  complexFont: "泰裤辣！"
+  english: "[LID:311]"
+}
+data {
+  id: 312
+  complexFont: "遥遥领先！"
+  english: "[LID:312]"
+}
+data {
+  id: 313
+  complexFont: "你是我的神！"
+  english: "[LID:313]"
+}
+data {
+  id: 314
+  complexFont: "有两下子！"
+  english: "[LID:314]"
+}
+data {
+  id: 315
+  complexFont: "芜湖~"
+  english: "[LID:315]"
+}
+data {
+  id: 316
+  complexFont: "这不比博人传燃？"
+  english: "[LID:316]"
+}
+data {
+  id: 317
+  complexFont: "收到啦~"
+  english: "[LID:317]"
+}
+data {
+  id: 318
+  complexFont: "牛的！"
+  english: "[LID:318]"
+}
+data {
+  id: 319
+  complexFont: "舒服了~"
+  english: "[LID:319]"
+}
+data {
+  id: 320
+  complexFont: "第{0}天"
+  english: "[LID:320]"
+}
+data {
+  id: 321
+  complexFont: "设置"
+  english: "[LID:321]"
+}
+data {
+  id: 322
+  complexFont: "分享"
+  english: "[LID:322]"
+}
+data {
+  id: 323
+  complexFont: "大咖挑战"
+  english: "[LID:323]"
+}
+data {
+  id: 324
+  complexFont: "开始派对"
+  english: "[LID:324]"
+}
+data {
+  id: 325
+  complexFont: "今日剩余：{0}/{1}"
+  english: "[LID:325]"
+}
+data {
+  id: 326
+  complexFont: "通关条件"
+  english: "[LID:326]"
+}
+data {
+  id: 327
+  complexFont: "拖拽方块至棋盘"
+  english: "[LID:327]"
+}
+data {
+  id: 328
+  complexFont: "暂停"
+  english: "[LID:328]"
+}
+data {
+  id: 329
+  complexFont: "已收集"
+  english: "[LID:329]"
+}
+data {
+  id: 330
+  complexFont: "资源不足"
+  english: "[LID:330]"
+}
+data {
+  id: 331
+  complexFont: "钱不够，是否观看广告获得道具？"
+  english: "[LID:331]"
+}
+data {
+  id: 332
+  complexFont: "确定"
+  english: "[LID:332]"
+}
+data {
+  id: 333
+  complexFont: "取消"
+  english: "[LID:333]"
+}
+data {
+  id: 334
+  complexFont: "达成通关目标！"
+  english: "[LID:334]"
+}
+data {
+  id: 335
+  complexFont: "炸翻全场!"
+  english: "[LID:335]"
+}
+data {
+  id: 336
+  complexFont: "派对新面孔：+{0}"
+  english: "[LID:336]"
+}
+data {
+  id: 337
+  complexFont: "大咖解锁：{0}"
+  english: "[LID:337]"
+}
+data {
+  id: 338
+  complexFont: "返回"
+  english: "[LID:338]"
+}
+data {
+  id: 339
+  complexFont: "下一天"
+  english: "[LID:339]"
+}
+data {
+  id: 340
+  complexFont: "音效"
+  english: "[LID:340]"
+}
+data {
+  id: 341
+  complexFont: "震动"
+  english: "[LID:341]"
+}
+data {
+  id: 342
+  complexFont: "开"
+  english: "[LID:342]"
+}
+data {
+  id: 343
+  complexFont: "关"
+  english: "[LID:343]"
+}
+data {
+  id: 344
+  complexFont: "返回主页"
+  english: "[LID:344]"
+}
+data {
+  id: 345
+  complexFont: "是否放弃本局游戏，立刻结算得分？"
+  english: "[LID:345]"
+}
+data {
+  id: 346
+  complexFont: "大咖登场"
+  english: "[LID:346]"
+}
+data {
+  id: 347
+  complexFont: "本局得分"
+  english: "[LID:347]"
+}
+data {
+  id: 348
+  complexFont: "重新开始"
+  english: "[LID:348]"
+}
+data {
+  id: 349
+  complexFont: "解锁"
+  english: "[LID:349]"
+}
+data {
+  id: 350
+  complexFont: "是否消耗体力重新开始？"
+  english: "[LID:350]"
+}
+data {
+  id: 351
+  complexFont: "钱不够花bro！"
+  english: "[LID:351]"
+}
+data {
+  id: 352
+  complexFont: "是否消耗{0}碎片进行解锁？"
+  english: "[LID:352]"
+}
+data {
+  id: 353
+  complexFont: "还差一点就能解锁新人物了！"
+  english: "[LID:353]"
+}
+data {
+  id: 354
+  complexFont: "是否消耗{0}块钱购买道具？"
+  english: "[LID:354]"
+}
+data {
+  id: 355
+  complexFont: "是否退出该局游戏，游戏进度将不保存！！"
+  english: "[LID:355]"
+}
+data {
+  id: 356
+  complexFont: "历史最高"
+  english: "[LID:356]"
+}
+data {
+  id: 357
+  complexFont: "目标分数"
+  english: "[LID:357]"
+}
+data {
+  id: 358
+  complexFont: "当前分数"
+  english: "[LID:358]"
+}
+data {
+  id: 359
+  complexFont: "不服再战"
+  english: "[LID:359]"
+}
+data {
+  id: 360
+  complexFont: "遗憾放弃"
+  english: "[LID:360]"
+}
+data {
+  id: 361
+  complexFont: "再邀请{}个派对宾客解锁！"
+  english: "[LID:361]"
+}
+data {
+  id: 362
+  complexFont: "添加桌面"
+  english: "[LID:362]"
+}
+data {
+  id: 363
+  complexFont: "立刻前往"
+  english: "[LID:363]"
+}
+data {
+  id: 364
+  complexFont: "搞砸了..."
+  english: "[LID:364]"
+}
+data {
+  id: 365
+  complexFont: "溜了..."
+  english: "[LID:365]"
+}
+data {
+  id: 366
+  complexFont: "确认"
+  english: "[LID:366]"
+}
+data {
+  id: 367
+  complexFont: "已击败{}%的玩家"
+  english: "[LID:367]"
+}
+data {
+  id: 368
+  complexFont: "载入中"
+  english: "[LID:368]"
+}
+data {
+  id: 369
+  complexFont: "本关剩余：{0}/{1}"
+  english: "[LID:369]"
+}
+data {
+  id: 370
+  complexFont: "观看时间不足，无法获取奖励。"
+  english: "[LID:370]"
+}
+data {
+  id: 371
+  complexFont: "派对经营不易！广告过后派发<color=#fef15b>大量奖励!</color>"
+  english: "[LID:371]"
+}
+data {
+  id: 372
+  complexFont: "发财啦！"
+  english: "[LID:372]"
+}
+data {
+  id: 373
+  complexFont: "点击屏幕继续"
+  english: "[LID:373]"
+}
+data {
+  id: 374
+  complexFont: "神秘大咖{0}时{1}分后造访！"
+  english: "[LID:374]"
+}
+data {
+  id: 375
+  complexFont: "切歌太快啦！休息下吧~"
+  english: "[LID:375]"
+}
+data {
+  id: 376
+  complexFont: "选择想要清除的<color=#fef15b>2列</color>方块吧！"
+  english: "[LID:376]"
+}
+data {
+  id: 377
+  complexFont: "点击一个<color=#fef15b>方块</color>，敲碎它和<color=#fef15b>相邻的方块</color>！"
+  english: "[LID:377]"
+}
+data {
+  id: 378
+  complexFont: "每日观看广告，领取海量钞票"
+  english: "[LID:378]"
+}
+data {
+  id: 379
+  complexFont: "{0}时{1}分后恢复体力"
+  english: "[LID:379]"
+}
+data {
+  id: 380
+  complexFont: "别急，新的赞助商正在路上！"
+  english: "[LID:380]"
+}
+data {
+  id: 381
+  complexFont: "今天没有赞助商啦，明天来吧！"
+  english: "[LID:381]"
+}
+data {
+  id: 382
+  complexFont: "今日剩余:{0}次"
+  english: "[LID:382]"
+}
+data {
+  id: 382
+  complexFont: "失败将损失关卡进度!"
+  english: "[LID:383]"
+}

@@ -1,0 +1,48 @@
+data {
+  id: 1
+  name: "单锁"
+  img: "UI_zdn_img_bingdong03"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 2
+  name: "双锁"
+  img: "UI_zdn_img_bingdong02"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 3
+  name: "三锁"
+  img: "UI_zdn_img_bingdong"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 4
+  name: "冰桶"
+  img: "UI_zdn_tsdj_bingtong"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 5
+  name: "物品桶"
+  img: "UI_zdn_tsdj_zyxiangzi"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 6
+  name: "炸弹"
+  img: "UI_zdn_tsdj_zhadan"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 7
+  name: "道具宝箱"
+  img: "UI_zdn_tsdj_xianshibx"
+  fx: "FX_Frame_White"
+}
+data {
+  id: 55
+  name: "香槟"
+  img: "Icon_order_xiangbin"
+  desc: "开启气泡的黄金庆典！"
+}

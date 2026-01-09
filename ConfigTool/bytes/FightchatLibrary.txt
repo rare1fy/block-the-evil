@@ -1,0 +1,193 @@
+data {
+  id: 1
+  npcid: 52
+  wordto: 1
+  level: 1
+}
+data {
+  id: 2
+  npcid: 39
+  wordto: 3
+  level: 1
+}
+data {
+  id: 3
+  npcid: 39
+  order: 1
+  wordto: 4
+  level: 1
+}
+data {
+  id: 4
+  npcid: 3
+  wordto: 5
+  level: 5
+}
+data {
+  id: 6
+  npcid: 6
+  wordto: 13
+  level: 10
+}
+data {
+  id: 7
+  npcid: 5
+  wordto: 11
+  level: 15
+}
+data {
+  id: 8
+  npcid: 9
+  wordto: 19
+  level: 20
+}
+data {
+  id: 9
+  npcid: 10
+  wordto: 21
+  level: 25
+}
+data {
+  id: 10
+  npcid: 13
+  wordto: 28
+  level: 30
+}
+data {
+  id: 11
+  npcid: 22
+  wordto: 46
+  level: 35
+}
+data {
+  id: 12
+  npcid: 43
+  wordto: 51
+  level: 40
+}
+data {
+  id: 13
+  npcid: 11
+  wordto: 23
+  level: 45
+}
+data {
+  id: 14
+  npcid: 12
+  wordto: 26
+  level: 50
+}
+data {
+  id: 15
+  npcid: 18
+  wordto: 38
+  level: 55
+}
+data {
+  id: 16
+  npcid: 16
+  wordto: 34
+  level: 60
+}
+data {
+  id: 17
+  npcid: 42
+  wordto: 49
+  level: 65
+}
+data {
+  id: 18
+  npcid: 44
+  wordto: 53
+  level: 70
+}
+data {
+  id: 19
+  npcid: 49
+  wordto: 63
+  level: 75
+}
+data {
+  id: 20
+  npcid: 7
+  wordto: 15
+  level: 80
+}
+data {
+  id: 21
+  npcid: 8
+  wordto: 17
+  level: 85
+}
+data {
+  id: 22
+  npcid: 17
+  wordto: 36
+  level: 90
+}
+data {
+  id: 23
+  npcid: 19
+  wordto: 40
+  level: 95
+}
+data {
+  id: 24
+  npcid: 21
+  wordto: 44
+  level: 100
+}
+data {
+  id: 25
+  npcid: 4
+  wordto: 8
+  level: 1
+}
+data {
+  id: 26
+  npcid: 20
+  wordto: 42
+  level: 1
+}
+data {
+  id: 27
+  npcid: 14
+  wordto: 30
+  level: 1
+}
+data {
+  id: 28
+  npcid: 15
+  wordto: 32
+  level: 1
+}
+data {
+  id: 29
+  npcid: 45
+  wordto: 55
+  level: 1
+}
+data {
+  id: 30
+  npcid: 48
+  wordto: 61
+  level: 1
+}
+data {
+  id: 31
+  npcid: 46
+  wordto: 57
+  level: 1
+}
+data {
+  id: 32
+  npcid: 47
+  wordto: 59
+  level: 1
+}
+data {
+  id: 33
+  npcid: 50
+  wordto: 65
+  level: 1
+}

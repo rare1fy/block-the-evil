@@ -1,0 +1,36 @@
+data {
+  id: 1
+  word: "泰裤辣！"
+}
+data {
+  id: 2
+  word: "遥遥领先！"
+}
+data {
+  id: 3
+  word: "你是我的神！"
+}
+data {
+  id: 4
+  word: "有两下子！"
+}
+data {
+  id: 5
+  word: "芜湖~"
+}
+data {
+  id: 6
+  word: "这不比博人传燃？"
+}
+data {
+  id: 7
+  word: "收到啦~"
+}
+data {
+  id: 8
+  word: "牛的！"
+}
+data {
+  id: 9
+  word: "舒服了~"
+}

@@ -1,0 +1,1096 @@
+data {
+  id: 1
+  dialogue_type: 10
+  typeid: 1
+  txt1: "talk1"
+  next: 2
+}
+data {
+  id: 2
+  dialogue_type: 1
+  typeid: 1
+  txt1: "我在黑珍珠海滩拍到的。"
+  button1: "赞扬照片"
+  button2: "表示一般"
+  button1to: 3
+  button2to: 25
+}
+data {
+  id: 3
+  dialogue_type: 2
+  txt1: "这也太辣了！"
+  next: 4
+}
+data {
+  id: 4
+  dialogue_type: 6
+  typeid: 1
+  txt1: "那必须的！"
+  next: 5
+}
+data {
+  id: 5
+  dialogue_type: 6
+  typeid: 1
+  txt1: "哥们儿现在就在海滩当义务救生员。"
+  next: 6
+}
+data {
+  id: 6
+  dialogue_type: 1
+  typeid: 1
+  txt1: "你知道吗？最近游客越来越少了..."
+  button1: "打趣他"
+  button1to: 7
+}
+data {
+  id: 7
+  dialogue_type: 2
+  txt1: "你搞的鬼？"
+  next: 8
+}
+data {
+  id: 8
+  dialogue_type: 1
+  typeid: 1
+  txt1: "狗屁，市政厅要把岛卖给哈夫克地产，说不定到时候要把我们本地人都迁走！"
+  button1: "为什么？"
+  button1to: 9
+}
+data {
+  id: 9
+  dialogue_type: 2
+  txt1: "为什么？"
+  next: 10
+}
+data {
+  id: 10
+  dialogue_type: 1
+  typeid: 1
+  txt1: "岛上已经没什么年轻人了，很多商店都在关门"
+  button1: "哎..."
+  button1to: 11
+}
+data {
+  id: 11
+  dialogue_type: 2
+  txt1: "哎..."
+  next: 12
+}
+data {
+  id: 12
+  dialogue_type: 1
+  typeid: 1
+  txt1: "本来我还想去城里投奔你呢，没想到发生这种事情..."
+  button1: "提议本地发展"
+  button2: "提议离开"
+  button1to: 13
+  button2to: 26
+}
+data {
+  id: 13
+  dialogue_type: 2
+  txt1: "我们在这里也可以过的很好！"
+  next: 14
+}
+data {
+  id: 14
+  dialogue_type: 6
+  typeid: 1
+  txt1: "也许吧，管他呢~"
+  next: 15
+}
+data {
+  id: 15
+  dialogue_type: 1
+  typeid: 1
+  txt1: "你爷爷过几天就要出院了。"
+  button1: "天，我差点忘记了！"
+  button1to: 16
+}
+data {
+  id: 16
+  dialogue_type: 7
+  txt1: "天，我差点忘记了！"
+  next: 17
+}
+data {
+  id: 17
+  dialogue_type: 2
+  txt1: "总不能让老爷子住在猪圈里，这几天我们需要打理一下房子。"
+  next: 18
+}
+data {
+  id: 18
+  dialogue_type: 1
+  typeid: 1
+  txt1: "我会帮你的，但这里很多东西都需要维修..."
+  button1: "我也没有钱了"
+  button1to: 19
+}
+data {
+  id: 19
+  dialogue_type: 2
+  txt1: "我也没有钱了..."
+  next: 20
+}
+data {
+  id: 20
+  dialogue_type: 6
+  typeid: 1
+  txt1: "我有个主意！"
+  next: 21
+}
+data {
+  id: 21
+  dialogue_type: 1
+  typeid: 1
+  txt1: "我们在这里办派对吧！向客人收一笔酒水费！"
+  button1: "你真是个天才， Dex！"
+  button1to: 22
+}
+data {
+  id: 22
+  dialogue_type: 2
+  txt1: "你真是个天才，Dex！"
+  next: 23
+}
+data {
+  id: 23
+  dialogue_type: 1
+  typeid: 1
+  txt1: "我再盘算一下，明天晚上再和你讨论。"
+  button1: "好，晚安！"
+  button1to: 24
+}
+data {
+  id: 24
+  dialogue_type: 11
+  txt1: "好，晚安！"
+  goodfeel_reward: "1#40"
+}
+data {
+  id: 25
+  dialogue_type: 2
+  txt1: "就这？"
+  next: 27
+}
+data {
+  id: 26
+  dialogue_type: 2
+  txt1: "或许离开是个不错的选择..."
+  next: 28
+}
+data {
+  id: 27
+  dialogue_type: 6
+  typeid: 1
+  txt1: "大城市回来的就是不一样！"
+  next: 5
+}
+data {
+  id: 28
+  dialogue_type: 6
+  typeid: 1
+  txt1: "你倒是可以走，但你爷爷怎么办？"
+  next: 15
+}
+data {
+  id: 100000
+  dialogue_type: 4
+}
+data {
+  id: 100001
+  dialogue_type: 5
+}
+data {
+  id: 100002
+  dialogue_type: 9
+}
+data {
+  id: 100003
+  dialogue_type: 10
+}
+data {
+  id: 29
+  dialogue_type: 1
+  typeid: 2
+  txt1: "我觉得你挺适合干这个的！"
+  button1: "什么?"
+  button1to: 30
+}
+data {
+  id: 30
+  dialogue_type: 2
+  txt1: "什么?"
+  next: 31
+}
+data {
+  id: 31
+  dialogue_type: 1
+  typeid: 2
+  txt1: "举办派对。"
+  button1: "表示谦虚"
+  button2: "自吹自擂"
+  button1to: 32
+  button2to: 49
+}
+data {
+  id: 32
+  dialogue_type: 2
+  txt1: "总不能靠这个吃饭吧。"
+  next: 33
+}
+data {
+  id: 33
+  dialogue_type: 1
+  typeid: 2
+  txt1: "你爷爷当初就是靠这个吃饭的。"
+  button1: "什么意思？"
+  button1to: 34
+}
+data {
+  id: 34
+  dialogue_type: 2
+  txt1: "什么意思？"
+  next: 35
+}
+data {
+  id: 35
+  dialogue_type: 1
+  typeid: 2
+  txt1: "你爷爷当年可是这里的派对之王！"
+  button1: "派对之王？"
+  button1to: 36
+}
+data {
+  id: 36
+  dialogue_type: 2
+  txt1: "什么是派对之王？"
+  next: 37
+}
+data {
+  id: 37
+  dialogue_type: 6
+  typeid: 2
+  txt1: "他曾经举办了很多精彩的派对，很多明星都抢着来！"
+  next: 38
+}
+data {
+  id: 38
+  dialogue_type: 1
+  typeid: 2
+  txt1: "也带了无数的名望与财富，这才有这座规模庞大的老宅。"
+  button1: "我从来不知道这些"
+  button1to: 39
+}
+data {
+  id: 39
+  dialogue_type: 2
+  txt1: "我从来不知道这些..."
+  next: 40
+}
+data {
+  id: 40
+  dialogue_type: 1
+  typeid: 2
+  txt1: "后来他的派对过时了，没有人永远年轻，派对也一样。"
+  button1: "表达对未来的自信"
+  button2: "表达对过去的惋惜"
+  button1to: 41
+  button2to: 51
+}
+data {
+  id: 41
+  dialogue_type: 2
+  txt1: "但我们不一样！"
+  next: 42
+}
+data {
+  id: 42
+  dialogue_type: 6
+  typeid: 2
+  txt1: "是的，这是我们的优势。"
+  next: 43
+}
+data {
+  id: 43
+  dialogue_type: 6
+  typeid: 2
+  txt1: "你爷爷做了很多尝试想要挽回一切，但最后还是失败了..."
+  next: 44
+}
+data {
+  id: 44
+  dialogue_type: 1
+  typeid: 2
+  txt1: "最后染上了酗酒，最后变成现在的样子..."
+  button1: "感谢她的故事"
+  button1to: 45
+}
+data {
+  id: 45
+  dialogue_type: 2
+  txt1: "谢谢你告诉我这些。"
+  next: 46
+}
+data {
+  id: 46
+  dialogue_type: 6
+  typeid: 2
+  txt1: "好了，我们继续计划，说不定你也是下一个派对之王！"
+  next: 47
+}
+data {
+  id: 47
+  dialogue_type: 1
+  typeid: 2
+  txt1: "晚安Toby！"
+  button1: "晚安Nina"
+  button1to: 48
+}
+data {
+  id: 48
+  dialogue_type: 11
+  txt1: "晚安Nina！"
+  goodfeel_reward: "2#40"
+}
+data {
+  id: 49
+  dialogue_type: 2
+  txt1: "那是当然！"
+  next: 50
+}
+data {
+  id: 50
+  dialogue_type: 6
+  typeid: 2
+  txt1: "不愧是家族传承~"
+  next: 34
+}
+data {
+  id: 51
+  dialogue_type: 2
+  txt1: "但有些经典永不过时。"
+  next: 52
+}
+data {
+  id: 52
+  dialogue_type: 6
+  typeid: 2
+  txt1: "你可真是乐观主义者~"
+  next: 43
+}
+data {
+  id: 53
+  dialogue_type: 1
+  typeid: 3
+  txt1: "我听Nina说你是这里的本地人。想请你帮忙找一些本地的查普汀，活的。"
+  button1: "那是什么东西？？？"
+  button1to: 54
+}
+data {
+  id: 54
+  dialogue_type: 2
+  txt1: "那是什么东西？？？"
+  next: 55
+}
+data {
+  id: 55
+  dialogue_type: 1
+  typeid: 3
+  txt1: "呃，英语应该是草蜢？"
+  button1: "询问动机"
+  button1to: 56
+}
+data {
+  id: 56
+  dialogue_type: 2
+  txt1: "我知道附近的农场有一些，不过你要用来干啥？"
+  next: 57
+}
+data {
+  id: 57
+  dialogue_type: 1
+  typeid: 3
+  txt1: "调酒，要未交配的雄性，体长必须大于2cm。"
+  button1: "表示怀疑"
+  button2: "答应帮忙"
+  button1to: 58
+  button2to: 62
+}
+data {
+  id: 58
+  dialogue_type: 2
+  txt1: "你确定是用来调酒而不是做什么...奇怪的药物？"
+  next: 59
+}
+data {
+  id: 59
+  dialogue_type: 6
+  typeid: 3
+  txt1: "可能有点那方面的功效，你需要来点儿？"
+  next: 63
+}
+data {
+  id: 60
+  dialogue_type: 1
+  typeid: 3
+  txt1: "事成之后还能给你尝尝。好了，我先去忙了。"
+  button1: "bye"
+  button1to: 61
+}
+data {
+  id: 61
+  dialogue_type: 11
+  txt1: "bye"
+  goodfeel_reward: "3#40"
+}
+data {
+  id: 62
+  dialogue_type: 2
+  txt1: "你需要多少...查普汀？"
+  next: 63
+}
+data {
+  id: 63
+  dialogue_type: 6
+  typeid: 3
+  txt1: "53只，放心，不会让你白帮忙的。"
+  next: 60
+}
+data {
+  id: 64
+  dialogue_type: 6
+  typeid: 4
+  txt1: "终于轮到我了吗？"
+  next: 65
+}
+data {
+  id: 65
+  dialogue_type: 1
+  typeid: 4
+  txt1: "刚刚在和哪个美人聊天呢？"
+  button1: "实话实说"
+  button2: "调情"
+  button1to: 66
+  button2to: 76
+}
+data {
+  id: 66
+  dialogue_type: 2
+  txt1: "在修理唱片机..."
+  next: 67
+}
+data {
+  id: 67
+  dialogue_type: 6
+  typeid: 4
+  txt1: "哇偶，还真是多才多艺呢~"
+  next: 68
+}
+data {
+  id: 68
+  dialogue_type: 1
+  typeid: 4
+  txt1: "我叫Zaza，是本岛最优秀的导游~"
+  button1: "我叫Toby，是本地人"
+  button1to: 69
+}
+data {
+  id: 69
+  dialogue_type: 2
+  txt1: "Toby，本地人。"
+  next: 70
+}
+data {
+  id: 70
+  dialogue_type: 1
+  typeid: 4
+  txt1: "我从来没见过你，还打算带你逛逛呢~"
+  button1: "刚从城里回来"
+  button1to: 71
+}
+data {
+  id: 71
+  dialogue_type: 2
+  txt1: "我刚从城里回来。"
+  next: 72
+}
+data {
+  id: 72
+  dialogue_type: 1
+  typeid: 4
+  txt1: "岛上变了很多，有空了姐姐给你介绍介绍~"
+  button1: "那太好了"
+  button1to: 73
+}
+data {
+  id: 73
+  dialogue_type: 2
+  txt1: "那太好了！"
+  next: 74
+}
+data {
+  id: 74
+  dialogue_type: 6
+  typeid: 4
+  txt1: "具体什么时候就看你表现了~"
+  next: 75
+}
+data {
+  id: 75
+  dialogue_type: 8
+  typeid: 4
+  txt1: "期待你的下一次派对！"
+  goodfeel_reward: "4#40"
+}
+data {
+  id: 76
+  dialogue_type: 2
+  txt1: "一直在等你~"
+  next: 77
+}
+data {
+  id: 77
+  dialogue_type: 6
+  typeid: 4
+  txt1: "油嘴滑舌的小坏蛋！"
+  next: 68
+}
+data {
+  id: 78
+  dialogue_type: 1
+  typeid: 5
+  txt1: "你好！我叫Ah Hu！"
+  button1: "自我介绍"
+  button1to: 79
+}
+data {
+  id: 79
+  dialogue_type: 2
+  txt1: "Toby"
+  next: 80
+}
+data {
+  id: 80
+  dialogue_type: 1
+  typeid: 5
+  txt1: "派对地址是你的收件地址吗？"
+  button1: "询问动机"
+  button1to: 81
+}
+data {
+  id: 81
+  dialogue_type: 2
+  txt1: "是的，为什么这样问？"
+  next: 82
+}
+data {
+  id: 82
+  dialogue_type: 6
+  typeid: 5
+  txt1: "我给你准备了一份礼物，今晚的收获~"
+  next: 83
+}
+data {
+  id: 83
+  dialogue_type: 10
+  typeid: 5
+  txt1: "talk2"
+  next: 84
+}
+data {
+  id: 84
+  dialogue_type: 1
+  typeid: 5
+  txt1: "它真漂亮，不是吗？"
+  button1: "婉拒礼物"
+  button2: "接受心意"
+  button1to: 85
+  button2to: 90
+}
+data {
+  id: 85
+  dialogue_type: 2
+  txt1: "这太贵重了我不能拿！"
+  next: 86
+}
+data {
+  id: 86
+  dialogue_type: 6
+  typeid: 5
+  txt1: "这是我的心意，如果你愿意尝试和我做朋友~"
+  next: 87
+}
+data {
+  id: 87
+  dialogue_type: 1
+  typeid: 5
+  txt1: "好了，我该上岸了！"
+  button1: "你居然在海里和我聊天吗？？？"
+  button1to: 89
+}
+data {
+  id: 88
+  dialogue_type: 2
+  txt1: "你居然在海里和我聊天吗？？？"
+  next: 89
+}
+data {
+  id: 89
+  dialogue_type: 8
+  typeid: 5
+  txt1: "当然，回见！"
+  goodfeel_reward: "5#40"
+}
+data {
+  id: 90
+  dialogue_type: 2
+  txt1: "我也在考虑给你准备什么礼物！"
+  next: 91
+}
+data {
+  id: 91
+  dialogue_type: 6
+  typeid: 5
+  txt1: "哈哈！我很期待！"
+  next: 87
+}
+data {
+  id: 92
+  dialogue_type: 6
+  typeid: 1
+  txt1: "我从叔叔那里借来了抽水机！"
+  next: 93
+}
+data {
+  id: 93
+  dialogue_type: 1
+  typeid: 1
+  txt1: "这样我们就可以从海里抽水而不需要支付自来水费~"
+  button1: "那我明天就去打扫水池"
+  button1to: 94
+}
+data {
+  id: 94
+  dialogue_type: 2
+  txt1: "那我明天就去打扫水池！"
+  next: 95
+}
+data {
+  id: 95
+  dialogue_type: 6
+  typeid: 1
+  txt1: "我忍不住开始幻想我们的泳池派对了~"
+  next: 96
+}
+data {
+  id: 96
+  dialogue_type: 1
+  typeid: 1
+  txt1: "有点急事，先下了！"
+  button1: "注意身体"
+  button1to: 97
+  goodfeel_reward: "1#40"
+}
+data {
+  id: 97
+  dialogue_type: 11
+  txt1: "注意身体！"
+}
+data {
+  id: 98
+  dialogue_type: 6
+  typeid: 2
+  txt1: "我找到一些老照片。"
+  next: 99
+}
+data {
+  id: 99
+  dialogue_type: 10
+  typeid: 2
+  txt1: "talk3"
+  next: 100
+}
+data {
+  id: 100
+  dialogue_type: 1
+  typeid: 2
+  txt1: "难以想象当年的盛况！"
+  button1: "就连猫王都曾参加过！"
+  button1to: 101
+}
+data {
+  id: 101
+  dialogue_type: 7
+  txt1: "就连猫王都曾参加过！"
+  next: 102
+}
+data {
+  id: 102
+  dialogue_type: 2
+  txt1: "要是能一直这样该多好啊..."
+  next: 103
+}
+data {
+  id: 103
+  dialogue_type: 8
+  typeid: 2
+  txt1: "这或许得问你爷爷..."
+  goodfeel_reward: "2#40"
+}
+data {
+  id: 104
+  dialogue_type: 6
+  typeid: 3
+  txt1: "Nina和我说了你爷爷的事情，你先拿去用！"
+  next: 105
+}
+data {
+  id: 105
+  dialogue_type: 3
+  typeid: 3
+  txt1: "sendmoney"
+  button1: "谢谢，我以后会还给你的"
+  button2: "不需要，我能自己搞定"
+  button1to: 117
+  button2to: 106
+  reward1: "1#1000"
+}
+data {
+  id: 106
+  dialogue_type: 2
+  txt1: "不需要，我能自己搞定。"
+  next: 107
+}
+data {
+  id: 107
+  dialogue_type: 1
+  typeid: 3
+  txt1: "希望这是自信而不是狂妄。"
+  button1: "能和我说说你自己吗？我对你还不够了解..."
+}
+data {
+  id: 108
+  dialogue_type: 2
+  txt1: "能和我说说你自己吗？我对你还不够了解..."
+  next: 109
+}
+data {
+  id: 109
+  dialogue_type: 1
+  typeid: 3
+  txt1: "我叫Clara！"
+  button1: "说点不知道的"
+  button1to: 110
+}
+data {
+  id: 110
+  dialogue_type: 2
+  txt1: "说点不知道的。"
+  next: 111
+}
+data {
+  id: 111
+  dialogue_type: 1
+  typeid: 3
+  txt1: "我是西班牙巴塞罗那大学的化学系助教，Nina的朋友。"
+  button1: "追问她的身份"
+  button1to: 112
+}
+data {
+  id: 112
+  dialogue_type: 2
+  txt1: "你这样的高材生不应该天天泡在实验室和书本里吗？"
+  next: 113
+}
+data {
+  id: 113
+  dialogue_type: 1
+  typeid: 3
+  txt1: "我是因为喜欢调酒所以选的化学系。"
+  button1: "难以置信..."
+  button1to: 114
+}
+data {
+  id: 114
+  dialogue_type: 2
+  txt1: "难以置信..."
+  next: 115
+}
+data {
+  id: 115
+  dialogue_type: 1
+  typeid: 3
+  txt1: "好了，我要继续实验了。"
+  button1: "好突兀的结束方式..."
+  button1to: 116
+}
+data {
+  id: 116
+  dialogue_type: 11
+  txt1: "好突兀的结束方式..."
+  goodfeel_reward: "3#40"
+}
+data {
+  id: 117
+  dialogue_type: 2
+  txt1: "谢谢，我以后会还给你的。"
+  next: 118
+}
+data {
+  id: 118
+  dialogue_type: 1
+  typeid: 3
+  txt1: "不必了，就当是草蜢酒的补偿！"
+  button1: "深入了解她"
+  button1to: 108
+}
+data {
+  id: 119
+  dialogue_type: 6
+  typeid: 5
+  txt1: "兄弟，你睡了吗？"
+  next: 120
+}
+data {
+  id: 120
+  dialogue_type: 1
+  typeid: 5
+  txt1: "我感觉有点不对！"
+  button1: "发生什么事了？"
+  button1to: 121
+}
+data {
+  id: 121
+  dialogue_type: 2
+  txt1: "发生什么事了？"
+  next: 122
+}
+data {
+  id: 122
+  dialogue_type: 1
+  typeid: 5
+  txt1: "今天海里一只鱼都没有！"
+  button1: "这代表什么？"
+  button1to: 123
+}
+data {
+  id: 123
+  dialogue_type: 2
+  txt1: "这代表什么？"
+  next: 124
+}
+data {
+  id: 124
+  dialogue_type: 1
+  typeid: 5
+  txt1: "可能附近有大型掠食者？"
+  button1: "你是说鲨鱼！"
+  button1to: 125
+}
+data {
+  id: 125
+  dialogue_type: 2
+  txt1: "你是说鲨鱼！"
+  next: 126
+}
+data {
+  id: 126
+  dialogue_type: 6
+  typeid: 5
+  txt1: "可能更糟糕！"
+  next: 127
+}
+data {
+  id: 127
+  dialogue_type: 1
+  typeid: 5
+  txt1: "我得先返航了。"
+  button1: "上帝保佑你。"
+  button1to: 128
+}
+data {
+  id: 128
+  dialogue_type: 11
+  txt1: "上帝保佑你。"
+  goodfeel_reward: "5#40"
+}
+data {
+  id: 129
+  dialogue_type: 1
+  typeid: 1
+  txt1: "问你个事。"
+  button1: "什么"
+  button1to: 130
+}
+data {
+  id: 130
+  dialogue_type: 2
+  txt1: "什么？"
+  next: 131
+}
+data {
+  id: 131
+  dialogue_type: 1
+  typeid: 1
+  txt1: "你有没有发现最近Nina怪怪的！"
+  button1: "没有"
+  button1to: 132
+}
+data {
+  id: 132
+  dialogue_type: 2
+  txt1: "没有。"
+  next: 133
+}
+data {
+  id: 133
+  dialogue_type: 1
+  typeid: 1
+  txt1: "你好好想想。"
+  button1: "有点心不在焉"
+  button2: "她最近到派对很晚"
+  button1to: 134
+  button2to: 140
+}
+data {
+  id: 134
+  dialogue_type: 2
+  txt1: "有点心不在焉..."
+  next: 135
+}
+data {
+  id: 135
+  dialogue_type: 6
+  typeid: 1
+  txt1: "而且在派对上迟到！"
+  next: 136
+}
+data {
+  id: 136
+  dialogue_type: 1
+  typeid: 1
+  txt1: "我在她身上闻到了奇怪的味道..."
+  button1: "什么味道"
+  button1to: 137
+}
+data {
+  id: 137
+  dialogue_type: 2
+  txt1: "什么味道？"
+  next: 138
+}
+data {
+  id: 138
+  dialogue_type: 1
+  typeid: 1
+  txt1: "某种药粉，我会继续调查的。"
+  button1: "表示关心"
+  button1to: 139
+}
+data {
+  id: 139
+  dialogue_type: 11
+  txt1: "好吧，有需要的话联系我。"
+  goodfeel_reward: "1#40"
+}
+data {
+  id: 140
+  dialogue_type: 2
+  txt1: "她最近到派对的时间都很晚。"
+  next: 141
+}
+data {
+  id: 141
+  dialogue_type: 1
+  typeid: 1
+  txt1: "而且感觉身体被掏空！"
+  next: 136
+}
+data {
+  id: 142
+  dialogue_type: 6
+  typeid: 5
+  txt1: "你不敢相信我看到了什么！"
+  next: 143
+}
+data {
+  id: 143
+  dialogue_type: 10
+  typeid: 5
+  txt1: "talk4"
+  next: 153
+}
+data {
+  id: 144
+  dialogue_type: 2
+  txt1: "这是你的船？"
+  next: 145
+}
+data {
+  id: 145
+  dialogue_type: 1
+  typeid: 5
+  txt1: "她被干成了碎片。"
+  button1: "或许是鲨鱼"
+  button2: "或许是人为的"
+  button1to: 146
+  button2to: 151
+}
+data {
+  id: 146
+  dialogue_type: 2
+  txt1: "或许是鲨鱼？"
+  next: 147
+}
+data {
+  id: 147
+  dialogue_type: 6
+  typeid: 5
+  txt1: "除非这个鲨鱼有钛合金假牙！"
+  next: 148
+}
+data {
+  id: 148
+  dialogue_type: 1
+  typeid: 5
+  txt1: "我感觉是某种巨型海洋生物，比鲨鱼更大！"
+  button1: "你最近不要下海了。"
+  button1to: 149
+}
+data {
+  id: 149
+  dialogue_type: 2
+  txt1: "你最近不要下海了。"
+  next: 150
+}
+data {
+  id: 150
+  dialogue_type: 8
+  typeid: 5
+  txt1: "你逼我我也不去了..."
+  goodfeel_reward: "5#40"
+}
+data {
+  id: 151
+  dialogue_type: 2
+  txt1: "或许是人为的。"
+  next: 152
+}
+data {
+  id: 152
+  dialogue_type: 6
+  typeid: 5
+  txt1: "我没得罪任何人啊？"
+  next: 148
+}
+data {
+  id: 153
+  dialogue_type: 1
+  typeid: 5
+  txt1: "我可怜的宝贝..."
+  button1: "这是你的船？"
+  button1to: 144
+}

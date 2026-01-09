@@ -1,0 +1,478 @@
+syntax="proto3";
+option go_package = "./pb";
+
+message StaticFrameNode
+{
+	 int32 resource_id = 1;// 图片图集ID
+	 int32 text_id = 2;    // 对话ID
+	 int32 audio_id = 3;   // 背景音效ID
+	 string ani_mode = 4;   // 播放模式(上下左右)
+	 int32 ani_time = 5;   // 动画播放时间
+	 int32 duration_time = 6; // 持续时间
+	 int32 talk_audio_id = 7;   // 旁白，对话
+}
+
+message StartEndValue
+{
+   	 int32 v1 = 1;
+     int32 v2 = 2;
+}
+
+message HomeBgValue
+{
+	 int32 x = 1;
+     int32 y = 2;
+}
+
+message PlayerTalkInfo
+{
+	 int32 left_id = 1;
+	 int32 right_id = 2;
+	 int32 lighting_pos = 3;
+	 int32 talk_id = 4;
+	 int32 audio_id = 5;
+     int32 can_jump = 6;
+	 int32 left_bg_id = 7;
+	 int32 right_bg_id = 8;
+}
+
+message ItemConfig
+{
+
+     int32 id = 1;
+     int64 number = 2;
+}
+
+message CmdActLimit
+{
+	 int32 id = 1;		//id
+	 int32 cmd = 2;		//主消息号
+	 int32 act = 3;		//子消息号
+	 int32 cd = 4;		//cd时间(毫秒)
+	 int32 times_max = 5;		//次数上限
+	 string operate_desc = 6;		//操作描述
+}
+
+
+
+message MailAsk
+{
+	 string ask_id = 1;		//问卷id
+	 int32 time_type = 2;		//问卷是否时限
+	 int32 ask_time_open = 3;		//开始时间
+	 int32 ask_time_close = 4;		//结束时间
+	 int32 ask_type = 5;		//事件枚举
+	 int32 statistics_module = 6;		//统计值
+	 int32 special_limit_type = 7;		//特殊限制类型
+	repeated int32 special_limit_value = 8;		//特殊限制类型值
+	 int32 email_need = 9;		//问卷邮件ID
+	 string email_url = 10;		//问卷链接
+	repeated ItemConfig email = 11;		//问卷邮件附件
+	 int32 ask_need_1 = 12;		//奖励邮件ID
+	repeated ItemConfig ask = 13;		//提交问卷奖励
+	 int32 is_open = 14;		//是否开启
+	 int32 ask_max = 15;		//回收上限
+	 int32 back_time_open = 16;		//回归问卷触发时间
+}
+
+message MailAskConfig
+{
+	repeated MailAsk data = 1;
+}
+
+message MailCfg
+{
+	 int32 mail_id = 1;		//邮件ID
+	 int32 mail_type = 2;		//邮件类型
+	 int32 is_del = 3;		//是否能够一键删除
+	 int32 mail_skin = 4;		//邮件皮肤
+	 string mail_title = 5;		//系统邮件标题_FID_LID
+	 string mail_content = 6;		//系统邮件内容_FID_LID
+	 string mail_addresser = 7;		//系统邮件发件人_FID_LID
+	 int32 save_time_1 = 8;		//未读-无附件-保存期
+	 int32 save_time_2 = 9;		//未读-有附件-保存期
+	 int32 save_time_3 = 10;		//已读-无附件-保存期
+	 int32 save_time_4 = 11;		//已读-有附件-未领取-保存期
+	 int32 save_time_5 = 12;		//已读-有附件-已领取-保存期
+	 string mail_ask = 13;		//关联问卷
+}
+
+message MailCfgConfig
+{
+	repeated MailCfg data = 1;
+}
+
+message MainPlayerShow
+{
+	 int32 id = 1;		//序列
+	 string main_showplayer_id = 2;		//主界面展示人物模型
+	 string role_name = 3;		//角色描述_FID_LID
+	 int32 res_type = 4;		//资源类型
+	repeated int32 main_palyer_cv = 5;		//该主角CV1
+}
+
+message MainPlayerShowConfig
+{
+	repeated MainPlayerShow data = 1;
+}
+
+message ManagerConstParameter
+{
+	 int32 id = 1;		//ID
+	 int32 common_use_total = 2;		//常用球员总场次权重
+	 int32 common_use_recent = 3;		//常用球员最近场次权重
+	 ItemConfig cost_change_name = 4;		//改名消耗道具
+	 int32 match_lower_limit = 5;		//计入排行榜比赛场次下限
+	 int32 favorite_player_max = 6;		//常用球员最大数量
+	 ItemConfig cost_loud_speak = 7;		//一次大喇叭消耗道具
+}
+
+//关卡配置
+message MatchingLvBaseCfg
+{
+    int32 id = 1; //关卡id
+	int32 chapter = 2; //大关卡id
+	int32 level   = 3; //小关卡id
+	int32 noExp   = 4; //未进球经验
+	int32 goalExp = 5; //进球经验
+	int32 goalItemGold = 6; //进球出产道具
+	int64 itemGoldMin = 7; //道具产出min数量
+	int64 itemGoldMax = 8; //道具产出max数量
+	int32 numberOfGoals = 9; //进阶赛进球数量
+	int32 maximumLevel  = 10; //最后一关  0：false  1：true
+	int32 toughnessValue = 11; //耐力恢复值（韧性）
+	int64 speedAction = 12; //出手速率 单位：毫秒
+	int32 bossId = 13; //触发晋级赛关id
+}
+
+//一些公式的参数配置
+message FormulaParamCfg
+{
+    int32 formulaId = 1; //公式id
+	int32 pram1 = 2; //参数1
+	int32 pram2 = 3; //参数2
+	int32 pram3 = 4; //参数3
+	int32 pram4 = 5; //参数4
+	int32 pram5 = 6; //参数5
+	int32 pram6 = 7; //参数6
+	int32 pram7 = 8; //参数7
+	int32 pram8 = 9; //参数8
+	int32 pram9 = 10; //参数9
+	int32 pram10 = 11; //参数10
+}
+
+
+message SpeedAfkBaseCfg
+{
+    int32 id = 1;
+	int32 consumption_times = 2;//消耗固定耐力值
+	repeated ItemConfig no_limit_props = 3; //不限制消耗道具和数量
+}
+
+
+message SkillBaseCfg
+{
+    int32 skill_id = 1 ;//技能id
+	int32 skill_group    = 2; //技能组
+	int32 skill_type = 3 ;//技能类型
+	int32 enum_id = 4 ;//技能枚举id
+	repeated ItemConfig upgrade_cost = 5 ;//升级消耗
+	int32 skill_lv = 6 ;//技能等级
+	int32 max_lv = 7 ;//是否满级
+	int32 skill_quality = 8 ;//品质
+	int32 skill_energy = 9 ;//释放能量
+	int32 skill_fame_points = 10 ;//技能转化战斗力
+	repeated ItemConfig repeat_conversion = 11; //重复获得转化
+}
+
+
+message SkillPositionCfg
+{
+	int32	pid = 1; //技能槽位id
+	int32	position_type = 2; //可放置技能类型
+	int32	unlock_method = 3; //解锁方式
+	int32	unlock_value = 4; //解锁值
+	UnlockConditionInfo unlockInfo = 5; //解锁条件
+}
+
+//解锁条件信息
+message UnlockConditionInfo
+{
+    int32 unlockType = 1; //解锁条件类型
+	repeated int64 unlockParams = 2; //解锁条件参数
+}
+
+
+
+//技能枚举
+message SkillEnumCfg
+{
+	int32 enum_id = 1;//技能枚举id
+	int32 enum_skill_type = 2; //技能枚举类型
+	repeated int32 enum_skill_parm = 3;//枚举参数
+}
+
+//buff枚举
+message buffEnumCfg
+{
+	int32 enum_buff_id = 1; //枚举id
+	int32 enum_buff_type = 2; //buff类型
+	int32 continuous_type = 3; //持续类型：0：全局持续，1：持续回合数
+	int64 continuous_value = 4; //持续值
+	repeated int32 enum_buff_parm = 5; //枚举参数
+}
+
+
+//属性配置
+message NewPropertyBaseCfg
+{
+	int32 prop_id = 1; //属性id
+}
+
+//投篮条配置
+message BattlepointBaseCfg
+{
+	int32 battlepoint_id = 1; //ID
+	int32 total_length = 2; //总长度
+	int32 moving_time = 3; //移动时间
+	int32 center_point = 4; //中心点坐标
+	int32 perfect_scope = 5; //perfect范围
+	int32 nice_scope = 6; //nice范围
+	int32 good_scope = 7; //good范围
+	int32 soso_scope = 8; //soso范围
+	int32 perfect_feel = 9; //perfect手感
+	int32 nice_feel = 10; //nice手感
+	int32 good_feel = 11; //good手感
+	int32 soso_feel = 12; //soso手感
+	int32 perfect_energy = 13; //perfect能量
+	int32 nice_energy = 14; //nice能量
+	int32 good_energy = 15; //good能量
+	int32 soso_energy = 16; //soso能量
+}
+
+message  MatchNiceContinuousCfg
+{
+	int32 nice_time = 1; //nice连续次数档位
+	int32 p_probability = 2; //p点出现概率
+	int32 ordinary_ball_probability = 3; //普通球出现概率
+	int32 silver_ball_probability = 4; //银球出现概率
+	int32 golden_ball_probability = 5; //金球出现概率
+	int32 colored_ball_probability = 6; //彩球出现概率
+}
+
+// 排行榜奖励
+message GamerLeaderboardReward {
+	map<int32, GamerLeaderboardRewardList> leaderboard_rewards = 1; // 排行榜奖励
+}
+
+message GamerLeaderboardRewardList {
+	repeated ItemConfig items = 1;
+}
+
+
+message MatchModeBaseCfg
+{
+	int32 model_id = 1;
+	int32 settlement_type = 2;  //结算类型：1：球数，2：时间长度
+	int32 settlement_value = 3;  //结算值
+	int32 wol_type = 4;         //胜负类型：1，比分
+}
+
+//pvp段位奖励
+message DuelRankBaseCfg
+{
+	int32 id = 1;//
+	int32  duel_rank_score = 2; //段位触达对决积分
+	repeated ItemConfig duel_rank_reward = 3; //段位奖励
+}
+
+
+message DuelSeasonBaseCfg
+{
+	int32 id = 1; //赛季id
+	int64 duel_season_open_time = 2; //赛季开启时间
+	int64 season_end_time = 3; //赛季冻结时间
+	int64 duel_season_close_time = 4; //赛季结束时间
+}
+
+message FameleaderboardRewardCfg
+{
+	int32 id = 1; 
+	int32 num_fame = 2; //声望
+	repeated ItemConfig reward_fame = 3; //奖励
+}
+
+//装备配置表
+message EquipmentBaseCfg
+{
+	int32 id = 1; 
+	int32 equipment_type = 2; //装备位置
+	int32 equipment_level = 3; //装备等级
+	int32 equipment_lv = 4; // 装备品质
+	int32 property_id = 5; //属性类型
+	int32 property_min = 6; //属性最小值
+	int32 property_max = 7; //属性最大值
+	int32 affix_pool = 8 ; //特殊词缀池
+	repeated ItemConfig break_down = 9; //分解材料
+	int32  affix_refined_pool = 10; //洗炼词缀池
+	repeated ItemConfig refined_item = 11; //洗炼消耗资源
+}
+
+//id对应权重
+message KeyIdRate
+{
+	int32 id = 1;  //id
+	int32 rate      = 2; //权重
+}
+
+
+//装备词缀随机池配置表
+message EquipmentSpecialPoolCfg
+{
+	int32 id = 1; 
+	KeyIdRate weight_group_1 = 2; //词缀权重
+	KeyIdRate weight_group_2 = 3; //词缀权重
+	KeyIdRate weight_group_3 = 4; //词缀权重
+	KeyIdRate weight_group_4 = 5; //词缀权重
+	KeyIdRate weight_group_5 = 6; //词缀权重
+}
+
+
+//邮件配置表
+message MailBaseInfoCfg
+{
+	int32 id = 1;
+	string name_Mail = 2; //邮件标题
+	string txt_Mail  = 3; //邮件文本
+	string sender_Mail = 4; //发件人
+	repeated ItemConfig item_Mail = 5; //附件奖励
+}
+
+//装备宝箱信息
+message EquipmentTreasurechestBaseCfg
+{
+	int32 id = 1; //宝箱id
+	int32 type = 2; //宝箱种类（头盔1手套2衣服3裤子4鞋5篮球6随机7）
+	int32 lv = 3; //宝箱等级
+	repeated KeyIdRate seting_equimentbox = 4; //宝箱产出与权重
+	repeated ItemConfig gold_equimentbox = 5;//宝箱售价
+	int32 ads = 6;//广告次数
+	int32 free = 7; //免费次数
+	int32 refresh = 8;//刷新时间点（h）
+}
+
+//装备宝箱等级信息
+message EquipmentTreasurechestLvupCfg
+{
+	int32 id = 1; //宝箱等级
+	int32 is_maxlv = 2; //是否满级
+	int32 exp_lvup = 3; //宝箱经验需求
+	repeated ItemConfig item_lvup = 4; //道具需求
+	int32 playerLv_lvup = 5; //玩家等级需求
+	repeated KeyIdRate seting_luckydraw = 6; //抽奖生成权重
+}
+
+//7日任务活动
+message ActiveSevenDaysCfg
+{
+	int32 id = 1;
+	repeated int32 taskid = 2; //小任务id列表
+}
+
+//掉落道具数量权重
+message DropItemRateInfo
+{
+	int32 id = 1; //道具id
+	int64 num = 2; //数量
+	int32 rate = 3; //权重
+}
+
+//技能宝箱配置
+message SkillTreasurechestBaseCfg
+{
+	int32 id = 1;
+	repeated DropItemRateInfo drop = 2; //掉落
+	int32 ads = 3;//广告刷新次数
+	int32 free = 4; //免费刷新次数
+	int32 refresh = 5; //刷新时间节点
+	repeated ItemConfig  spend_item = 6; //单次花费的道具
+}
+
+
+//充值配置表
+message ShopRechargeCfg
+{
+	int32 Goods_id = 1; //商品id
+	int32 Shop_id = 2; //商店id
+	repeated ItemConfig Item_id = 3; //道具id
+	int32 Cost_doll = 4;  //售价美分
+	int32 Limit_buy_type = 5; //限购类型  1、每日限购  2、永久限购  3、不限购
+	int32 Limit_buy_num = 6; //限购数量
+	
+}
+
+
+message ShopTypeCfg
+{
+	int32 shopId = 1 ; //商店id
+}
+
+
+message ModuleUnlockCfg
+{
+	int32 ModuleId = 1;  //功能id
+	int32 UnlockCondition = 2; //解锁条件只做123 1等级解锁、2任务解锁、3关卡解锁、4服务器时间、5玩家时间解锁
+	repeated int64 EnableNum = 3;  //开启条件数值
+}
+
+message VipPerksCfg
+{
+	int32 id = 1; 
+	repeated ItemConfig  instantClaim = 2; //一次性奖励
+	repeated ItemConfig  dailyReward = 3; //每日奖励
+	int32 rechargeId = 4; //充值id
+	int32 isTime     = 5; //是否有时限1限时
+	int32 countDown  = 6; //倒计时天数
+	int32  isADFree  = 7; //是否免广告
+}
+
+//服务器信息
+message ServerListCfg
+{
+	int32 id = 1; //服务器id
+	string name = 2; //服务器名称
+	int32  status = 3; //服务器状态   0：维护中   4: 关闭中  
+	int32  tag    = 4; //服务器标签
+}
+
+//装备栏升级配置
+message EquipmentSoltLvupCfg
+{
+	int32 id = 1; 
+	map<int32, int32>  hat_delivery = 2;  //头部装备栏属性投放
+	map<int32, int32>  gloves_delivery = 3; //护腕装备栏属性投放
+	map<int32, int32>  clothes_delivery = 4;//衣服装备栏属性投放
+	map<int32, int32>  pants_delivery = 5;//裤子装备栏属性投放
+	map<int32, int32>  shoes_delivery = 6;//鞋子装备栏属性投放
+	map<int32, int32>  basketball_delivery = 7; //篮球装备栏属性投放
+	repeated ItemConfig need = 8; //所需资源
+}
+
+//装备升阶配置
+message EquipmentUpGradeCfg
+{
+	int32 lv = 1; //装备栏等级
+	map<int32, int32>  hat_delivery = 2;  //头部装备栏属性投放
+	map<int32, int32>  gloves_delivery = 3; //护腕装备栏属性投放
+	map<int32, int32>  clothes_delivery = 4;//衣服装备栏属性投放
+	map<int32, int32>  pants_delivery = 5;//裤子装备栏属性投放
+	map<int32, int32>  shoes_delivery = 6;//鞋子装备栏属性投放
+	map<int32, int32>  basketball_delivery = 7; //篮球装备栏属性投放
+	int32 need = 8; //升到该级所需经验值
+	int32 exp  = 9; //作为素材的经验值
+}
+
+
+
+
+

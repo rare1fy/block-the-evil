@@ -1,0 +1,45 @@
+data {
+  id: 1
+  sp_npc: 4
+  npc: 1000
+}
+data {
+  id: 2
+  sp_npc: 20
+  npc: 1500
+}
+data {
+  id: 3
+  sp_npc: 14
+  npc: 2000
+}
+data {
+  id: 4
+  sp_npc: 15
+  npc: 2500
+}
+data {
+  id: 5
+  sp_npc: 45
+  npc: 3000
+}
+data {
+  id: 6
+  sp_npc: 48
+  npc: 3500
+}
+data {
+  id: 7
+  sp_npc: 46
+  npc: 4000
+}
+data {
+  id: 8
+  sp_npc: 47
+  npc: 4500
+}
+data {
+  id: 9
+  sp_npc: 50
+  npc: 5000
+}

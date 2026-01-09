@@ -1,0 +1,12 @@
+data {
+  id: 10001
+  share_img_url: "https://mmocgame.qpic.cn/wechatgame/wbaic5RnxOc0Sd7zP81WpfFPFHu7TRTNWvf8zTbB30G2IuxiapzO1ZQKfW3wLgYd7ic/0"
+  share_text: "练习时长两年半，就差一块了！"
+  is_random_pool: 1
+}
+data {
+  id: 10002
+  share_img_url: "https://mmocgame.qpic.cn/wechatgame/35QtSvYvCJvyxico9ia942QYDj8plujB9L3IrhibhmkzKpRoiao0wTAAx2Av3SzzWiasf/0"
+  share_text: "雪豹闭嘴！你来你也过不了。"
+  is_random_pool: 1
+}

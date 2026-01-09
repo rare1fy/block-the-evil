@@ -1,0 +1,210 @@
+data {
+  id: 1
+  music: "bgm_island_funk"
+  img: "UI_BGM_island_funk"
+  consume: "1#200"
+  beats_ani: "OrderItem_Loop_2"
+  beats_ani_main_dj: "Player_Dance_2"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2"
+}
+data {
+  id: 2
+  music: "bgm_faraway_latin_girl"
+  img: "UI_BGM_Faraway_latin_girl"
+  consume: "2#200"
+  beats_ani: "OrderItem_Loop_1dian6"
+  beats_ani_main_dj: "Player_Dance_1dian6"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian6"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian6"
+}
+data {
+  id: 3
+  music: "bgm_till_the_very_end"
+  img: "UI_BGM_Till_the_very_end"
+  consume: "3#200"
+  beats_ani: "OrderItem_Loop_1dian6"
+  beats_ani_main_dj: "Player_Dance_1dian6"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian6"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian6"
+}
+data {
+  id: 4
+  music: "bgm_Elite_Monster"
+  img: "UI_BGM_Elite_Monster"
+  consume: "4#200"
+  beats_ani: "OrderItem_Loop_2dian1"
+  beats_ani_main_dj: "Player_Dance_2dian1"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian1"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian1"
+}
+data {
+  id: 5
+  music: "bgm_swag_diving"
+  img: "UI_BGM_Swag_diving"
+  consume: "5#200"
+  beats_ani: "OrderItem_Loop_2dian3"
+  beats_ani_main_dj: "Player_Dance_2dian3"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian3"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian3"
+}
+data {
+  id: 6
+  music: "bgm_Twilight_in_Smoke"
+  img: "UI_BGM_Twilight_in_Smoke"
+  consume: "1#400"
+  beats_ani: "OrderItem_Loop_2dian1"
+  beats_ani_main_dj: "Player_Dance_2dian1"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian1"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian1"
+}
+data {
+  id: 7
+  music: "bgm_Moon_Vibe"
+  img: "UI_BGM_Moon_Vibe"
+  consume: "2#400"
+  beats_ani: "OrderItem_Loop_2dian1"
+  beats_ani_main_dj: "Player_Dance_2dian1"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian1"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian1"
+}
+data {
+  id: 8
+  music: "bgm_Slow_Faint"
+  img: "UI_BGM_Slow_Faint"
+  consume: "3#400"
+  beats_ani: "OrderItem_Loop_2dian7"
+  beats_ani_main_dj: "Player_Dance_2dian7"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian7"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian7"
+}
+data {
+  id: 9
+  music: "bgm_neon_beach"
+  img: "UI_BGM_neon_beach"
+  consume: "4#400"
+  beats_ani: "OrderItem_Loop_1dian6"
+  beats_ani_main_dj: "Player_Dance_1dian6"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian6"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian6"
+}
+data {
+  id: 10
+  music: "bgm_seek_in_the_sunset"
+  img: "UI_BGM_seek_in_the_sunset"
+  consume: "5#400"
+  beats_ani: "OrderItem_Loop_1dian7"
+  beats_ani_main_dj: "Player_Dance_1dian7"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian7"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian7"
+}
+data {
+  id: 11
+  music: "bgm_Mind_Shake"
+  img: "UI_BGM_Mind_shake"
+  consume: "1#800"
+  beats_ani: "OrderItem_Loop_1dian7"
+  beats_ani_main_dj: "Player_Dance_1dian7"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian7"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian7"
+}
+data {
+  id: 12
+  music: "bgm_tipsy_yet"
+  img: "UI_BGM_tipsy_yet"
+  consume: "2#800"
+  beats_ani: "OrderItem_Loop_2dian1"
+  beats_ani_main_dj: "Player_Dance_2dian1"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian1"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian1"
+}
+data {
+  id: 13
+  music: "bgm_Day_Dream"
+  img: "UI_BGM_Day_dream"
+  consume: "3#800"
+  beats_ani: "OrderItem_Loop_2"
+  beats_ani_main_dj: "Player_Dance_2"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2"
+}
+data {
+  id: 14
+  music: "bgm_Floating"
+  img: "UI_BGM_Floating"
+  consume: "4#800"
+  beats_ani: "OrderItem_Loop_2dian6"
+  beats_ani_main_dj: "Player_Dance_2dian6"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian6"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian6"
+}
+data {
+  id: 15
+  music: "bgm_Glass_River"
+  img: "UI_BGM_Glass_River"
+  consume: "5#800"
+  beats_ani: "OrderItem_Loop_2dian7"
+  beats_ani_main_dj: "Player_Dance_2dian7"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian7"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian7"
+}
+data {
+  id: 16
+  music: "bgm_trouble_ready"
+  img: "UI_BGM_TROUBLE_READY"
+  consume: "1#2000"
+  beats_ani: "OrderItem_Loop_2dian6"
+  beats_ani_main_dj: "Player_Dance_2dian6"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian6"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian6"
+}
+data {
+  id: 17
+  music: "bgm_Mad_Wish"
+  img: "UI_BGM_Mad_Wish"
+  consume: "2#2000"
+  beats_ani: "OrderItem_Loop_1dian5"
+  beats_ani_main_dj: "Player_Dance_1dian5"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian5"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian5"
+}
+data {
+  id: 18
+  music: "bgm_Past_Away"
+  img: "UI_BGM_Past_Away"
+  consume: "3#2000"
+  beats_ani: "OrderItem_Loop_1dian7"
+  beats_ani_main_dj: "Player_Dance_1dian7"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_1dian7"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_1dian7"
+}
+data {
+  id: 19
+  music: "bgm_Rave_and_Forget"
+  img: "UI_BGM_Rave_and_forget"
+  consume: "4#2000"
+  beats_ani: "OrderItem_Loop_2dian7"
+  beats_ani_main_dj: "Player_Dance_2dian7"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian7"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian7"
+}
+data {
+  id: 20
+  music: "bgm_Shadow_Hunt"
+  img: "UI_BGM_Shadow_Hunt"
+  consume: "5#2000"
+  beats_ani: "OrderItem_Loop_2"
+  beats_ani_main_dj: "Player_Dance_2"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2"
+}
+data {
+  id: 21
+  music: "bgm_Underground_Action"
+  img: "UI_BGM_Underground_Action"
+  consume: "1#2000"
+  beats_ani: "OrderItem_Loop_2dian5"
+  beats_ani_main_dj: "Player_Dance_2dian5"
+  beats_ani_main_kala: "NpcDance_Kala_Ani_2dian5"
+  beats_ani_main_sp: "NpcDance_Sp_Ani_2dian5"
+}

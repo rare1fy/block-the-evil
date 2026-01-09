@@ -1,0 +1,5 @@
+ID章节,解锁关卡,关卡最大值,奖励,背景,是否显示,预制体名称
+id,lvmin,lvmax,reward,background,hide,name_prefab
+int,int,int,string,string,int,string
+1,0,10,1#100,bg1_old,1,Chapter1
+2,10,20,1#100,ui_loading_img_bg,0,Chapter2

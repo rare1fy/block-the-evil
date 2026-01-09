@@ -1,0 +1,292 @@
+data {
+  id: 1
+  name: "红色"
+  img: "UI_block_color_hong"
+  fx: "FX_Frame_Red"
+  fx_putdown: "FX_Frame_Red"
+}
+data {
+  id: 2
+  name: "蓝色"
+  img: "UI_block_color_lan"
+  fx: "FX_Frame_Blue"
+  fx_putdown: "FX_Frame_Blue"
+}
+data {
+  id: 3
+  name: "绿色"
+  img: "UI_block_color_lv"
+  fx: "FX_Frame_Green"
+  fx_putdown: "FX_Frame_Green"
+}
+data {
+  id: 4
+  name: "黄色"
+  img: "UI_block_color_huang"
+  fx: "FX_Frame_Yellow"
+  fx_putdown: "FX_Frame_Yellow"
+}
+data {
+  id: 5
+  name: "青色"
+  img: "UI_block_color_dian"
+  fx: "FX_Frame_Green02"
+  fx_putdown: "FX_Frame_Green02"
+}
+data {
+  id: 6
+  name: "果汁潘趣酒"
+  img: "UI_block_color_gzpqj"
+  img1: "Icon_order_gzpqj"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "甜蜜爆表！"
+  background: 1
+}
+data {
+  id: 7
+  name: "披萨切片"
+  img: "UI_block_color_pisa"
+  img1: "Icon_order_pisa"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "芝士就是力量！"
+  background: 1
+}
+data {
+  id: 8
+  name: "野格"
+  img: "UI_block_color_yege"
+  img1: "Icon_order_yege"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "野兽启动按钮！"
+  background: 1
+}
+data {
+  id: 9
+  name: "炸薯条"
+  img: "UI_block_color_shutiaolan"
+  img1: "Icon_order_shutiaolan"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "今晚盐值担当！"
+  background: 1
+}
+data {
+  id: 10
+  name: "派对王冠​"
+  img: "UI_block_color_wg"
+  img1: "Icon_order_wg"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "戴上即主角"
+  background: 1
+}
+data {
+  id: 11
+  name: "朗姆酒"
+  img: "UI_block_color_lmj"
+  img1: "Icon_order_lmj"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "海盗船长！嘿咻嘿咻~"
+  background: 1
+}
+data {
+  id: 12
+  name: "拍立得​"
+  img: "UI_block_color_pld"
+  img1: "Icon_order_pld"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "三秒出片，终身社死。"
+  background: 1
+}
+data {
+  id: 13
+  name: "经典可乐"
+  img: "UI_block_color_kele"
+  img1: "Icon_order_kele"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "爷青回的气泡。"
+  background: 1
+}
+data {
+  id: 14
+  name: "骰子​"
+  img: "UI_block_color_sz"
+  img1: "Icon_order_sz"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "今日欧非判定器。"
+  background: 1
+}
+data {
+  id: 15
+  name: "莫吉托"
+  img: "UI_block_color_mojituo"
+  img1: "Icon_order_mojituo"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "“麻烦给我的爱人来一杯...”"
+  background: 1
+}
+data {
+  id: 16
+  name: "玩具手铐"
+  img: "UI_block_color_wjsk"
+  img1: "Icon_order_wjsk"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "行动-1，心动+1"
+  background: 1
+}
+data {
+  id: 17
+  name: "龙舌兰Shots"
+  img: "UI_block_color_shots"
+  img1: "Icon_order_shots"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "舔、嚼、吞！"
+  background: 1
+}
+data {
+  id: 18
+  name: "充电宝"
+  img: "UI_block_color_cdb"
+  img1: "Icon_order_cdb"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "不专心跳舞的家伙们..."
+  background: 1
+}
+data {
+  id: 19
+  name: "高端白酒"
+  img: "UI_block_color_mt"
+  img1: "Icon_order_mt"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "“十二岁酒壮怂人胆”"
+  background: 1
+}
+data {
+  id: 20
+  name: "鬼脸面具"
+  img: "UI_block_color_youlingmianju"
+  img1: "Icon_order_youlingmianju"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "吓唬谁呢？"
+  background: 1
+}
+data {
+  id: 21
+  name: "星空“飓风”"
+  img: "UI_block_color_jfjwj"
+  img1: "Icon_order_jfjwj"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "三秒卷走烦恼！"
+  background: 1
+}
+data {
+  id: 22
+  name: "一次性手套"
+  img: "UI_block_color_duleisipng"
+  img1: "Icon_order_duleisipng"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "这真是小龙虾手套！"
+  background: 1
+}
+data {
+  id: 23
+  name: "苏打水​"
+  img: "UI_block_color_sudashui"
+  img1: "Icon_order_sudashui"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "酒精过敏就不能参加派对？"
+  background: 1
+}
+data {
+  id: 24
+  name: "小红杯"
+  img: "UI_block_color_bz"
+  img1: "Icon_order_hbz"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "派对游戏C位！"
+  background: 1
+}
+data {
+  id: 25
+  name: "麦克风​"
+  img: "UI_block_color_semkf"
+  img1: "Icon_order_ktvmkf"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "“给我一个把世界都毁掉的高音”"
+  background: 1
+}
+data {
+  id: 26
+  name: "威士忌"
+  img: "UI_block_color_weishiji"
+  img1: "Icon_order_weishiji"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "摇摇晃摇~"
+  background: 1
+}
+data {
+  id: 27
+  name: "尤克里里"
+  img: "UI_block_color_youkelili"
+  img1: "Icon_order_youkelili"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "才华搭配可爱，不赖！"
+  background: 1
+}
+data {
+  id: 28
+  name: "香槟"
+  img: "UI_block_color_xiangbin"
+  img1: "Icon_order_xiangbin"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "开心开心开香槟"
+  background: 1
+}
+data {
+  id: 29
+  name: "桶装啤酒"
+  img: "UI_block_color_pjt"
+  img1: "Icon_order_pjt"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "欢乐时光~就要开始了！"
+  background: 1
+}
+data {
+  id: 30
+  name: "伏特加"
+  img: "UI_block_color_ftj"
+  img1: "Icon_order_ftj"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+  desc: "无味的坏主意发生器。"
+  background: 1
+}
+data {
+  id: 999
+  name: "透明"
+  img: "UI_zdn_img_touming"
+  fx: "FX_Frame_White"
+  fx_putdown: "FX_Frame_White"
+}

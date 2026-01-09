@@ -1,0 +1,357 @@
+data {
+  id: 1
+  block: "1"
+  length: 1
+  width: 1
+}
+data {
+  id: 2
+  block: "1;2"
+  length: 2
+  width: 1
+  normal: 1
+  weight: 15
+  difficulty: 1
+}
+data {
+  id: 3
+  block: "1;2"
+  length: 1
+  width: 2
+  normal: 1
+  weight: 15
+  difficulty: 1
+}
+data {
+  id: 4
+  block: "1;2;3"
+  length: 3
+  width: 1
+  normal: 1
+  weight: 10
+  difficulty: 3
+}
+data {
+  id: 5
+  block: "1;2;3"
+  length: 1
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 3
+}
+data {
+  id: 6
+  block: "1;2;3;4"
+  length: 4
+  width: 1
+  normal: 1
+  weight: 5
+  difficulty: 5
+}
+data {
+  id: 7
+  block: "1;2;3;4"
+  length: 1
+  width: 4
+  normal: 1
+  weight: 5
+  difficulty: 5
+}
+data {
+  id: 8
+  block: "1;2;3"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 2
+}
+data {
+  id: 9
+  block: "1;2;4"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 2
+}
+data {
+  id: 10
+  block: "1;3;4"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 2
+}
+data {
+  id: 11
+  block: "2;3;4"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 2
+}
+data {
+  id: 12
+  block: "1;2;3;6;9"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 5
+}
+data {
+  id: 13
+  block: "1;2;3;4;7"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 5
+}
+data {
+  id: 14
+  block: "1;4;7;8;9"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 5
+}
+data {
+  id: 15
+  block: "3;6;7;8;9"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 5
+}
+data {
+  id: 16
+  block: "1;2;4;6"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 17
+  block: "1;2;3;5"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 18
+  block: "1;3;5;6"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 19
+  block: "2;4;5;6"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 20
+  block: "1;2;3;6"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 21
+  block: "1;2;3;4"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 22
+  block: "1;4;5;6"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 23
+  block: "3;4;5;6"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 5
+  difficulty: 4
+}
+data {
+  id: 24
+  block: "1;3;4;5"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 25
+  block: "2;3;4;6"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 26
+  block: "2;4;5;6"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 27
+  block: "1;2;3;5"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 28
+  block: "1;3;4;6"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 29
+  block: "2;3;4;5"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 30
+  block: "1;2;5;6"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 31
+  block: "2;3;4;5"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 4
+}
+data {
+  id: 32
+  block: "1;2;3;4"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 20
+  difficulty: 3
+}
+data {
+  id: 33
+  block: "1;2;3;4;5;6;7;8;9"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 5
+  difficulty: 9
+}
+data {
+  id: 34
+  block: "1;5;9"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 6
+}
+data {
+  id: 35
+  block: "3;5;7"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 6
+}
+data {
+  id: 36
+  block: "1;4"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 5
+}
+data {
+  id: 37
+  block: "2;3"
+  length: 2
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 5
+}
+data {
+  id: 38
+  block: "2;4;5;6;8"
+  length: 3
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 7
+}
+data {
+  id: 39
+  block: "1;2;3;4;5;6"
+  length: 2
+  width: 3
+  normal: 1
+  weight: 10
+  difficulty: 8
+}
+data {
+  id: 40
+  block: "1;2;3;4;5;6"
+  length: 3
+  width: 2
+  normal: 1
+  weight: 10
+  difficulty: 8
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>	
+	<script src="TGMiniApp.js"></script>
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+    <div id="unity-container" class="unity-desktop">
+      <div id="unity-logo">
+        <canvas id="unity-canvas"></canvas>
+        <div id="unity-loading-bar">
+           <!-- <div id="unity-loading"> </div> -->
+           <div id="unity-title">First load’s slow, but Michael Jordan wasn’t GOAT in a day!</div>
+           <div id="unity-progress-bar-empty">
+             <div id="unity-progress-bar-full"></div>
+             <!-- <span id="unity_basketball_logo"></span> -->
+           </div>                      
+        </div>
+      </div>
+    </div>
+    <script>
+	   //window.alert = function() {};
+	   // 全局错误处理
+	   //window.onerror = function(message, source, lineno, colno, error) {
+		  //console.log("全局错误: ", message, source, lineno, colno, error);
+		  //return true; // 阻止浏览器显示原生弹窗
+	   //};
+      if(window && window.Telegram && window.Telegram.WebApp) {
+        if(window.Telegram.WebApp.isVersionAtLeast('8.0'))
+        {
+          if(window.Telegram.WebApp.platform=="android"||window.Telegram.WebApp.platform=="ios")
+          {
+            window.Telegram.WebApp.requestFullscreen();
+          }    
+          window.Telegram.WebApp.onEvent("deactivated", (event) => {
+            console.log("deactivated");
+            window.unityInstance.SendMessage("GameManager", "ReflashTelegramActive", `deactivated`);
+          }); 
+          window.Telegram.WebApp.onEvent("activated", (event) => {
+            console.log("activated");
+            window.unityInstance.SendMessage("GameManager", "ReflashTelegramActive", `activated`);
+          });                
+          window.Telegram.WebApp.onEvent("viewportChanged", (event) => {
+            console.log("viewportChanged");
+          })          
+        }
+      }
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+        workerUrl: buildUrl + "/{{{ WORKER_FILENAME }}}",
+#endif
+#if USE_WASM
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#endif
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        // 禁用流式加载
+        // streamingAssets: { "enabled": false },
+      };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+      }
+   
+// #if BACKGROUND_FILENAME
+//       canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
+// #endif
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+              }).then((unityInstance) => {               
+                progressBarFull.style.width = "100%";
+                loadingBar.style.display = "none";
+                if (window && window.Telegram && window.Telegram.WebApp) {
+                    window.unityInstance = unityInstance;                               
+                    window.unityInstance.SendMessage("LaunchManager", "SetTelegramInitData", window.Telegram.WebApp.initData);                   
+                    window.unityInstance.SendMessage("LaunchManager", "SetTelegramIsFullScreen", `${window.Telegram.WebApp.isFullscreen}`);   
+                           
+                }else{
+                    window.unityInstance = unityInstance;              
+                    window.unityInstance.SendMessage("LaunchManager", "SetTelegramInitData", ""); 
+                }
+                                      
+              }).catch((message) => {
+                console.error("出现了报错信息=====",message);
+                alert("Browser Error: Please Close and Restart the Browser");
+              });
+            };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

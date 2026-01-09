@@ -1,0 +1,36 @@
+data {
+  id: 1
+  ad: "复活"
+}
+data {
+  id: 2
+  ad: "补充体力"
+}
+data {
+  id: 3
+  ad: "道具充气锤"
+}
+data {
+  id: 4
+  ad: "道具香槟"
+}
+data {
+  id: 5
+  ad: "道具摇酒壶"
+}
+data {
+  id: 6
+  ad: "广告订单位"
+}
+data {
+  id: 7
+  ad: "广告遮罩"
+}
+data {
+  id: 8
+  ad: "关卡内大咖插屏"
+}
+data {
+  id: 9
+  ad: "主页大咖广告金币"
+}

@@ -1,0 +1,16 @@
+data {
+  id: 1
+  lvmax: 10
+  reward: "1#100"
+  background: "bg1_old"
+  hide: 1
+  name_prefab: "Chapter1"
+}
+data {
+  id: 2
+  lvmin: 10
+  lvmax: 20
+  reward: "1#100"
+  background: "ui_loading_img_bg"
+  name_prefab: "Chapter2"
+}

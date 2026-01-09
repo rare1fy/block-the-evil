@@ -1,0 +1,13 @@
+ID,所属章节,批次,名称,缩略图,消耗,解锁关卡,挂机收益,场景节点,解锁对话id,解锁对话提示,建造摄像机坐标,建造摄像机缩放
+id,group,batch,name,image,needglod,unlocklevel,reward,buildnod,unlockchatid,tips,camera_set,camera_Zoom
+int,int,int,string,string,string,int,string,string,int,string,string,string
+1,1,1,修草坪,build_small_1,2#1,1,1#100,Chapter1_Bulid_Grass,0,null,null,null
+2,1,1,修理围墙,build_small_2,2#1,1,1#100,Chapter1_Bulid_Wall,0,null,null,null
+3,1,1,修房子,build_small_3,2#1,1,1#100,Chapter1_Build_House,0,null,0#3.3,-6
+4,1,2,修剪杂草,build_small_4,2#1,1,1#100,Chapter1_Build_CleanWeed,0,null,null,null
+5,1,2,种树通海滩,build_small_5,2#1,1,1#100,Chapter1_Build_TreeAndRock,0,null,null,null
+6,1,2,修泳池,build_small_6,2#1,1,1#100,Chapter1_Build_Pool,0,null,2.06#0.13,-4.36
+7,1,3,添置设备,build_small_7,2#1,1,1#100,Chapter1_Build_Equipment,0,null,2.06#0.13,-5.14
+8,1,3,添置食物,build_small_8,2#1,1,1#100,Chapter1_Build_Food,0,null,null,null
+9,1,4,派对必需品,build_small_9,2#1,1,1#100,Chapter1_Build_PartyNeed,0,null,null,null
+10,1,4,欢迎装饰,build_small_10,2#1,1,1#100,Chapter1_Build_Welcome,0,null,0#0.98,-5.06

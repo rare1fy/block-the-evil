@@ -1,0 +1,159 @@
+data {
+  id: 1
+  num: 100
+}
+data {
+  id: 2
+  num: 30
+}
+data {
+  id: 3
+  num: 100
+}
+data {
+  id: 4
+  num: 18
+}
+data {
+  id: 5
+  num: 42
+}
+data {
+  id: 6
+  num: 300
+}
+data {
+  id: 7
+  num: 30
+}
+data {
+  id: 8
+  num: 20
+}
+data {
+  id: 9
+  num: 18
+}
+data {
+  id: 10
+  num: 16
+}
+data {
+  id: 11
+  num: 14
+}
+data {
+  id: 12
+  num: 10
+}
+data {
+  id: 13
+  num: 8
+}
+data {
+  id: 14
+  num: 1200
+}
+data {
+  id: 15
+  num: 1600
+}
+data {
+  id: 16
+  num: 1000
+}
+data {
+  id: 17
+  num: 1
+}
+data {
+  id: 18
+  num: 1
+}
+data {
+  id: 19
+  num: 1
+}
+data {
+  id: 20
+  num: 5
+}
+data {
+  id: 21
+  num: 60
+}
+data {
+  id: 22
+  num: 3
+}
+data {
+  id: 23
+  num: 5
+}
+data {
+  id: 24
+  num: 6
+}
+data {
+  id: 25
+  num: 5
+}
+data {
+  id: 26
+  num: 3
+}
+data {
+  id: 27
+  num: 1
+}
+data {
+  id: 28
+  num: 100
+}
+data {
+  id: 29
+  num: 300
+}
+data {
+  id: 30
+  num: 15
+}
+data {
+  id: 31
+  num: 60
+}
+data {
+  id: 32
+}
+data {
+  id: 33
+  num: 50
+}
+data {
+  id: 34
+  num: 1000
+}
+data {
+  id: 35
+  num: 3
+}
+data {
+  id: 36
+  num: 300
+}
+data {
+  id: 37
+  num: 500
+}
+data {
+  id: 38
+  num: 1
+}
+data {
+  id: 39
+  num: 5000
+}
+data {
+  id: 40
+  num: 1
+}

@@ -1,0 +1,506 @@
+data {
+  id: 1
+  img1: "Avatar_02"
+  img2: "npc_b"
+  img3: "addressbook_b"
+  npcname: "主角"
+  voice1: "order_done_npc_b.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 2
+  img1: "Avatar_03"
+  img2: "npc_c"
+  img3: "addressbook_c"
+  npcname: "妮娜"
+  voice1: "order_done_npc_c.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 3
+  img2: "npc_sp_tlp"
+  npcname: "建国"
+  special: 1
+  voice1: "order_done_npc_sp_tlp.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "M!A!G!A!"
+}
+data {
+  id: 4
+  img1: "UI_zdn_wj_jige"
+  img2: "npc_sp_cxk"
+  img4: "UI_zjm_icon_daka1"
+  npcname: "鸡哥"
+  special: 1
+  voice1: "order_done_npc_sp_cxk.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "唱跳RAP样样行!"
+}
+data {
+  id: 5
+  img2: "npc_sp_tl"
+  npcname: "小霉"
+  special: 1
+  voice1: "order_done_npc_sp_tl.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "灵感永不枯竭!"
+}
+data {
+  id: 6
+  img2: "npc_sp_xlz"
+  npcname: "小李子"
+  special: 1
+  voice1: "order_done_npc_sp_xlz.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "我的奥斯卡呢?"
+}
+data {
+  id: 7
+  img2: "npc_sp_qbs"
+  npcname: "乔帮主"
+  special: 1
+  voice1: "order_done_npc_sp_qbs.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "一天一个苹果"
+}
+data {
+  id: 8
+  img2: "npc_sp_cl"
+  npcname: "龙哥"
+  special: 1
+  voice1: "order_done_npc_sp_cl.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "Duang!"
+}
+data {
+  id: 9
+  img2: "npc_sp_msk"
+  npcname: "钢丝客"
+  special: 1
+  voice1: "order_done_npc_sp_msk.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "立志要当火星人"
+}
+data {
+  id: 10
+  img2: "npc_sp_kb"
+  npcname: "曼巴哥"
+  special: 1
+  voice1: "order_done_npc_sp_kb.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "曼巴奥特!"
+}
+data {
+  id: 11
+  img2: "npc_sp_mj"
+  npcname: "流行之王"
+  special: 1
+  voice1: "order_done_npc_sp_mj.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "地球当前版本唯一真神"
+}
+data {
+  id: 12
+  img2: "npc_sp_gaga"
+  npcname: "扑克脸女王"
+  special: 1
+  voice1: "order_done_npc_sp_gaga.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "每天造型不重样"
+}
+data {
+  id: 13
+  img2: "npc_sp_zms"
+  npcname: "Taco哥"
+  special: 1
+  voice1: "order_done_npc_sp_zms.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "G!O!A!T!"
+}
+data {
+  id: 14
+  img1: "UI_zdn_wj_dingzhen"
+  img2: "npc_sp_dingzhen"
+  img4: "UI_zjm_icon_daka3"
+  npcname: "纯真哥"
+  special: 1
+  voice1: "order_done_npc_sp_dingzhen.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "芝士雪豹~"
+}
+data {
+  id: 15
+  img1: "UI_zdn_wj_wujing"
+  img2: "npc_sp_wujing"
+  img4: "UI_zjm_icon_daka4"
+  npcname: "兵王"
+  special: 1
+  voice1: "order_done_npc_sp_wujing.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "坦克是没有后视镜的~"
+}
+data {
+  id: 16
+  img2: "npc_sp_qs"
+  npcname: "石头哥"
+  special: 1
+  voice1: "order_done_npc_sp_qs.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "一拳打死一头牛"
+}
+data {
+  id: 17
+  img2: "npc_sp_zl"
+  npcname: "劳拉"
+  special: 1
+  voice1: "order_done_npc_sp_zl.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "皮特你人呢?"
+}
+data {
+  id: 18
+  img2: "npc_sp_liweisi"
+  npcname: "强尼金手"
+  special: 1
+  voice1: "order_done_npc_sp_liweisi.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "没人比我更懂子弹时间"
+}
+data {
+  id: 19
+  img2: "npc_sp_kuting"
+  npcname: "纽碧导演"
+  special: 1
+  voice1: "order_done_npc_sp_kuting.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "暴力美学缔造者!"
+}
+data {
+  id: 20
+  img1: "UI_zdn_wj_shanyichun"
+  img2: "npc_sp_shanyichun"
+  img4: "UI_zjm_icon_daka2"
+  npcname: "打野歌后"
+  special: 1
+  voice1: "order_done_npc_sp_shanyichun.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "如何呢?又能怎?"
+}
+data {
+  id: 21
+  img2: "npc_sp_bas"
+  npcname: "碧局长"
+  special: 1
+  voice1: "order_done_npc_sp_biangsi.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "没人敢说我坏话!"
+}
+data {
+  id: 22
+  img2: "npc_sp_snoop"
+  npcname: "狗爷"
+  special: 1
+  voice1: "order_done_npc_sp_snoop.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "我玩儿的就是西海岸"
+}
+data {
+  id: 23
+  img1: "Avatar_04"
+  img2: "npc_d"
+  img3: "addressbook_d"
+  npcname: "Clara"
+  voice1: "order_done_npc_d.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 24
+  img1: "Avatar_05"
+  img2: "npc_g"
+  img3: "addressbook_g"
+  npcname: "Zaza"
+  voice1: "order_done_npc_g.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 25
+  img1: "Avatar_06"
+  img2: "npc_h"
+  img3: "addressbook_h"
+  npcname: "Ah Hu"
+  voice1: "order_done_npc_h.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 26
+  img2: "npc_kala_1"
+  npcname: "路人1"
+  voice1: "order_done_npc_kala_1.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 27
+  img2: "npc_kala_2"
+  npcname: "路人2"
+  voice1: "order_done_npc_kala_2.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 28
+  img2: "npc_kala_3"
+  npcname: "路人3"
+  voice1: "order_done_npc_kala_3.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 29
+  img2: "npc_kala_4"
+  npcname: "路人4"
+  voice1: "order_done_npc_kala_4.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 30
+  img2: "npc_kala_5"
+  npcname: "路人5"
+  voice1: "order_done_npc_kala_5.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 31
+  img2: "npc_kala_6"
+  npcname: "路人6"
+  voice1: "order_done_npc_kala_6.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 32
+  img2: "npc_kala_7"
+  npcname: "路人7"
+  voice1: "order_done_npc_kala_7.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 33
+  img2: "npc_kala_8"
+  npcname: "路人8"
+  voice1: "order_done_npc_kala_8.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 34
+  img2: "npc_kala_9"
+  npcname: "路人9"
+  voice1: "order_done_npc_kala_9.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 35
+  img2: "npc_kala_10"
+  npcname: "路人10"
+  voice1: "order_done_npc_kala_10.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 36
+  img2: "npc_kala_11"
+  npcname: "路人11"
+  voice1: "order_done_npc_kala_11.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 37
+  img2: "npc_kala_12"
+  npcname: "路人12"
+  voice1: "order_done_npc_kala_12.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 38
+  img2: "npc_kala_13"
+  npcname: "路人13"
+  voice1: "order_done_npc_kala_13.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 39
+  img2: "npc_kala_14"
+  npcname: "阿宅"
+  voice1: "order_done_npc_kala_14.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 40
+  img2: "npc_kala_15"
+  npcname: "路人15"
+  voice1: "order_done_npc_kala_15.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 41
+  img2: "npc_kala_16"
+  npcname: "路人16"
+  voice1: "order_done_npc_kala_16.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 42
+  img2: "npc_sp_lixiaolong"
+  npcname: "李小尤"
+  special: 1
+  voice1: "order_done_npc_sp_lixiaolong.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "啊~打打打打!"
+}
+data {
+  id: 43
+  img2: "npc_sp_aiyinsitan"
+  npcname: "爱因斯坦"
+  special: 1
+  voice1: "order_done_npc_sp_aiyinsitan.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "派对时间也是相对的"
+}
+data {
+  id: 44
+  img2: "npc_sp_baofengbing"
+  npcname: "风暴兵"
+  special: 1
+  voice1: "order_done_npc_sp_baofengbing.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "今天不用吃原力"
+}
+data {
+  id: 45
+  img1: "UI_zdn_wj_baozupo"
+  img2: "npc_sp_baozupo"
+  img4: "UI_zjm_icon_daka5"
+  npcname: "包租婆"
+  special: 1
+  voice1: "order_done_npc_sp_baozupo.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "该交水费啦!"
+}
+data {
+  id: 46
+  img1: "UI_zdn_wj_nidahong"
+  img2: "npc_sp_nidahong"
+  img4: "UI_zjm_icon_daka7"
+  npcname: "苏老强"
+  special: 1
+  voice1: "order_done_npc_sp_nidahong.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "我要喝手磨咖啡!"
+}
+data {
+  id: 47
+  img1: "UI_zdn_wj_sunhonglei"
+  img2: "npc_sp_sunhonglei"
+  img4: "UI_zjm_icon_daka8"
+  npcname: "华弓虽"
+  special: 1
+  voice1: "order_done_npc_sp_sunhonglei.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "这瓜保熟吗?"
+}
+data {
+  id: 48
+  img1: "UI_zdn_wj_juan"
+  img2: "npc_sp_juan"
+  img4: "UI_zjm_icon_daka6"
+  npcname: "娟儿"
+  special: 1
+  voice1: "order_done_npc_sp_juan.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "好烦，到了富婆的年纪~"
+}
+data {
+  id: 49
+  img2: "npc_sp_zhongjiezhe"
+  npcname: "州长"
+  special: 1
+  voice1: "order_done_npc_sp_zhongjiezhe.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "我会回来的!"
+}
+data {
+  id: 50
+  img1: "UI_zdn_wj_saonv"
+  img2: "npc_sp_saonv"
+  img4: "UI_zjm_icon_daka9"
+  npcname: "刺激姐"
+  special: 1
+  voice1: "order_done_npc_sp_saonv.ogg"
+  vioce2: "notice_order_default.ogg"
+  word: "我知道你想说什么"
+}
+data {
+  id: 51
+  img2: "npc_kala_17"
+  npcname: "路人15"
+  voice1: "order_done_npc_kala_17.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 52
+  img2: "npc_kala_18"
+  npcname: "路人16"
+  voice1: "order_done_npc_kala_18.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 53
+  img2: "npc_kala_19"
+  npcname: "路人17"
+  voice1: "order_done_npc_kala_19.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 54
+  img2: "npc_kala_20"
+  npcname: "路人18"
+  voice1: "order_done_npc_kala_20.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 55
+  img2: "npc_kala_21"
+  npcname: "路人19"
+  voice1: "order_done_npc_kala_21.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 56
+  img2: "npc_kala_22"
+  npcname: "路人20"
+  voice1: "order_done_npc_kala_22.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 57
+  img2: "npc_kala_23"
+  npcname: "路人21"
+  voice1: "order_done_npc_kala_23.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 58
+  img2: "npc_kala_24"
+  npcname: "路人22"
+  voice1: "order_done_npc_kala_24.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 59
+  img2: "npc_kala_25"
+  npcname: "路人23"
+  voice1: "order_done_npc_kala_25.ogg"
+  vioce2: "notice_order_default.ogg"
+}
+data {
+  id: 60
+  img2: "npc_kala_26"
+  npcname: "路人24"
+  voice1: "order_done_npc_kala_26.ogg"
+  vioce2: "notice_order_default.ogg"
+}

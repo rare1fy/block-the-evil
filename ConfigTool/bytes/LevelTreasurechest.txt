@@ -1,0 +1,54 @@
+data {
+  id: 1
+  type: 1
+  num: "3#1"
+  weight: 10
+}
+data {
+  id: 2
+  type: 1
+  num: "4#1"
+  weight: 10
+}
+data {
+  id: 3
+  type: 1
+  num: "5#1"
+  weight: 10
+}
+data {
+  id: 4
+  type: 2
+  num: "0#50"
+  weight: 10
+}
+data {
+  id: 5
+  type: 2
+  num: "100#50"
+  weight: 15
+}
+data {
+  id: 6
+  type: 2
+  num: "300#50"
+  weight: 20
+}
+data {
+  id: 7
+  type: 2
+  num: "0#100"
+  weight: 10
+}
+data {
+  id: 8
+  type: 2
+  num: "0#200"
+  weight: 10
+}
+data {
+  id: 9
+  type: 2
+  num: "0#300"
+  weight: 5
+}

@@ -1,0 +1,196 @@
+data {
+  id: 1
+  npcid: "1"
+}
+data {
+  id: 2
+  npcid: "1;2"
+}
+data {
+  id: 3
+  npcid: "1;2;3"
+}
+data {
+  id: 4
+  npcid: "2;3;4"
+}
+data {
+  id: 5
+  npcid: "3;4;5"
+}
+data {
+  id: 6
+  npcid: "4;5;6"
+}
+data {
+  id: 7
+  npcid: "5;6;7"
+}
+data {
+  id: 8
+  npcid: "6;7;8"
+}
+data {
+  id: 9
+  npcid: "7;8;9"
+}
+data {
+  id: 10
+  npcid: "8;9;10"
+}
+data {
+  id: 11
+  npcid: "9;10;11"
+}
+data {
+  id: 12
+  npcid: "10;11;12"
+}
+data {
+  id: 13
+  npcid: "11;12;13"
+}
+data {
+  id: 14
+  npcid: "12;13;14"
+}
+data {
+  id: 15
+  npcid: "13;14;15"
+}
+data {
+  id: 16
+  npcid: "14;15;16"
+}
+data {
+  id: 17
+  npcid: "15;16;17"
+}
+data {
+  id: 18
+  npcid: "16;17;18"
+}
+data {
+  id: 19
+  npcid: "17;18;19"
+}
+data {
+  id: 20
+  npcid: "18;19;20"
+}
+data {
+  id: 21
+  npcid: "19;20;21"
+}
+data {
+  id: 22
+  npcid: "20;21;22"
+}
+data {
+  id: 23
+  npcid: "21;22;23"
+}
+data {
+  id: 24
+  npcid: "22;23;24"
+}
+data {
+  id: 25
+  npcid: "23;24;25"
+}
+data {
+  id: 10002
+  npcid: "2"
+}
+data {
+  id: 10003
+  npcid: "3"
+}
+data {
+  id: 10004
+  npcid: "4"
+}
+data {
+  id: 10005
+  npcid: "5"
+}
+data {
+  id: 10006
+  npcid: "6"
+}
+data {
+  id: 10007
+  npcid: "7"
+}
+data {
+  id: 10008
+  npcid: "8"
+}
+data {
+  id: 10009
+  npcid: "9"
+}
+data {
+  id: 10010
+  npcid: "10"
+}
+data {
+  id: 10011
+  npcid: "11"
+}
+data {
+  id: 10012
+  npcid: "12"
+}
+data {
+  id: 10013
+  npcid: "13"
+}
+data {
+  id: 10014
+  npcid: "14"
+}
+data {
+  id: 10015
+  npcid: "15"
+}
+data {
+  id: 10016
+  npcid: "16"
+}
+data {
+  id: 10017
+  npcid: "17"
+}
+data {
+  id: 10018
+  npcid: "18"
+}
+data {
+  id: 10019
+  npcid: "19"
+}
+data {
+  id: 10020
+  npcid: "20"
+}
+data {
+  id: 10021
+  npcid: "21"
+}
+data {
+  id: 10022
+  npcid: "22"
+}
+data {
+  id: 10023
+  npcid: "23"
+}
+data {
+  id: 10024
+  npcid: "24"
+}
+data {
+  id: 10025
+  npcid: "25"
+}

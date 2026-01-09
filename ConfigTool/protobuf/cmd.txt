@@ -1,0 +1,7 @@
+1#GAME_CMD_LOGIN_BYSESSION#GamerLoginC2S#GamerLoginS2C#客户端登陆消息
+
+
+10101#GAMER_NOTIFY_TASK_INFO#NULL#NtfGamerTaskInfo#同步玩家任务task
+
+
+

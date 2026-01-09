@@ -1,0 +1,138 @@
+data {
+  id: 1
+  dialogue_type: 1
+  txt1: "你好"
+  button1: "你好"
+  button2: "不好"
+  button1to: 2
+  button2to: 3
+}
+data {
+  id: 2
+  dialogue_type: 2
+  txt1: "你好"
+  next: 4
+}
+data {
+  id: 3
+  dialogue_type: 2
+  txt1: "不好"
+  next: 6
+}
+data {
+  id: 4
+  dialogue_type: 1
+  txt1: "你好回答1"
+  next: 5
+}
+data {
+  id: 5
+  dialogue_type: 1
+  txt1: "你好回答2"
+  button1: "结局1"
+  button2: "结局2"
+  button1to: 7
+  button2to: 8
+}
+data {
+  id: 6
+  dialogue_type: 2
+  txt1: "不好回答1"
+  button1: "结局3"
+  button2: "结局4"
+  button1to: 9
+  button2to: 10
+}
+data {
+  id: 7
+  dialogue_type: 1
+  txt1: "结局1"
+  reward: "2#100"
+}
+data {
+  id: 8
+  dialogue_type: 1
+  txt1: "结局2"
+  reward: "2#80"
+}
+data {
+  id: 9
+  dialogue_type: 1
+  txt1: "结局3"
+  reward: "2#60"
+}
+data {
+  id: 10
+  dialogue_type: 1
+  txt1: "结局4"
+  reward: "2#40"
+}
+data {
+  id: 11
+  dialogue_type: 1
+  txt1: "第二次通话"
+  button1: "你好"
+  button2: "不好"
+  button1to: 12
+  button2to: 13
+}
+data {
+  id: 12
+  dialogue_type: 2
+  txt1: "你好"
+  next: 14
+}
+data {
+  id: 13
+  dialogue_type: 2
+  txt1: "不好"
+  next: 16
+}
+data {
+  id: 14
+  dialogue_type: 1
+  txt1: "你好回答1"
+  next: 15
+}
+data {
+  id: 15
+  dialogue_type: 1
+  txt1: "你好回答2"
+  button1: "结局1"
+  button2: "结局2"
+  button1to: 17
+  button2to: 18
+}
+data {
+  id: 16
+  dialogue_type: 2
+  txt1: "不好回答1"
+  button1: "结局3"
+  button2: "结局4"
+  button1to: 19
+  button2to: 20
+}
+data {
+  id: 17
+  dialogue_type: 1
+  txt1: "结局1"
+  reward: "2#100"
+}
+data {
+  id: 18
+  dialogue_type: 1
+  txt1: "结局2"
+  reward: "2#80"
+}
+data {
+  id: 19
+  dialogue_type: 1
+  txt1: "结局3"
+  reward: "2#60"
+}
+data {
+  id: 20
+  dialogue_type: 1
+  txt1: "结局4"
+  reward: "2#40"
+}

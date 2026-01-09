@@ -1,0 +1,21 @@
+syntax="proto3";
+option go_package = "./pb";
+
+
+//玩家登陆
+message GamerLoginC2S
+{
+  int32       id        = 1;//玩家id
+}
+
+//玩家登陆
+message GamerLoginS2C
+{
+	int32 id 		= 1;//玩家ID
+}
+
+message NtfGamerTaskInfo
+{
+  int32 taskId = 1;//任务id
+}
+

@@ -1,0 +1,19 @@
+
+5"FX_C_cn_combox2*fight_combo0
+8(B255#255#255
+1"FX_C_cn_combox3*fight_combo08<B0#255#0
+1"FX_C_cn_combox4*fight_combo08PB0#0#255
+3"FX_C_cn_combox5*fight_combo0(8dB	255#0#255
+6"FX_C_cn_combox6*fight_combo0<8ÈB255#255#255
+2"FX_C_cn_combox7*fight_combo0P8¬B255#0#0
+2"FX_C_cn_combox8*fight_combo0d8B255#0#0
+&"
+FX_C1_Good*fight_hit_good08
+&	"
+FX_C1_NIce*fight_hit_nice08
+,
+"FX_C1_PERFECT*fight_hit_perfect08 
+,"FX_C1_Amazing*fight_hit_amazing080
+1"FX_C1_Excellent!*fight_hit_excellent08@
+'"FX_C1_EPIC!*fight_hit_epic0 8H
+8

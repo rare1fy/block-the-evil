@@ -1,0 +1,420 @@
+{
+    "ShaderTotalCount": 21,
+    "VariantTotalCount": 35,
+    "ShaderVariantInfos": [
+        {
+            "AssetPath": "Assets/Bundles/FX/Shader/2D_Additive.shadergraph",
+            "ShaderName": "Shader Graphs/2D_Additive",
+            "ShaderVariantCount": 6,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET_CUSTOM",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_TIME",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET_TIME",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET_TIME",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_TIME",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET_TIME",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET_TIME",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_CUSTOM",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_TIME",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Assets/Bundles/FX/Shader/2D_Blend.shadergraph",
+            "ShaderName": "Shader Graphs/2D_Blend",
+            "ShaderVariantCount": 6,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET_CUSTOM",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET_CUSTOM",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_TIME",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET_TIME",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET_CUSTOM",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_TIME",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET_TIME",
+                        "_NOISE_OFFSET_MODEL_OFFSET_TIME",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET_TIME",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_DISSOLVE_OFFSET_MODEL_OFFSET",
+                        "_MAINTEX_OFFSET_MODEL_OFFSET_TIME",
+                        "_MASKTEX02_OFFSET_MODEL_OFFSET",
+                        "_NOISE_OFFSET_MODEL_OFFSET",
+                        "_VERTEX_OFFSET_MODEL_OFFSET"
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Assets/Bundles/Shaders/Shader/2D-CreateShinerMask.shader",
+            "ShaderName": "2D/CreateShinerMask",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/FallbackShader.shader",
+            "ShaderName": "Hidden/Core/FallbackError",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader",
+            "ShaderName": "Universal Render Pipeline/Lit",
+            "ShaderVariantCount": 3,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_ADDITIONAL_LIGHT_SHADOWS",
+                        "_ADDITIONAL_LIGHTS",
+                        "_MAIN_LIGHT_SHADOWS_CASCADE",
+                        "_REFLECTION_PROBE_BLENDING",
+                        "_REFLECTION_PROBE_BOX_PROJECTION",
+                        "_SHADOWS_SOFT"
+                    ]
+                },
+                {
+                    "PassType": 13,
+                    "Keywords": [
+                        "_ADDITIONAL_LIGHTS",
+                        "_MAIN_LIGHT_SHADOWS_CASCADE"
+                    ]
+                },
+                {
+                    "PassType": 8,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CopyDepth.shader",
+            "ShaderName": "Hidden/Universal Render Pipeline/CopyDepth",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlit.shader",
+            "ShaderName": "Hidden/Universal/CoreBlit",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader",
+            "ShaderName": "Hidden/Universal Render Pipeline/FallbackError",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/BlitCopy",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-GUIRoundedRect",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-GUIRoundedRectWithColorPerBorder",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-GUITexture",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-GUITextureBlit",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-GUITextureClip",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-GUITextureClipText",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/Internal-UIRAtlasBlitCopy",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Hidden/UIElements/EditorUIE",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Mobile/Particles/Additive",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Mobile/Particles/Alpha Blended",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Particles/Standard Unlit",
+            "ShaderVariantCount": 3,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        "_ALPHABLEND_ON",
+                        "_FADING_ON"
+                    ]
+                },
+                {
+                    "PassType": 8,
+                    "Keywords": [
+                        "_ALPHABLEND_ON",
+                        "PROCEDURAL_INSTANCING_ON"
+                    ]
+                },
+                {
+                    "PassType": 8,
+                    "Keywords": [
+                        "_ALPHABLEND_ON",
+                        "SHADOWS_DEPTH"
+                    ]
+                }
+            ]
+        },
+        {
+            "AssetPath": "Resources/unity_builtin_extra",
+            "ShaderName": "Skybox/Procedural",
+            "ShaderVariantCount": 1,
+            "ShaderVariantElements": [
+                {
+                    "PassType": 0,
+                    "Keywords": [
+                        "_SUNDISK_SIMPLE"
+                    ]
+                }
+            ]
+        }
+    ]
+}

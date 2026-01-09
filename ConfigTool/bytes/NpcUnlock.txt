@@ -1,0 +1,100 @@
+data {
+  id: 1
+  npcname: "建国"
+  npcid: 3
+}
+data {
+  id: 2
+  npcname: "小李子"
+  npcid: 6
+}
+data {
+  id: 3
+  npcname: "小霉"
+  npcid: 5
+}
+data {
+  id: 4
+  npcname: "钢丝客"
+  npcid: 9
+}
+data {
+  id: 5
+  npcname: "曼巴哥"
+  npcid: 10
+}
+data {
+  id: 6
+  npcname: "Taco哥"
+  npcid: 13
+}
+data {
+  id: 7
+  npcname: "狗爷"
+  npcid: 22
+}
+data {
+  id: 8
+  npcname: "爱因斯坦"
+  npcid: 43
+}
+data {
+  id: 9
+  npcname: "流行之王"
+  npcid: 11
+}
+data {
+  id: 10
+  npcname: "扑克脸女王"
+  npcid: 12
+}
+data {
+  id: 11
+  npcname: "强尼金手"
+  npcid: 18
+}
+data {
+  id: 12
+  npcname: "石头哥"
+  npcid: 16
+}
+data {
+  id: 13
+  npcname: "李小尤"
+  npcid: 42
+}
+data {
+  id: 14
+  npcname: "风暴兵"
+  npcid: 44
+}
+data {
+  id: 15
+  npcname: "州长"
+  npcid: 49
+}
+data {
+  id: 16
+  npcname: "乔帮主"
+  npcid: 7
+}
+data {
+  id: 17
+  npcname: "龙哥"
+  npcid: 8
+}
+data {
+  id: 18
+  npcname: "劳拉"
+  npcid: 17
+}
+data {
+  id: 19
+  npcname: "纽碧导演"
+  npcid: 19
+}
+data {
+  id: 20
+  npcname: "碧局长"
+  npcid: 21
+}

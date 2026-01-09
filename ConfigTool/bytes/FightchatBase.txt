@@ -1,0 +1,497 @@
+data {
+  id: 1
+  dialogue_type: 2
+  npcid: 52
+  txt1: "嘿~宝贝！给我来<color=#FF6300>几杯酒</color>！"
+  button1: "我该怎么做？"
+  button1to: 2
+}
+data {
+  id: 2
+  dialogue_type: 4
+  npcid: 52
+  txt1: "把方块填满<color=#FF6300>1行</color>或<color=#FF6300>1列</color>进行<color=#FF6300>消除</color>，我会拿走需要的东西！"
+  button1: "知道了！"
+}
+data {
+  id: 3
+  dialogue_type: 4
+  npcid: 39
+  txt1: "这里也太安静了！<color=#FF6300>拿酒来</color>，我去收拾一下DJ台！"
+  button1: "交给你了！"
+}
+data {
+  id: 4
+  dialogue_type: 5
+  npcid: 39
+  txt1: "搞定！现在才有点派对的样子！"
+  button1: "那就开始狂欢吧！"
+  music: 1
+}
+data {
+  id: 5
+  dialogue_type: 2
+  npcid: 3
+  txt1: "我要让派对再次伟大！"
+  button1: "你要怎么做？"
+  button1to: 6
+}
+data {
+  id: 6
+  dialogue_type: 2
+  npcid: 3
+  txt1: "我会建一堵墙！"
+  button1: "用来隔离闹事的家伙？"
+  button1to: 7
+}
+data {
+  id: 7
+  dialogue_type: 4
+  npcid: 3
+  txt1: "我会把没喝醉的家伙扔出去！"
+  button1: "不愧是懂王！"
+}
+data {
+  id: 8
+  dialogue_type: 2
+  npcid: 4
+  txt1: "哎呀！你干嘛~"
+  button1: "这是在干什么？"
+  button1to: 9
+}
+data {
+  id: 9
+  dialogue_type: 2
+  npcid: 4
+  txt1: "我在展示我的性感舞蹈！"
+  button1: "看上去像是某种篮球动作！"
+  button1to: 10
+}
+data {
+  id: 10
+  dialogue_type: 4
+  npcid: 4
+  txt1: "这叫铁山靠！"
+  button1: "至少得练两年半！"
+}
+data {
+  id: 11
+  dialogue_type: 2
+  npcid: 5
+  txt1: "我要在派对上找一位新男友！"
+  button1: "那你前男友呢？"
+  button1to: 12
+}
+data {
+  id: 12
+  dialogue_type: 4
+  npcid: 5
+  txt1: "灵感来了，被用来写歌了。"
+  button1: "这算是某种消耗品吗..."
+}
+data {
+  id: 13
+  dialogue_type: 2
+  npcid: 6
+  txt1: "吃我水枪biubiubiu~"
+  button1: "你怎么胖成这样？"
+  button1to: 14
+}
+data {
+  id: 14
+  dialogue_type: 4
+  npcid: 6
+  txt1: "想去选角参与雷神的，结果失败了！"
+  button1: "那你得赶快把多余的“神力”减掉！"
+}
+data {
+  id: 15
+  dialogue_type: 2
+  npcid: 7
+  txt1: "你的蛋糕非常没有品味！"
+  button1: "有什么问题吗？"
+  button1to: 16
+}
+data {
+  id: 16
+  dialogue_type: 4
+  npcid: 7
+  txt1: "要是你在上面咬一口，我的粉丝会买1000万份！"
+  button1: "这不是重点吧！"
+}
+data {
+  id: 17
+  dialogue_type: 2
+  npcid: 8
+  txt1: "快给我满上！"
+  button1: "哇，你喝了多少！"
+  button1to: 18
+}
+data {
+  id: 18
+  dialogue_type: 4
+  npcid: 8
+  txt1: "才18杯!"
+  button1: "家具很贵的，您小心点！"
+}
+data {
+  id: 19
+  dialogue_type: 2
+  npcid: 9
+  txt1: "这场派对简直是“火星”级的！"
+  button1: "这是一种赞美吗？"
+  button1to: 20
+}
+data {
+  id: 20
+  dialogue_type: 4
+  npcid: 9
+  txt1: "如果你愿意替我去踢一脚建国的屁股！"
+  button1: "你还是自己去吧！"
+}
+data {
+  id: 21
+  dialogue_type: 2
+  npcid: 10
+  txt1: "Man！"
+  button1: "吓我一跳！"
+  button1to: 22
+}
+data {
+  id: 22
+  dialogue_type: 4
+  npcid: 10
+  txt1: "动作要快！姿势要帅！就像上篮一样！"
+  button1: "把你胳膊收起来，肘到别的客人了"
+}
+data {
+  id: 23
+  dialogue_type: 2
+  npcid: 11
+  txt1: "能快一点吗？"
+  button1: "你急着上台跳舞吗？"
+  button1to: 24
+}
+data {
+  id: 24
+  dialogue_type: 2
+  npcid: 11
+  txt1: "不，我着急去厕所！"
+  button1: "还以为你摸裆是在舞蹈练习呢..."
+  button1to: 25
+}
+data {
+  id: 25
+  dialogue_type: 4
+  npcid: 11
+  txt1: "大部分情况下是因为裤子太紧了..."
+  button1: "真是尴尬~"
+}
+data {
+  id: 26
+  dialogue_type: 2
+  npcid: 12
+  txt1: "我准备用肉来编织新的裙子"
+  button1: "除了味儿大以外没别的毛病！"
+  button1to: 27
+}
+data {
+  id: 27
+  dialogue_type: 4
+  npcid: 12
+  txt1: "那我就当你同意了！"
+  button1: "不准进我的厨房！"
+}
+data {
+  id: 28
+  dialogue_type: 2
+  npcid: 13
+  txt1: "我和时间老人做了一笔生意~"
+  button1: "他决定继续让你永葆青春？"
+  button1to: 29
+}
+data {
+  id: 29
+  dialogue_type: 4
+  npcid: 13
+  txt1: "当然，而且我只和他签了一份老将底薪合同。"
+  button1: "天生的生意人！"
+}
+data {
+  id: 30
+  dialogue_type: 2
+  npcid: 14
+  txt1: "你为什么不准我抽烟！"
+  button1: "抽烟去室外！"
+  button1to: 31
+}
+data {
+  id: 31
+  dialogue_type: 4
+  npcid: 14
+  txt1: "我这是电子烟！"
+  button1: "什么烟都不行!"
+}
+data {
+  id: 32
+  dialogue_type: 2
+  npcid: 15
+  txt1: "你觉得派对最大的难点是什么？"
+  button1: "我不知道..."
+  button1to: 33
+}
+data {
+  id: 33
+  dialogue_type: 4
+  npcid: 15
+  txt1: "酒精是不长眼的，音乐是要手动切的，游泳池是要放水的！"
+  button1: "呃，说点大家不知道的..."
+}
+data {
+  id: 34
+  dialogue_type: 2
+  npcid: 16
+  txt1: "昨天我被恶魔附身了！"
+  button1: "什么鬼胆子那么大！"
+  button1to: 35
+}
+data {
+  id: 35
+  dialogue_type: 4
+  npcid: 16
+  txt1: "但它重量太低了，还不够我做硬拉。"
+  button1: "你应该去兼职做驱魔师..."
+}
+data {
+  id: 36
+  dialogue_type: 2
+  npcid: 17
+  txt1: "你知道我为什么要随身带着道具枪吗？"
+  button1: "有人觊觎你的美貌？"
+  button1to: 37
+}
+data {
+  id: 37
+  dialogue_type: 4
+  npcid: 17
+  txt1: "这样我不用说话也能让孩子们写作业。"
+  button1: "硬核教育家！"
+}
+data {
+  id: 38
+  dialogue_type: 2
+  npcid: 18
+  txt1: "我们活在虚拟世界，美梦转瞬即逝。"
+  button1: "强尼，你怎么不留在夜之城？"
+  button1to: 39
+}
+data {
+  id: 39
+  dialogue_type: 4
+  npcid: 18
+  txt1: "夜之城太寡淡了，不如你这里最烈的酒。"
+  button1: "我会让你醉倒！"
+}
+data {
+  id: 40
+  dialogue_type: 2
+  npcid: 19
+  txt1: "你这个地方太适合拍电影了！"
+  button1: "为什么！"
+  button1to: 41
+}
+data {
+  id: 41
+  dialogue_type: 4
+  npcid: 19
+  txt1: "混乱的派对与血腥的枪战是绝配！"
+  button1: "你别把我客人吓跑了！"
+}
+data {
+  id: 42
+  dialogue_type: 2
+  npcid: 20
+  txt1: "我本是辅助，今晚来打野！"
+  button1: "你喝迷糊了？"
+  button1to: 43
+}
+data {
+  id: 43
+  dialogue_type: 4
+  npcid: 20
+  txt1: "如何呢？又能怎！"
+  button1: "真是奔放的表达..."
+}
+data {
+  id: 44
+  dialogue_type: 2
+  npcid: 21
+  txt1: "能不能动作快点？"
+  button1: "别急，马上就好"
+  button1to: 45
+}
+data {
+  id: 45
+  dialogue_type: 4
+  npcid: 21
+  txt1: "全世界为我都等了你一分钟，这是一种犯罪！"
+  button1: "心急吃不了热豆腐！"
+}
+data {
+  id: 46
+  dialogue_type: 2
+  npcid: 22
+  txt1: "他们都叫我狗爷。M3~"
+  button1: "但你看上去很年轻啊？"
+  button1to: 47
+}
+data {
+  id: 47
+  dialogue_type: 2
+  npcid: 22
+  txt1: "从你出生到现在，我就没下过榜单。M3~"
+  button1: "尊嘟假嘟？"
+  button1to: 48
+}
+data {
+  id: 48
+  dialogue_type: 4
+  npcid: 22
+  txt1: "For sure bro! 你妈当年放的胎教曲里都有我。"
+  button1: "Damn!"
+}
+data {
+  id: 49
+  dialogue_type: 2
+  npcid: 42
+  txt1: "不喜欢酒精，水才是我的饮品。"
+  button1: "这样也太无趣了！"
+  button1to: 50
+}
+data {
+  id: 50
+  dialogue_type: 4
+  npcid: 42
+  txt1: "沉迷酒水只会让人虚度光阴！"
+  button1: "但人生苦短，何不对酒当歌？"
+}
+data {
+  id: 51
+  dialogue_type: 2
+  npcid: 43
+  txt1: "这个派对实在是太短暂了！"
+  button1: "但我们已经狂欢了好几个钟头了呀？"
+  button1to: 52
+}
+data {
+  id: 52
+  dialogue_type: 4
+  npcid: 43
+  txt1: "时间是相对的，美好总是短暂！"
+  button1: "就像工作的时间永远漫长！"
+}
+data {
+  id: 53
+  dialogue_type: 2
+  npcid: 44
+  txt1: "为了帝国干杯！"
+  button1: "帝国允许你们来参加派对？"
+  button1to: 54
+}
+data {
+  id: 54
+  dialogue_type: 4
+  npcid: 44
+  txt1: "呃，好吧为了我还活着干杯！"
+  button1: "你还真是现实主义~"
+}
+data {
+  id: 55
+  dialogue_type: 2
+  npcid: 45
+  txt1: "你应该去当个律师或者医生，而不是在这里虚度时间！"
+  button1: "嘿！那你为什么在这?"
+  button1to: 56
+}
+data {
+  id: 56
+  dialogue_type: 4
+  npcid: 45
+  txt1: "我只是在这里寻找万中无一的武林高手！"
+  button1: "我觉得你只能找到\"舞林高手\"！"
+}
+data {
+  id: 57
+  dialogue_type: 2
+  npcid: 46
+  txt1: "啊啊啊啊啊！"
+  button1: "老先生你怎么了！"
+  button1to: 58
+}
+data {
+  id: 58
+  dialogue_type: 4
+  npcid: 46
+  txt1: "我要喝手磨咖啡！！！"
+  button1: "您吓我一跳！"
+}
+data {
+  id: 59
+  dialogue_type: 2
+  npcid: 47
+  txt1: "你这里服务费怎么收？"
+  button1: "二十一位！"
+  button1to: 60
+}
+data {
+  id: 60
+  dialogue_type: 4
+  npcid: 47
+  txt1: "我看你是真的想和我拼一下子！"
+  button1: "开个玩笑！免费，免费！"
+}
+data {
+  id: 61
+  dialogue_type: 2
+  npcid: 48
+  txt1: "我今天要穿迷你裙还是吊带袜？"
+  button1: "老人家您不要说笑~"
+  button1to: 62
+}
+data {
+  id: 62
+  dialogue_type: 4
+  npcid: 48
+  txt1: "你们这些年轻人真是不懂欣赏！"
+  button1: "您开心就好！"
+}
+data {
+  id: 63
+  dialogue_type: 2
+  npcid: 49
+  txt1: "成功返回坐标！"
+  button1: "哇！大块头，什么风把你吹来了!"
+  button1to: 64
+}
+data {
+  id: 64
+  dialogue_type: 4
+  npcid: 49
+  txt1: "来参加天网毁灭人类前最好的派对！"
+  button1: "等等，难道你失败了吗？"
+}
+data {
+  id: 65
+  dialogue_type: 2
+  npcid: 50
+  txt1: "我今天美吗？"
+  button1: "衣服不太合身..."
+  button1to: 66
+}
+data {
+  id: 66
+  dialogue_type: 4
+  npcid: 50
+  txt1: "因为这是品如的衣服~"
+  button1: "你好烧啊！"
+}

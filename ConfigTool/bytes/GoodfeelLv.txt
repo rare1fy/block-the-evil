@@ -1,0 +1,81 @@
+data {
+  lv: 1
+  exp: 100
+}
+data {
+  lv: 2
+  exp: 100
+}
+data {
+  lv: 3
+  exp: 100
+}
+data {
+  lv: 4
+  exp: 100
+}
+data {
+  lv: 5
+  exp: 100
+}
+data {
+  lv: 6
+  exp: 100
+}
+data {
+  lv: 7
+  exp: 100
+}
+data {
+  lv: 8
+  exp: 100
+}
+data {
+  lv: 9
+  exp: 100
+}
+data {
+  lv: 10
+  exp: 100
+}
+data {
+  lv: 11
+  exp: 100
+}
+data {
+  lv: 12
+  exp: 100
+}
+data {
+  lv: 13
+  exp: 100
+}
+data {
+  lv: 14
+  exp: 100
+}
+data {
+  lv: 15
+  exp: 100
+}
+data {
+  lv: 16
+  exp: 100
+}
+data {
+  lv: 17
+  exp: 100
+}
+data {
+  lv: 18
+  exp: 100
+}
+data {
+  lv: 19
+  exp: 100
+}
+data {
+  lv: 20
+  exp: 100
+  max: 1
+}
