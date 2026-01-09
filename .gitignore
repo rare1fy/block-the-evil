@@ -1,0 +1,10 @@
+# 忽略文件夹
+/Bundles/
+/Library/
+/Logs/
+/obj/
+/Temp/
+
+# 忽略.csproj文件
+*.csproj
+*.sln
