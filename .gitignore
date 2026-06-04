@@ -1,10 +1,60 @@
-# 忽略文件夹
-/Bundles/
-/Library/
-/Logs/
-/obj/
-/Temp/
+# ============================================
+# Unity 项目 .gitignore（UTF-8）
+# ============================================
 
-# 忽略.csproj文件
+# 资源打包输出目录
+/Bundles/
+/[Bb]undles/
+
+# Unity 自动生成的缓存/临时目录
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# 本地工具 / MCP 服务（不入库）
+/McpServer/
+
+# 自动生成的工程文件
 *.csproj
+*.unityproj
 *.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# 压缩包（按需手动添加）
+*.zip
+*.rar
+*.7z
+
+# Rider / VS / VSCode
+/.idea/
+/.vs/
+/.vscode/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Unity Crash 日志
+sysinfo.txt
+crashlog/
+*.stackdump
+
+# Asset Store Tools 插件
+/[Aa]ssets/AssetStoreTools*

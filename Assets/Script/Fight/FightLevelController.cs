@@ -403,17 +403,6 @@ public class FightLevelController
                     npcId = npcId,
                     pos = pos,
                     CloseAction = (id, exp) => { ChatEndNewSystem(); }
-                    // CloseAction = (id, addExp) =>
-                    // {
-                    //     var fristFeel = GetFeelLv(npcData.exp);
-                    //     EventDispatchCenter.Instance.Dispatch(SDEvents.FIGHT_FEEL_EXP_UP, new Tuple<int, int, int, int, Action>(id, fristFeel.value1, fristFeel.value2, addExp, null));
-                    //     npcData.exp += addExp;
-                    //     var curFeel = GetFeelLv(npcData.exp);
-                    //     if (fristFeel.value1 != curFeel.value1)
-                    //     {
-                    //         UIManager.Instance.ShowUI("FeelWindow", param: new Tuple<int, int, Action>(curFeel.value1, id, null));
-                    //     }
-                    // }
                 };
                 UIManager.Instance.ShowUI("UIFightChat", param: data);
             }
@@ -461,33 +450,6 @@ public class FightLevelController
         {
             UIManager.Instance.ShowUI("UIFightNewSystem", param: 999);
         }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="Exp"></param>
-    /// <returns>value1 好感等级，value2 剩余经验</returns>
-    private Tuple<int, int> GetFeelLv(int Exp)
-    {
-        int feel = 0;
-        int curExp = 0;
-        while (Exp >= 0)
-        {
-            var feelCfg = Config.GetConfig<Config_GoodfeelLv>().GetConfigById(feel + 1);
-            if (feelCfg.Max == 1)
-            {
-                break;
-            }
-            else
-            {
-                feel++;
-                curExp = Exp;
-                Exp -= feelCfg.Exp;
-            }
-        }
-
-        return new Tuple<int, int>(feel, curExp);
     }
 
     /// <summary>

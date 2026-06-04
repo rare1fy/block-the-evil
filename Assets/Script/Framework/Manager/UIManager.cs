@@ -49,12 +49,6 @@ class UIManager : MonoSingleton<UIManager>
         {"UISecondConfirm",new UIParam("UISecondConfirm",6,UIType.StaticNotInStack)},     //选项提示
         {"UConnectingWindow",new UIParam("UConnectingWindow",6,UIType.StaticNotInStack)}, //短线重连
 
-        { "UIDialogueWindow", new UIParam("UIDialogueWindow",3)},                           //外围对话框
-        { "UIChatWindow", new UIParam("UIChatWindow",2)},                                   //聊天室
-        { "UIContactsWindow", new UIParam("UIContactsWindow",2)},                           //npc列表
-        { "UIBuildWindow", new UIParam("UIBuildWindow",2)},                    //建筑
-        { "FeelWindow", new UIParam("FeelWindow",4) },                      //好感
-        { "PerformWindow", new UIParam("PerformWindow",5)},                  //剧情
         { "UIPassConfirm", new UIParam("UIPassConfirm",6)},                  //通关弹窗
         { "UISuggest", new UIParam("UISuggest",6)},                     //开场提示
         { "UISetPopup", new UIParam("UISetPopup",3)},                        //设置

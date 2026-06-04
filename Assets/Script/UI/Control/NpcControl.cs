@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NpcControl : BaseControl
@@ -19,8 +18,6 @@ public class NpcControl : BaseControl
 
     protected override void OnInitControl() 
     {
-        //EventDispatchCenter.Instance.Registry(SDEvents.CHANGE_LEAVL, RefreshAllNpcState);
-
         Model.NpcDic.Clear();
         var configs = Config.GetConfig<Config_NpcBase>().m_NpcBaseDic;
         foreach (var item in configs)
@@ -33,8 +30,6 @@ public class NpcControl : BaseControl
 
     protected override void OnCloseControl() 
     {
-        //EventDispatchCenter.Instance.UnRegistry(SDEvents.CHANGE_LEAVL, RefreshAllNpcState);
-
     }
 
     public NpcData GetNpcData(int id)
@@ -61,29 +56,6 @@ public class NpcControl : BaseControl
             }
         }
         return ret;
-    }
-
-    public int GetMaxExp(int lv, out bool isMax)
-    {
-        var cfg = Config.GetConfig<Config_GoodfeelLv>().GetConfigById(lv);
-        isMax = cfg.Max == 1;
-        return cfg.Exp;
-    }
-
-    /// <summary>
-    /// 获得npc的好感度等级
-    /// </summary>
-    /// <returns></returns>
-    public int GetNpcFeelLevel(int npcId)
-    {
-        foreach (var item in Model.NpcDic.Values)
-        {
-            if (item.Id == npcId)
-            {
-                return item.FeelLv;
-            }
-        }
-        return 0;
     }
 
     /// <summary>
@@ -119,39 +91,17 @@ public class NpcControl : BaseControl
         return false;
     }
 
-    public void SetNpcFeel(int NpcId, int exp)
-    {
-        if (Model.NpcDic.TryGetValue(NpcId, out var data))
-        {
-            data.AddExp(exp);
-        }
-    }
-
     /// <summary>
-    /// 刷新所有npc状态
+    /// 战斗结算回写npc数据
     /// </summary>
-    public void RefreshAllNpcState(object obj = null)
-    {
-        foreach (var item in Model.NpcDic)
-        {
-            item.Value.RefreshNpcType();
-            item.Value.Serialize();
-        }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="npcAddDatas"> id, exp, order</param>
+    /// <param name="npcInfoList">id, order</param>
     public void ChangeNpcDatas(List<NpcInfo> npcInfoList)
     {
         foreach (var data in npcInfoList)
         {
             if (Model.NpcDic.TryGetValue(data.id, out var item))
             {
-                int addExp = data.exp - item.FeelExp;
                 int addOrder = data.order - item.Order;
-                item.AddExp(addExp);
                 item.AddNpcOrder(addOrder);
                 item.SetPrefData();
             }
@@ -175,4 +125,3 @@ public class NpcControl : BaseControl
         }
     }
 }
-

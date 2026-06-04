@@ -26,21 +26,6 @@ public class NpcData
         get { return id; }
         private set { }
     }
-    //好感等级
-    private int feelLv;
-    public int FeelLv
-    {
-        get { return feelLv; }
-        private set { feelLv = value; }
-    }
-
-    private int feelExp;
-    //好感经验
-    public int FeelExp
-    {
-        get { return feelExp; }
-        private set { feelExp = value; }
-    }
 
     private NpcState npcsState;
     public NpcState NpcState
@@ -61,8 +46,6 @@ public class NpcData
     public NpcData(int id)
     {
         this.id = id;
-        this.feelLv = 1;
-        this.feelExp = 0;
         this.npcsState = NpcState.Lock;
         this.order = 0;
         AnalysisPrefData();
@@ -71,8 +54,6 @@ public class NpcData
     public void SetPrefData()
     {
         string strData = "";
-        strData += $"{feelLv};";
-        strData += $"{feelExp};";
         strData += $"{NpcState};";
         strData += $"{order};";
         PlayerPrefs.SetString("TetrisBarClient_NpcData_" + Id, strData);
@@ -83,73 +64,25 @@ public class NpcData
         if (PlayerPrefs.HasKey("TetrisBarClient_NpcData_" + id))
         {
             var strData = PlayerPrefs.GetString("TetrisBarClient_NpcData_" + id).Split(";");
-            feelLv = int.Parse(strData[0]);
-            feelExp = int.Parse(strData[1]);
-            NpcState = Enum.Parse<NpcState>(strData[2]);
-            order = int.Parse(strData[3]);
+            NpcState = Enum.Parse<NpcState>(strData[0]);
+            order = int.Parse(strData[1]);
         }
         else
         {
             RefreshNpcType();
             SetPrefData();
         }
-        //Debug.LogError($"npcId = {id}; order = {order}");
-    }
-
-    /// <summary>
-    /// 增加经验
-    /// </summary>
-    /// <param name="exp"></param>
-    /// <param name="bStore">立即缓存</param>
-    public void AddExp(int exp)
-    {
-        feelExp += exp;
-        while (true)
-        {
-            var cfg = Config.GetConfig<Config_GoodfeelLv>().GetConfigById(feelLv);
-            if (feelExp >= cfg.Exp)
-            {
-                if (cfg.Max == 1)
-                {
-                    feelExp = cfg.Exp;
-                    break;
-                }
-                feelLv++;
-                feelExp -= cfg.Exp;
-            }
-            else
-            {
-                break;
-            }
-        }
-        EventDispatchCenter.Instance.Dispatch(SDEvents.CHAGE_NPC_FEEL, new Tuple<int,int>(id, exp));
     }
 
     public void RefreshNpcType()
     {
-        var lastType = npcsState;
-        var playerModel = GameManager.Instance.PlayerControl.PlayerModel;
-        var cfg = Config.GetConfig<Config_NpcBase>().GetConfigById(id);
-        //var bOrder = order >= cfg.Unlockorderneed;
-        //var bLevel = playerModel.Level >= cfg.Unlocklevelneed;
-
         if (NpcState == NpcState.UnLock)
         {
             NpcState = NpcState.UnLock;
-
         }
         else
         {
             NpcState = NpcState.Lock;
-
-            //if (bOrder && bLevel)
-            //{
-            //    NpcState = NpcState.Openable;
-            //}
-            //else
-            //{
-            //    NpcState = NpcState.Lock;
-            //}
         }
         EventDispatchCenter.Instance.Dispatch(SDEvents.CHANGE_NPC_STATE, id);
     }
@@ -175,7 +108,6 @@ public class NpcData
 public class NpcInfo
 {
     public int id;
-    public int exp;
     public int order;
 }
 

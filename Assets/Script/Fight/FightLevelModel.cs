@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Pb;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -146,7 +145,6 @@ public class FightLevelModel : BaseModel
             NpcDic.Add(npcData.Key, new NpcInfo()
             {
                 id = data.Id,
-                exp = data.FeelExp,
                 order = data.Order
             });
         }

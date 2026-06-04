@@ -25,8 +25,6 @@ public class Config : Singleton<Config>
 		new	Config_FighteffectBase(),
 		new	Config_GdConstant(),
 		new	Config_GiftBase(),
-		new	Config_GoodfeelLv(),
-		new	Config_GoodfeelNpc(),
 		new	Config_GuildGroup(),
 		new	Config_GuildPerform(),
 		new	Config_GuildWord(),

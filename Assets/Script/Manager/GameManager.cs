@@ -206,35 +206,6 @@ public class GameManager : MonoSingleton<GameManager>
     }
 
     /// <summary>
-    /// 章节控制器
-    /// </summary>
-    private ChapterControl chapterControl = null;
-    public ChapterControl ChapterControl 
-    {
-        get 
-        {
-            if (ReferenceEquals(chapterControl, null))
-                chapterControl = new ChapterControl();
-            return chapterControl;
-        }
-    }
-
-    /// <summary>
-    /// npc外围对话控制器
-    /// </summary>
-    private DialogueControl _dialogueControl = null;
-
-    public DialogueControl DialogueControl
-    {
-        get
-        {
-            if (ReferenceEquals(_dialogueControl, null))
-                _dialogueControl = new DialogueControl();
-            return _dialogueControl;
-        }
-    }
-
-    /// <summary>
     /// 背包控制器
     /// </summary>
     private GameBagControl _gameBagControl = null;
@@ -249,17 +220,6 @@ public class GameManager : MonoSingleton<GameManager>
         }
     }
 
-    private PerformControl performControl = null;
-
-    public PerformControl PerformControl
-    {
-        get {
-            if (ReferenceEquals(performControl, null))
-                performControl = new PerformControl();
-            return performControl;
-        }
-    }
-    
     private MusicControl _musicControl = null;
     public MusicControl MusicControl
     {
@@ -296,11 +256,8 @@ public class GameManager : MonoSingleton<GameManager>
     {
         _gameControl.Add(PlayerControl);
         _gameControl.Add(NpcControl);
-        _gameControl.Add(ChapterControl);
-        _gameControl.Add(DialogueControl);
         _gameControl.Add(CurFightControl);
         _gameControl.Add(GameBagControl);
-        _gameControl.Add(PerformControl);
         _gameControl.Add(MusicControl);
         _gameControl.Add(StageControl);
         _gameControl.Add(EndlessControl);

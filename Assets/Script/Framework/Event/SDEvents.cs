@@ -177,11 +177,6 @@ public static class SDEvents
     /// 局内聊天下一步
     /// </summary>
     public static string C2C_FIGHT_CHAT_NEXT = "C2C_FIGHT_CHAT_NEXT";
-    
-    /// <summary>
-    /// 局内经验提升
-    /// </summary>
-    public static string FIGHT_FEEL_EXP_UP = "FIGHT_FEEL_EXP_UP";
 
     #endregion
 
@@ -208,10 +203,6 @@ public static class SDEvents
     /// 订单变更
     /// </summary>
     public static string CHANGE_ORDER = "CHANGE_ORDER";
-    /// <summary>
-    /// 好感提升
-    /// </summary>
-    public static string CHAGE_NPC_FEEL = "CHAGE_FEEL";
     /// <summary>
     /// NPC状态变更
     /// </summary>
