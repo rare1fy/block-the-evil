@@ -47,23 +47,17 @@ public class UIOrderPanel : UIItemBase
     {
         _uiFightMain = ui;
         var levelModel = GameManager.Instance.CurFightControl.LevelController.Model;
-        if (levelModel.LevelBaseData.Payorder == 1)
-        {
+        var maxMonsterSlots = levelModel.GetMaxActiveMonsterSlots();
+        _Obj_OrderItem1.gameObject.SetActiveEx(maxMonsterSlots >= 1);
+        _Obj_OrderItem2.gameObject.SetActiveEx(maxMonsterSlots >= 2);
+        _Obj_OrderItem3.gameObject.SetActiveEx(maxMonsterSlots >= 3);
+
+        if (maxMonsterSlots >= 2 && !_orderItemList.Contains(_Obj_OrderItem2))
             _orderItemList.Add(_Obj_OrderItem2);
-        }
-        else
-        {
-            _Obj_OrderItem3.gameObject.SetActiveEx(false);
-        }
-        
-        if (levelModel.LevelBaseData.Adsorder == 1)
-        {
+
+        if (maxMonsterSlots >= 3 && !_orderItemList.Contains(_Obj_OrderItem3))
             _orderItemList.Add(_Obj_OrderItem3);
-        }
-        else
-        {
-            _Obj_OrderItem3.gameObject.SetActiveEx(false);
-        }
+
         RefreshPanel();
         
         if (levelModel.LevelBaseData.Modle == 2 || levelModel.IsEndLess)

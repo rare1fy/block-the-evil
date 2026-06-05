@@ -269,10 +269,7 @@ public class FightLevelController
 
     public void InitCreateOrder()
     {
-        AddOrderCount(0);
-
-        if (Model.LevelBaseData.Modle == 2 || Model.IsEndLess)
-            AddOrderCount(2);
+        FillOpenMonsterSlots();
     }
 
     /// <summary>
@@ -303,19 +300,27 @@ public class FightLevelController
         }
 
         if (posList.Count > 0)
-        {
-            foreach (var index in posList)
-            {
-                if (Model.OrderList.Count <= 0)
-                {
-                    break;
-                }
-
-                CreateFightOrder(index);
-            }
-        }
+            FillOpenMonsterSlots();
 
         return finishList;
+    }
+
+    private void FillOpenMonsterSlots()
+    {
+        if (IsLevelTargetFinish())
+            return;
+
+        var desiredSlots = Model.GetDesiredActiveMonsterSlots();
+        for (var index = 0; index < Model.GetMaxActiveMonsterSlots() && Model.FightOrders.Count < desiredSlots; index++)
+        {
+            if (Model.OrderList.Count <= 0)
+                break;
+
+            if (Model.FightOrders.Exists(orderData => orderData.Index == index))
+                continue;
+
+            AddOrderCount(index);
+        }
     }
 
     /// <summary>
@@ -343,7 +348,8 @@ public class FightLevelController
 
         var fightOrderData = new FightOrderData(index, orderId);
         Model.FightOrders.Add(fightOrderData);
-        Model.RegisterOrderAsMonster(fightOrderData);
+        var isBoss = Model.LevelBaseData != null && Model.LevelBaseData.Boss == 1 && fightOrderData.Index == 0;
+        Model.RegisterOrderAsMonster(fightOrderData, isBoss);
         var alreadyCreateOrder = Model.FinishOrderList.Count + Model.FightOrders.Count;
 
         if (Model.ColorUnlockDic.TryGetValue(alreadyCreateOrder, out var colorType))
@@ -443,12 +449,19 @@ public class FightLevelController
     /// </summary>
     public void AddOrderCount(int index)
     {
+        if (Model.OrderList.Count <= 0)
+            return;
+
         if (!Model.FightOrderIndex.Contains(index))
         {
             Model.FightOrderIndex.Add(index);
-            CreateFightOrder(index, index == 0);
-            EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_REFRESH_ORDER_ITEM);
         }
+
+        if (Model.FightOrders.Exists(orderData => orderData.Index == index))
+            return;
+
+        CreateFightOrder(index, index == 0 && Model.FinishOrderList.Count == 0);
+        EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_REFRESH_ORDER_ITEM);
     }
     
     /// <summary>

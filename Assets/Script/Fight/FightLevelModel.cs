@@ -17,6 +17,10 @@ public class FightLevelModel : BaseModel
     private const int MiddleLevelInitialTargetColorBlocks = 2;
     private const int LateLevelInitialTargetColorBlocks = 1;
     private const int BossInitialTargetColorBlocks = 1;
+    private const int EarlyLevelMaxActiveMonsters = 1;
+    private const int MiddleLevelMaxActiveMonsters = 2;
+    private const int LateLevelMaxActiveMonsters = 3;
+    private const int BossWarmupMaxActiveMonsters = 2;
 
     /// <summary>
     /// 章节id
@@ -155,12 +159,11 @@ public class FightLevelModel : BaseModel
         EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_UPDATE_SCORE, LevelScore);
     }
 
-    public void RegisterOrderAsMonster(FightOrderData orderData)
+    public void RegisterOrderAsMonster(FightOrderData orderData, bool isBoss = false)
     {
         if (orderData == null || orderData.NeedBlockCount <= 0)
             return;
 
-        var isBoss = LevelBaseData != null && LevelBaseData.Boss == 1 && orderData.Index == 0;
         var stages = new List<StageRequirement>
         {
             new StageRequirement(StageRequirementType.Color, orderData.NeedBlockId, orderData.NeedBlockCount)
@@ -287,6 +290,37 @@ public class FightLevelModel : BaseModel
         return LevelBaseData.Id <= 30
             ? MiddleLevelInitialTargetColorBlocks
             : LateLevelInitialTargetColorBlocks;
+    }
+
+    public int GetMaxActiveMonsterSlots()
+    {
+        if (LevelBaseData == null)
+            return EarlyLevelMaxActiveMonsters;
+
+        if (LevelBaseData.Boss == 1)
+            return BossWarmupMaxActiveMonsters;
+
+        if (LevelBaseData.Id <= 10)
+            return EarlyLevelMaxActiveMonsters;
+
+        return LevelBaseData.Id <= 30
+            ? MiddleLevelMaxActiveMonsters
+            : LateLevelMaxActiveMonsters;
+    }
+
+    public int GetDesiredActiveMonsterSlots()
+    {
+        if (LevelBaseData == null || OrderList.Count <= 0)
+            return 0;
+
+        if (LevelBaseData.Boss == 1)
+            return Math.Min(BossWarmupMaxActiveMonsters, Math.Max(1, Target - FinishOrderList.Count - 1));
+
+        var maxSlots = GetMaxActiveMonsterSlots();
+        if (maxSlots >= LateLevelMaxActiveMonsters && FinishOrderList.Count < 2)
+            return MiddleLevelMaxActiveMonsters;
+
+        return maxSlots;
     }
     
     /// <summary>

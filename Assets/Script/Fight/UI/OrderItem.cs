@@ -72,19 +72,14 @@ public class OrderItem : UIItemBase
             _nextTime = -1;
         }
         
-        var isOpen = GameManager.Instance.CurFightControl.LevelController.Model.FightOrderIndex.Contains(index);
-        var isAd = index == 2;   //index =2 默认为广告
-        _Btn_Cost.SetActiveEx(orderData == null && !isOpen && !isAd);
-        _Btn_AD.SetActiveEx(orderData == null && !isOpen && isAd);
+        _Btn_Cost.SetActiveEx(false);
+        _Btn_AD.SetActiveEx(false);
         _Obj_Npc.SetActiveEx(orderData != null);
         _Img_Npc.gameObject.SetActiveEx(orderData != null);
         
         if (orderData == null)
         {
-            if (!isAd)
-            {
-                _Txt_Cost.text = Util.FormatNumber(GameManager.Instance.CurFightControl.LevelController.Model.LevelBaseData.PayorderNeed);
-            }
+            _Txt_Cost.text = string.Empty;
         }
         else
         {
