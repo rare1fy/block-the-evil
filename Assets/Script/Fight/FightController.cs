@@ -9,9 +9,6 @@ using UnityEngine;
 
 public class FightController : BaseControl
 {
-    private const int EnemyPressureBlocksPerMonster = 3;
-    private const int MaxEnemyPressureBlocks = 12;
-
     /// <summary>
     /// 战斗结束
     /// </summary>
@@ -606,8 +603,10 @@ public class FightController : BaseControl
             candidates.Add(blockData);
         }
 
-        var pressurePerTurn = activeMonsterCount * EnemyPressureBlocksPerMonster;
-        var pressureCount = Math.Min(pressurePerTurn, Math.Max(0, MaxEnemyPressureBlocks - currentPressureCount));
+        var pressurePerTurn = activeMonsterCount * LevelController.Model.GetEnemyPressureBlocksPerMonster();
+        var pressureCount = Math.Min(
+            pressurePerTurn,
+            Math.Max(0, LevelController.Model.GetMaxEnemyPressureBlocks() - currentPressureCount));
         pressureCount = Math.Min(pressureCount, candidates.Count);
         for (var i = 0; i < pressureCount; i++)
         {

@@ -9,6 +9,10 @@ using Random = UnityEngine.Random;
 public class FightLevelModel : BaseModel
 {
     private const int MaxPendingRewardColors = 3;
+    private const int NormalEnemyPressureBlocksPerMonster = 3;
+    private const int BossEnemyPressureBlocksPerMonster = 4;
+    private const int NormalMaxEnemyPressureBlocks = 12;
+    private const int BossMaxEnemyPressureBlocks = 16;
 
     /// <summary>
     /// 章节id
@@ -218,6 +222,20 @@ public class FightLevelModel : BaseModel
     public bool HasPendingRewardColor()
     {
         return _pendingRewardColors.Count > 0;
+    }
+
+    public int GetEnemyPressureBlocksPerMonster()
+    {
+        return LevelBaseData != null && LevelBaseData.Boss == 1
+            ? BossEnemyPressureBlocksPerMonster
+            : NormalEnemyPressureBlocksPerMonster;
+    }
+
+    public int GetMaxEnemyPressureBlocks()
+    {
+        return LevelBaseData != null && LevelBaseData.Boss == 1
+            ? BossMaxEnemyPressureBlocks
+            : NormalMaxEnemyPressureBlocks;
     }
     
     /// <summary>
