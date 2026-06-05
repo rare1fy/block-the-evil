@@ -13,10 +13,10 @@ public class FightLevelModel : BaseModel
     private const int BossEnemyPressureBlocksPerMonster = 4;
     private const int NormalMaxEnemyPressureBlocks = 12;
     private const int BossMaxEnemyPressureBlocks = 16;
-    private const int EarlyLevelInitialTargetColorBlocks = 3;
-    private const int MiddleLevelInitialTargetColorBlocks = 2;
-    private const int LateLevelInitialTargetColorBlocks = 1;
-    private const int BossInitialTargetColorBlocks = 1;
+    private const float EarlyLevelInitialTargetColorRatio = 1f;
+    private const float MiddleLevelInitialTargetColorRatio = 0.7f;
+    private const float LateLevelInitialTargetColorRatio = 0.45f;
+    private const float BossInitialTargetColorRatio = 0.45f;
     private const int EarlyLevelMaxActiveMonsters = 1;
     private const int MiddleLevelMaxActiveMonsters = 2;
     private const int LateLevelMaxActiveMonsters = 3;
@@ -283,15 +283,20 @@ public class FightLevelModel : BaseModel
         if (LevelBaseData == null)
             return 0;
 
+        var activeNeedCount = MonsterBattleState.GetActiveColorNeedCount();
+        if (activeNeedCount <= 0)
+            return 0;
+
         if (LevelBaseData.Boss == 1)
-            return BossInitialTargetColorBlocks;
+            return Math.Max(1, (int)Math.Ceiling(activeNeedCount * BossInitialTargetColorRatio));
 
         if (LevelBaseData.Id <= 10)
-            return EarlyLevelInitialTargetColorBlocks;
+            return Math.Max(1, (int)Math.Ceiling(activeNeedCount * EarlyLevelInitialTargetColorRatio));
 
-        return LevelBaseData.Id <= 30
-            ? MiddleLevelInitialTargetColorBlocks
-            : LateLevelInitialTargetColorBlocks;
+        var ratio = LevelBaseData.Id <= 30
+            ? MiddleLevelInitialTargetColorRatio
+            : LateLevelInitialTargetColorRatio;
+        return Math.Max(1, (int)Math.Ceiling(activeNeedCount * ratio));
     }
 
     public int GetMaxActiveMonsterSlots()

@@ -250,6 +250,21 @@ public class MonsterBattleState
         return colors;
     }
 
+    public int GetActiveColorNeedCount()
+    {
+        var needCount = 0;
+        foreach (var monster in _activeMonsters)
+        {
+            var stage = monster.CurrentStage;
+            if (stage == null || stage.RequirementType != StageRequirementType.Color || stage.IsComplete)
+                continue;
+
+            needCount += stage.RemainingCount;
+        }
+
+        return needCount;
+    }
+
     public List<int> GetMonsterIdsNeedingSpirit()
     {
         var monsterIds = new List<int>();

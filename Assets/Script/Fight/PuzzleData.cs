@@ -60,6 +60,15 @@ public class PuzzleData
         }
     }
 
+    public bool DyeBlockByOrder(int colorType, int orderIndex)
+    {
+        if (colorType <= 0 || orderIndex < 0 || orderIndex >= _posList.Count)
+            return false;
+
+        PosColorList[_posList[orderIndex]] = colorType;
+        return true;
+    }
+
     public int PosCount()
     {
         return _posList.Count;

@@ -238,21 +238,25 @@ public class FightController : BaseControl
             if (puzzleData.bUsed)
                 continue;
 
-            var colorType = LevelController.Model.MonsterBattleState.GetMostNeededColor(availableColorCounts);
-            if (colorType <= 0)
-                break;
-
-            puzzleData.DyeFirstBlocks(colorType, 1);
-            if (availableColorCounts.ContainsKey(colorType))
+            for (var blockIndex = 0; blockIndex < puzzleData.PosCount() && dyedCount < colorCount; blockIndex++)
             {
-                availableColorCounts[colorType]++;
-            }
-            else
-            {
-                availableColorCounts.Add(colorType, 1);
+                var colorType = LevelController.Model.MonsterBattleState.GetMostNeededColor(availableColorCounts);
+                if (colorType <= 0)
+                    break;
+
+                puzzleData.DyeBlockByOrder(colorType, blockIndex);
+                if (availableColorCounts.ContainsKey(colorType))
+                {
+                    availableColorCounts[colorType]++;
+                }
+                else
+                {
+                    availableColorCounts.Add(colorType, 1);
+                }
+
+                dyedCount++;
             }
 
-            dyedCount++;
             if (dyedCount >= colorCount)
                 break;
         }
