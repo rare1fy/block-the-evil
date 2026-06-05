@@ -1,0 +1,491 @@
+{
+    "FileVersion": "1.0.0",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2025-10-28-738",
+    "Wrappers": [
+        {
+            "BundleGUID": "4ed08ab754f78823ea8a17074d4867bb",
+            "FileName": "defaultpackage_assets_bundles_audios_orderdone_4ed08ab754f78823ea8a17074d4867bb.bundle"
+        },
+        {
+            "BundleGUID": "c2b54ebd5d7c80b86b1f6897aea681fb",
+            "FileName": "defaultpackage_assets_bundles_audios_systemaudio_c2b54ebd5d7c80b86b1f6897aea681fb.bundle"
+        },
+        {
+            "BundleGUID": "bce5db46164af7e8f269b1ca60ce7da8",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_day_dream_bce5db46164af7e8f269b1ca60ce7da8.bundle"
+        },
+        {
+            "BundleGUID": "6ccce49ceb01eb1113e90b7de0272a40",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_elite_monster_6ccce49ceb01eb1113e90b7de0272a40.bundle"
+        },
+        {
+            "BundleGUID": "3f837b122a36b5182b1c9ec064107121",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_faraway_latin_girl_3f837b122a36b5182b1c9ec064107121.bundle"
+        },
+        {
+            "BundleGUID": "85baca314d9d7ba5ecb6b63fcc381a77",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_floating_85baca314d9d7ba5ecb6b63fcc381a77.bundle"
+        },
+        {
+            "BundleGUID": "530ab26b093da1c8de9fc68fd2ed1dc0",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_glass_river_530ab26b093da1c8de9fc68fd2ed1dc0.bundle"
+        },
+        {
+            "BundleGUID": "916a5e26d4c81cbd89606261dd2cccea",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_island_funk_916a5e26d4c81cbd89606261dd2cccea.bundle"
+        },
+        {
+            "BundleGUID": "6d91dc987386df87d6af37b37fc026f7",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_mad_wish_6d91dc987386df87d6af37b37fc026f7.bundle"
+        },
+        {
+            "BundleGUID": "21042b0e490bf88b1ba205850926f195",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_mind_shake_21042b0e490bf88b1ba205850926f195.bundle"
+        },
+        {
+            "BundleGUID": "bd85b98f52cbfc502a02fd112da3d27a",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_moon_vibe_bd85b98f52cbfc502a02fd112da3d27a.bundle"
+        },
+        {
+            "BundleGUID": "835522a756af28cd049f1c94c70b80c4",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_neon_beach_835522a756af28cd049f1c94c70b80c4.bundle"
+        },
+        {
+            "BundleGUID": "f38aaa321b8846300107daaae2178caa",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_past_away_f38aaa321b8846300107daaae2178caa.bundle"
+        },
+        {
+            "BundleGUID": "0015fe7a65e32ff220a2ef0668c9e99a",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_rave_and_forget_0015fe7a65e32ff220a2ef0668c9e99a.bundle"
+        },
+        {
+            "BundleGUID": "6b2cd3ca746b5c4fdee37e71bd746233",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_seek_in_the_sunset_6b2cd3ca746b5c4fdee37e71bd746233.bundle"
+        },
+        {
+            "BundleGUID": "0a1a8b58b447710f3fc49a46afbcc73e",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_shadow_hunt_0a1a8b58b447710f3fc49a46afbcc73e.bundle"
+        },
+        {
+            "BundleGUID": "204def2942b4b0fc5dc3fdead83cb612",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_slow_faint_204def2942b4b0fc5dc3fdead83cb612.bundle"
+        },
+        {
+            "BundleGUID": "edda1d9d560eed76d1f7f0fda4f7b6b7",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_swag_diving_edda1d9d560eed76d1f7f0fda4f7b6b7.bundle"
+        },
+        {
+            "BundleGUID": "67987ca78ddb1595d72391b84f811091",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_till_the_very_end_67987ca78ddb1595d72391b84f811091.bundle"
+        },
+        {
+            "BundleGUID": "b73e056255b6913b2dd88887ad043cfa",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_tipsy_yet_b73e056255b6913b2dd88887ad043cfa.bundle"
+        },
+        {
+            "BundleGUID": "fb03f943dd17ba84b4d2c6358892c7ca",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_trouble_ready_fb03f943dd17ba84b4d2c6358892c7ca.bundle"
+        },
+        {
+            "BundleGUID": "24a2a6988a68bbc11a1a90d1579c02f6",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_twilight_in_smoke_24a2a6988a68bbc11a1a90d1579c02f6.bundle"
+        },
+        {
+            "BundleGUID": "1059a0c9bd92fd0cb29d2f4a6e1a2b15",
+            "FileName": "defaultpackage_assets_bundles_bgm_bgm_underground_action_1059a0c9bd92fd0cb29d2f4a6e1a2b15.bundle"
+        },
+        {
+            "BundleGUID": "a37df2299a8edcdb958cd875fba64fa7",
+            "FileName": "defaultpackage_assets_bundles_bgm_default_bgm_a37df2299a8edcdb958cd875fba64fa7.bundle"
+        },
+        {
+            "BundleGUID": "bc5f5bdcca1cf831fce50b246cd3a738",
+            "FileName": "defaultpackage_assets_bundles_common_audio_bc5f5bdcca1cf831fce50b246cd3a738.bundle"
+        },
+        {
+            "BundleGUID": "69e8a4e5b6adb0dadad2dc53536a9972",
+            "FileName": "defaultpackage_assets_bundles_common_font_69e8a4e5b6adb0dadad2dc53536a9972.bundle"
+        },
+        {
+            "BundleGUID": "c79e994f8787dc1d8480a537feff2318",
+            "FileName": "defaultpackage_assets_bundles_config_leveldata_c79e994f8787dc1d8480a537feff2318.bundle"
+        },
+        {
+            "BundleGUID": "063b2f7e7efa3dc3e20c847f7a44ebf7",
+            "FileName": "defaultpackage_assets_bundles_config_tables_063b2f7e7efa3dc3e20c847f7a44ebf7.bundle"
+        },
+        {
+            "BundleGUID": "5e72deda79f11c4c13573792e9332cee",
+            "FileName": "defaultpackage_assets_bundles_fight_anim_5e72deda79f11c4c13573792e9332cee.bundle"
+        },
+        {
+            "BundleGUID": "211551ca8c3bf4c1b701d238ab53af60",
+            "FileName": "defaultpackage_assets_bundles_fight_atlas_211551ca8c3bf4c1b701d238ab53af60.bundle"
+        },
+        {
+            "BundleGUID": "c437056aa0fde2451ce1b63e98e2d515",
+            "FileName": "defaultpackage_assets_bundles_fight_prefab_c437056aa0fde2451ce1b63e98e2d515.bundle"
+        },
+        {
+            "BundleGUID": "c0c3ff64076ffd4e63660c76375c94a0",
+            "FileName": "defaultpackage_assets_bundles_fight_textrue_c0c3ff64076ffd4e63660c76375c94a0.bundle"
+        },
+        {
+            "BundleGUID": "5b42aebe29f6bc379602ce419d286101",
+            "FileName": "defaultpackage_assets_bundles_fx_ani_5b42aebe29f6bc379602ce419d286101.bundle"
+        },
+        {
+            "BundleGUID": "3ba97f253c0cdb9586d586891e73ec12",
+            "FileName": "defaultpackage_assets_bundles_fx_mat_3ba97f253c0cdb9586d586891e73ec12.bundle"
+        },
+        {
+            "BundleGUID": "ecc9dcac25607109c149cad2e0caae2a",
+            "FileName": "defaultpackage_assets_bundles_fx_mod_ecc9dcac25607109c149cad2e0caae2a.bundle"
+        },
+        {
+            "BundleGUID": "3870dd546b0f0814f34b890831502c57",
+            "FileName": "defaultpackage_assets_bundles_fx_prefab_3870dd546b0f0814f34b890831502c57.bundle"
+        },
+        {
+            "BundleGUID": "9859f22c3bd8ea99ddec7ce77faaf21a",
+            "FileName": "defaultpackage_assets_bundles_fx_shader_9859f22c3bd8ea99ddec7ce77faaf21a.bundle"
+        },
+        {
+            "BundleGUID": "c54f0a96f036cbe4158eb457281ee7d9",
+            "FileName": "defaultpackage_assets_bundles_fx_ui_effect_c54f0a96f036cbe4158eb457281ee7d9.bundle"
+        },
+        {
+            "BundleGUID": "ab15ecc292b2f724d8168d81e4be8d99",
+            "FileName": "defaultpackage_assets_bundles_scenes_ab15ecc292b2f724d8168d81e4be8d99.bundle"
+        },
+        {
+            "BundleGUID": "c286c012b27446af4d05412ebc3230a4",
+            "FileName": "defaultpackage_assets_bundles_shaders_c286c012b27446af4d05412ebc3230a4.bundle"
+        },
+        {
+            "BundleGUID": "a83d89b04f8bd66ee2baad7737096c34",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_ani_a83d89b04f8bd66ee2baad7737096c34.bundle"
+        },
+        {
+            "BundleGUID": "a994697e37f05ba450ea9ca30d84f38f",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_b_a994697e37f05ba450ea9ca30d84f38f.bundle"
+        },
+        {
+            "BundleGUID": "c198b963eb6a6213797b3678f5283e84",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_c_c198b963eb6a6213797b3678f5283e84.bundle"
+        },
+        {
+            "BundleGUID": "b7301ca686a8984edffa52b95e264c5a",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_d_b7301ca686a8984edffa52b95e264c5a.bundle"
+        },
+        {
+            "BundleGUID": "5fe09bb40842156214faeaeda133f9eb",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_g_5fe09bb40842156214faeaeda133f9eb.bundle"
+        },
+        {
+            "BundleGUID": "3386af0db18501d54694fc74f444af08",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_h_3386af0db18501d54694fc74f444af08.bundle"
+        },
+        {
+            "BundleGUID": "f03df2eb4180daf20c6e7874b5f48de8",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_10_f03df2eb4180daf20c6e7874b5f48de8.bundle"
+        },
+        {
+            "BundleGUID": "0a2e678a86e53a406abb0fd33275e594",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_11_0a2e678a86e53a406abb0fd33275e594.bundle"
+        },
+        {
+            "BundleGUID": "e0f551c04820e370ad00fbc0acf9308a",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_12_e0f551c04820e370ad00fbc0acf9308a.bundle"
+        },
+        {
+            "BundleGUID": "d2822e94b501a57117f9de57ad24674f",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_13_d2822e94b501a57117f9de57ad24674f.bundle"
+        },
+        {
+            "BundleGUID": "c1cb16011197eaf7c59f0adfbcab3f1e",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_14_c1cb16011197eaf7c59f0adfbcab3f1e.bundle"
+        },
+        {
+            "BundleGUID": "66523b3b99d989cbb6c75a15176acf29",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_15_66523b3b99d989cbb6c75a15176acf29.bundle"
+        },
+        {
+            "BundleGUID": "1e5c3fd835271f1d595cecfc4fed9f78",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_16_1e5c3fd835271f1d595cecfc4fed9f78.bundle"
+        },
+        {
+            "BundleGUID": "15bb08914a6b312e05124d4e12b4a765",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_17_15bb08914a6b312e05124d4e12b4a765.bundle"
+        },
+        {
+            "BundleGUID": "d562eea734e2a08b3124bf3fce20791a",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_18_d562eea734e2a08b3124bf3fce20791a.bundle"
+        },
+        {
+            "BundleGUID": "3def00aaea8550ae9b15b83a684eb794",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_19_3def00aaea8550ae9b15b83a684eb794.bundle"
+        },
+        {
+            "BundleGUID": "979bc72142e34a98dcce464387873909",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_1_979bc72142e34a98dcce464387873909.bundle"
+        },
+        {
+            "BundleGUID": "cb4705af307dc5d090d415ca79f0554c",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_20_cb4705af307dc5d090d415ca79f0554c.bundle"
+        },
+        {
+            "BundleGUID": "54ec4340cf9d4657c98b68a0ddadb8c0",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_21_54ec4340cf9d4657c98b68a0ddadb8c0.bundle"
+        },
+        {
+            "BundleGUID": "e237094948463abcc9eaa88827697735",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_22_e237094948463abcc9eaa88827697735.bundle"
+        },
+        {
+            "BundleGUID": "8964b367aa00db65d0581003866cc808",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_23_8964b367aa00db65d0581003866cc808.bundle"
+        },
+        {
+            "BundleGUID": "f1f75095eb3cd1e3c05b93e5e78e386e",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_24_f1f75095eb3cd1e3c05b93e5e78e386e.bundle"
+        },
+        {
+            "BundleGUID": "094a1c2e189ccf3cba5353f1d03e0d5f",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_25_094a1c2e189ccf3cba5353f1d03e0d5f.bundle"
+        },
+        {
+            "BundleGUID": "f07b60a7a431c9f78475085fc8344b3c",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_26_f07b60a7a431c9f78475085fc8344b3c.bundle"
+        },
+        {
+            "BundleGUID": "d535547914305ec3f64d6a3dcb4aa692",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_2_d535547914305ec3f64d6a3dcb4aa692.bundle"
+        },
+        {
+            "BundleGUID": "ffdd0c5a34d1a8677b9b1539dc2c6dad",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_3_ffdd0c5a34d1a8677b9b1539dc2c6dad.bundle"
+        },
+        {
+            "BundleGUID": "458fee7085a6bb4918424a5b4b222ddc",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_4_458fee7085a6bb4918424a5b4b222ddc.bundle"
+        },
+        {
+            "BundleGUID": "d816da4d514416f87cc1c73066972960",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_5_d816da4d514416f87cc1c73066972960.bundle"
+        },
+        {
+            "BundleGUID": "231da2a81b54df2694713a9bb0f9b090",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_6_231da2a81b54df2694713a9bb0f9b090.bundle"
+        },
+        {
+            "BundleGUID": "98d4d51e2a2f9d76a4a68b569daaa49b",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_7_98d4d51e2a2f9d76a4a68b569daaa49b.bundle"
+        },
+        {
+            "BundleGUID": "ff7b74f8e3d7bba694a3fa56f78d42af",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_8_ff7b74f8e3d7bba694a3fa56f78d42af.bundle"
+        },
+        {
+            "BundleGUID": "646b5e9fca564150d83b7d26fef16c6b",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_kala_9_646b5e9fca564150d83b7d26fef16c6b.bundle"
+        },
+        {
+            "BundleGUID": "2ce6b1196d824a6fe2deaf79dbb2737f",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_aiyinsitan_2ce6b1196d824a6fe2deaf79dbb2737f.bundle"
+        },
+        {
+            "BundleGUID": "51ad1ea403a475589085586d4ace383b",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_baofengbing_51ad1ea403a475589085586d4ace383b.bundle"
+        },
+        {
+            "BundleGUID": "c73a43e2063cd82beeab1256d65f8c3f",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_baozupo_c73a43e2063cd82beeab1256d65f8c3f.bundle"
+        },
+        {
+            "BundleGUID": "80b256bdcd61c521d7c15d2e9ea13eb8",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_bas_80b256bdcd61c521d7c15d2e9ea13eb8.bundle"
+        },
+        {
+            "BundleGUID": "403ab7f68559749ec02f22c97822c496",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_cl_403ab7f68559749ec02f22c97822c496.bundle"
+        },
+        {
+            "BundleGUID": "bcf12c096926430d478a76fc6255bcce",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_cxk_bcf12c096926430d478a76fc6255bcce.bundle"
+        },
+        {
+            "BundleGUID": "d75bffef0ca34a7e234ad13d17245ef1",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_dingzhen_d75bffef0ca34a7e234ad13d17245ef1.bundle"
+        },
+        {
+            "BundleGUID": "1205c62130346d893fdcc9443abec1fd",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_gaga_1205c62130346d893fdcc9443abec1fd.bundle"
+        },
+        {
+            "BundleGUID": "7959d89369eba7eeac180b2038ff7202",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_juan_7959d89369eba7eeac180b2038ff7202.bundle"
+        },
+        {
+            "BundleGUID": "6de35125616b02172c8eef15c07165d4",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_kb_6de35125616b02172c8eef15c07165d4.bundle"
+        },
+        {
+            "BundleGUID": "be9d4fbd763ccf8bb09e155df54c6f19",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_kuting_be9d4fbd763ccf8bb09e155df54c6f19.bundle"
+        },
+        {
+            "BundleGUID": "c471ee02e0f132385c5c98afc162b806",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_liweisi_c471ee02e0f132385c5c98afc162b806.bundle"
+        },
+        {
+            "BundleGUID": "c673158c62659b5eae0f4b0772d1c256",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_lixiaolong_c673158c62659b5eae0f4b0772d1c256.bundle"
+        },
+        {
+            "BundleGUID": "55acc7a46bb222cac8f7afb9294f0327",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_mj_55acc7a46bb222cac8f7afb9294f0327.bundle"
+        },
+        {
+            "BundleGUID": "39ca48532476a2ea5a69c63e3dee6a74",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_msk_39ca48532476a2ea5a69c63e3dee6a74.bundle"
+        },
+        {
+            "BundleGUID": "ff762e1b8721f9f16896cd4ab83a8113",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_nidahong_ff762e1b8721f9f16896cd4ab83a8113.bundle"
+        },
+        {
+            "BundleGUID": "d61bc6dbac31ce67e31828e7a02fde80",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_qbs_d61bc6dbac31ce67e31828e7a02fde80.bundle"
+        },
+        {
+            "BundleGUID": "9d400dbac48bb0948149ebedcc8d798c",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_qs_9d400dbac48bb0948149ebedcc8d798c.bundle"
+        },
+        {
+            "BundleGUID": "10ff5f590fcbc915737f261cb033a88c",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_saonv_10ff5f590fcbc915737f261cb033a88c.bundle"
+        },
+        {
+            "BundleGUID": "69433be1115fdadd96c65fab224c8378",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_shanyichun_69433be1115fdadd96c65fab224c8378.bundle"
+        },
+        {
+            "BundleGUID": "0b6be9efa72e3222968abd0ffae80232",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_snoop_0b6be9efa72e3222968abd0ffae80232.bundle"
+        },
+        {
+            "BundleGUID": "0ef1afedb9e5642f691d485c635c5db9",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_sunhonglei_0ef1afedb9e5642f691d485c635c5db9.bundle"
+        },
+        {
+            "BundleGUID": "e9ca54e76f3cf413ad1137d322c9e6ee",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_tlp_e9ca54e76f3cf413ad1137d322c9e6ee.bundle"
+        },
+        {
+            "BundleGUID": "76a9cfa85fb9e142a0aea15c4838cf6b",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_tl_76a9cfa85fb9e142a0aea15c4838cf6b.bundle"
+        },
+        {
+            "BundleGUID": "e5e73d575a64ac789439592e7e02bf33",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_wujing_e5e73d575a64ac789439592e7e02bf33.bundle"
+        },
+        {
+            "BundleGUID": "2fba4e091cefa7d0e68f54be04b1cb89",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_xlz_2fba4e091cefa7d0e68f54be04b1cb89.bundle"
+        },
+        {
+            "BundleGUID": "59587f450b5595c0e867b980eb547b84",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_zhongjiezhe_59587f450b5595c0e867b980eb547b84.bundle"
+        },
+        {
+            "BundleGUID": "796ee4416bee469a0cb9830cbd06d77d",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_zl_796ee4416bee469a0cb9830cbd06d77d.bundle"
+        },
+        {
+            "BundleGUID": "eb11848b20ad72c30eb58b0eaa6d9440",
+            "FileName": "defaultpackage_assets_bundles_ui_npc_npc_textrue_npc_sp_zms_eb11848b20ad72c30eb58b0eaa6d9440.bundle"
+        },
+        {
+            "BundleGUID": "1064019c347278fb967eed1a5ba433bc",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uicommon_1064019c347278fb967eed1a5ba433bc.bundle"
+        },
+        {
+            "BundleGUID": "7383f18112a56dbf224de7c2c1c3197d",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uicommon_anim_7383f18112a56dbf224de7c2c1c3197d.bundle"
+        },
+        {
+            "BundleGUID": "2a65b210186eb1f0b613363db8b91315",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uicommon_atlas_2a65b210186eb1f0b613363db8b91315.bundle"
+        },
+        {
+            "BundleGUID": "99b59d5625b566ee6336759339990c92",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uicommon_prefab_99b59d5625b566ee6336759339990c92.bundle"
+        },
+        {
+            "BundleGUID": "2ac6e12b8f932e19a0469c63c97715f7",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uicommon_textrue_2ac6e12b8f932e19a0469c63c97715f7.bundle"
+        },
+        {
+            "BundleGUID": "0f3ca04c53193dc0b9bc92e80562daba",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimain_anim_0f3ca04c53193dc0b9bc92e80562daba.bundle"
+        },
+        {
+            "BundleGUID": "0156a6812e675dbccac6f31e9f624b68",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimain_atlas_0156a6812e675dbccac6f31e9f624b68.bundle"
+        },
+        {
+            "BundleGUID": "1d9c07090d4dba0053c162d5880127e7",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimain_prefab_1d9c07090d4dba0053c162d5880127e7.bundle"
+        },
+        {
+            "BundleGUID": "f9873f4b5f0ea9100a050e3e1853785a",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimain_textrue_f9873f4b5f0ea9100a050e3e1853785a.bundle"
+        },
+        {
+            "BundleGUID": "b54e1a27de1a5952174a025f017e9ce4",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimusic_anim_b54e1a27de1a5952174a025f017e9ce4.bundle"
+        },
+        {
+            "BundleGUID": "f2bc23fc8ad975cd51d1c3bee223080b",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimusic_atlas_f2bc23fc8ad975cd51d1c3bee223080b.bundle"
+        },
+        {
+            "BundleGUID": "22e4439d3d5087c18e1e7aaaad9ef1fd",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimusic_prefab_22e4439d3d5087c18e1e7aaaad9ef1fd.bundle"
+        },
+        {
+            "BundleGUID": "94b818ad4b13fa12ec84d7f268116c3e",
+            "FileName": "defaultpackage_assets_bundles_ui_system_uimusic_textrue_94b818ad4b13fa12ec84d7f268116c3e.bundle"
+        },
+        {
+            "BundleGUID": "d2939bd9e33a702eed9a8faed5e44b3e",
+            "FileName": "defaultpackage_share_assets_launchscene_anim_d2939bd9e33a702eed9a8faed5e44b3e.bundle"
+        },
+        {
+            "BundleGUID": "77abd188318b77f9d1548ebc83156a5f",
+            "FileName": "defaultpackage_share_assets_launchscene_textrue_77abd188318b77f9d1548ebc83156a5f.bundle"
+        },
+        {
+            "BundleGUID": "a761ac873f8db3fb6ed83203811635ce",
+            "FileName": "defaultpackage_share_assets_plugins_allin1spriteshader_demo_textures_a761ac873f8db3fb6ed83203811635ce.bundle"
+        },
+        {
+            "BundleGUID": "40fb861543b736f2652edeeff3ae5a5e",
+            "FileName": "defaultpackage_share_assets_plugins_allin1spriteshader_textures_40fb861543b736f2652edeeff3ae5a5e.bundle"
+        },
+        {
+            "BundleGUID": "8a672edec54e446d0a4ffed99bae2a9c",
+            "FileName": "defaultpackage_share_assets_plugins_allin1spriteshader_textures_gradienttextures_8a672edec54e446d0a4ffed99bae2a9c.bundle"
+        },
+        {
+            "BundleGUID": "ae809d36777ef4468436bf7e1e26c233",
+            "FileName": "defaultpackage_share_packages_com_unity_render-pipelines_universal_runtime_materials_ae809d36777ef4468436bf7e1e26c233.bundle"
+        },
+        {
+            "BundleGUID": "3921d2279717ca18ebac88e7df5acb0d",
+            "FileName": "defaultpackage_unityshaders_3921d2279717ca18ebac88e7df5acb0d.bundle"
+        }
+    ]
+}
