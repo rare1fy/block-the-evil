@@ -597,8 +597,8 @@ public class FightController : BaseControl
             candidates.Add(blockData);
         }
 
-        var pressureBudget = activeMonsterCount * EnemyPressureBlocksPerMonster;
-        var pressureCount = Math.Min(pressureBudget, Math.Max(0, MaxEnemyPressureBlocks - currentPressureCount));
+        var pressurePerTurn = activeMonsterCount * EnemyPressureBlocksPerMonster;
+        var pressureCount = Math.Min(pressurePerTurn, Math.Max(0, MaxEnemyPressureBlocks - currentPressureCount));
         pressureCount = Math.Min(pressureCount, candidates.Count);
         for (var i = 0; i < pressureCount; i++)
         {
