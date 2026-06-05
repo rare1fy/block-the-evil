@@ -60,7 +60,8 @@ public class BlockItem : UIItemBase
             ResourceManagerNew.instance.LoadSpriteAsset(effectIconStr, _Img_Effect);
         }
 
-        var showNotice = GameManager.Instance.CurFightControl.LevelController.CheckItemOrderNeed(blockData.ColorType);
+        var showNotice = blockData.HasAttachedSpirit
+                         || GameManager.Instance.CurFightControl.LevelController.CheckItemOrderNeed(blockData.ColorType);
         _Obj_Notice.SetActiveEx(showNotice);
     }
     

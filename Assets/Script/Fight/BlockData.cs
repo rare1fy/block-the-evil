@@ -31,6 +31,8 @@ public class BlockData
     public Vector2Int Pos { get; private set; }
     public int ColorType { get; private set; }
     public bool IsOccupied { get; private set; }   //是否被占据
+    public int AttachedSpiritId { get; private set; }
+    public bool HasAttachedSpirit => AttachedSpiritId > 0;
     
     public EffectType Effect = EffectType.None;
     
@@ -48,6 +50,7 @@ public class BlockData
         Pos = blockData.Pos;
         ColorType = blockData.ColorType;
         IsOccupied = blockData.IsOccupied;
+        AttachedSpiritId = blockData.AttachedSpiritId;
         Effect = blockData.Effect;
     }
     
@@ -77,11 +80,24 @@ public class BlockData
     {
         IsOccupied = isOccupied;
     }
+
+    public void AttachSpirit(int spiritId)
+    {
+        AttachedSpiritId = spiritId;
+    }
+
+    public int DetachSpirit()
+    {
+        var spiritId = AttachedSpiritId;
+        AttachedSpiritId = 0;
+        return spiritId;
+    }
     
     public void Reset()
     {
         ColorType = 0;
         Effect = EffectType.None;
         IsOccupied = false;
+        AttachedSpiritId = 0;
     }
 }

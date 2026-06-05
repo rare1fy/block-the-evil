@@ -42,6 +42,7 @@ public class FightLevelController
         var itemLibrary = Config.GetConfig<Config_LevelOrder>().GetConfigById(Model.OrderList[^1]).Npcitem;
         var fightOrderData = new FightOrderData(0, config.SpNpc, itemLibrary);
         Model.FightOrders.Add(fightOrderData);
+        Model.RegisterOrderAsMonster(fightOrderData);
 
         CreateFightOrder(2);
     }
@@ -60,6 +61,16 @@ public class FightLevelController
                 blockDataList.Add(blockData);
             }
         }
+
+        foreach (var blockData in blockDataList)
+        {
+            if (blockData.HasAttachedSpirit)
+                Model.MonsterBattleState.ConsumeSpirit(blockData.DetachSpirit());
+        }
+
+        Model.MonsterBattleState.ConsumeClearedColors(blockDataList
+            .Where(blockData => blockData.ColorType > 0)
+            .Select(blockData => blockData.ColorType));
 
         Dictionary<FightOrderData, List<BlockData>> data = new();
 
@@ -109,43 +120,10 @@ public class FightLevelController
     private int GetRandomColorFromPool()
     {
         var colorPool = Model.ColorPool;
-        var randomIndex = Random.Range(0, colorPool.Count);
-        return colorPool[randomIndex];
-    }
+        if (colorPool.Count <= 0)
+            return 0;
 
-    //获取随机物品颜色
-    private int GetRandomColorItemFromPool()
-    {
-        var colorItemPool = Model.ColorItemPool;
-        Dictionary<int, int> itemProbDic = new();
-        foreach (var colorItem in colorItemPool)
-        {
-            itemProbDic[colorItem] = 100; //默认规则
-        }
-
-        foreach (var fightOrder in Model.FightOrders)
-        {
-            if (itemProbDic.TryGetValue(fightOrder.NeedBlockId, out var prob))
-            {
-                itemProbDic[fightOrder.NeedBlockId] = prob + (15 * fightOrder.NeedBlockCount);
-            }
-        }
-
-        var total = itemProbDic.Sum(prob => prob.Value);
-        var random = Random.Range(0, total);
-
-        foreach (var itemProb in itemProbDic)
-        {
-            if (random < itemProb.Value)
-            {
-                return itemProb.Key;
-            }
-
-            random -= itemProb.Value;
-        }
-
-        Debug.LogError($"随机bug了, total:{total}, random:{random}");
-        return 0;
+        return colorPool[0];
     }
 
     /// <summary>
@@ -155,9 +133,7 @@ public class FightLevelController
     {
         var puzzle = new PuzzleData(puzzleId);
         var colorType = GetRandomColorFromPool();
-        var itemColorType = GetRandomColorItemFromPool();
-        var count = Model.GetRandomPuzzleCreateItemCount(puzzle.PosCount());
-        puzzle.SetPuzzleData(colorType, itemColorType, count);
+        puzzle.SetPuzzleData(colorType, 0, 0);
         return puzzle;
     }
 
@@ -309,9 +285,10 @@ public class FightLevelController
         for (var i = Model.FightOrders.Count - 1; i >= 0; i--) //检查是否有已经完成的订单
         {
             var fightOrder = Model.FightOrders[i];
-            if (fightOrder.CheckNeedListFinish())
+            if (fightOrder.CheckNeedListFinish() && Model.IsOrderBattleComplete(fightOrder))
             {
                 Model.FinishOrderList.Add(fightOrder);
+                Model.UnregisterOrderMonster(fightOrder);
                 Model.FightOrders.RemoveAt(i);
                 OrderFinish(fightOrder);
                 posList.Add(fightOrder.Index);
@@ -342,6 +319,7 @@ public class FightLevelController
         var orderData = Model.FightOrders.Find(x => x.Index == index);
         if (orderData != null)
         {
+            Model.UnregisterOrderMonster(orderData);
             Model.FightOrders.Remove(orderData);
         }
 
@@ -358,6 +336,7 @@ public class FightLevelController
 
         var fightOrderData = new FightOrderData(index, orderId);
         Model.FightOrders.Add(fightOrderData);
+        Model.RegisterOrderAsMonster(fightOrderData);
         var alreadyCreateOrder = Model.FinishOrderList.Count + Model.FightOrders.Count;
 
         if (Model.ColorUnlockDic.TryGetValue(alreadyCreateOrder, out var colorType))

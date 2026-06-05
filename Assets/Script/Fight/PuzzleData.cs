@@ -44,6 +44,22 @@ public class PuzzleData
         }
     }
 
+    public void DyeFirstBlocks(int colorType, int count)
+    {
+        if (count <= 0 || colorType <= 0)
+            return;
+
+        var dyedCount = 0;
+        foreach (var pos in _posList)
+        {
+            PosColorList[pos] = colorType;
+            dyedCount++;
+
+            if (dyedCount >= count)
+                break;
+        }
+    }
+
     public int PosCount()
     {
         return _posList.Count;
@@ -73,4 +89,4 @@ public class PuzzleData
     }
     
     
-}   
+}

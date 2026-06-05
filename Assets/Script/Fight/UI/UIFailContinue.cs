@@ -27,17 +27,25 @@ public class UIFailContinue : UIBase
         AudioManagerNew.Instance.SetPassFilter(true);
         GameManager.Instance.CurFightControl.IsGameEnd = true;
         
-        var curRevive = GameManager.Instance.CurFightControl.LevelController.Model.ReviveTimes;
-        var maxRevive = GameManager.Instance.CurFightControl.LevelController.Model.GetMaxReviveTimes();
+        var levelModel = GameManager.Instance.CurFightControl.LevelController.Model;
         AudioManagerNew.Instance.PlayAudio("fight_fail_continue.ogg");
-        _Txt_Revive.text = $"本关剩余:{maxRevive - curRevive}/{maxRevive}次";
-
-        var freeAdIndex = Config.GetConfig<Config_GdConstant>().GetConfigById(38).Num;
-        var curLvId = GameManager.Instance.CurFightControl.LevelController.Model.LevelBaseData.Id;
-        if (curLvId <= freeAdIndex)
+        if (levelModel.IsEndLess)
         {
-            _Img_AD.gameObject.SetActive(false);
+            var maxRevive = levelModel.GetMaxReviveTimes();
+            _Txt_Revive.text = $"本关剩余:{maxRevive - levelModel.ReviveTimes}/{maxRevive}次";
+            _Img_AD.gameObject.SetActiveEx(levelModel.ReviveTimes < maxRevive);
         }
+        else if (levelModel.CanUseFreeAdRevive())
+        {
+            _Txt_Revive.text = "观看广告复活";
+            _Img_AD.gameObject.SetActiveEx(true);
+        }
+        else
+        {
+            _Txt_Revive.text = $"铜板复活:{levelModel.GetNextCopperReviveCost()}";
+            _Img_AD.gameObject.SetActiveEx(false);
+        }
+
         remainingTime = awaidTime;
         SetEndTime();
     }
@@ -62,42 +70,75 @@ public class UIFailContinue : UIBase
     private void OnClickContinue(GameObject _, PointerEventData __)
     {
         var lvMode = GameManager.Instance.CurFightControl.LevelController.Model;
-        var curRevive = lvMode.ReviveTimes;
+
+        if (lvMode.IsEndLess)
+        {
+            TryEndlessRevive(lvMode);
+            return;
+        }
+
+        if (lvMode.CanUseFreeAdRevive())
+        {
+            TryFreeAdRevive(lvMode);
+        }
+        else
+        {
+            TryCopperRevive(lvMode);
+        }
+    }
+
+    private void TryEndlessRevive(FightLevelModel lvMode)
+    {
         var maxRevive = lvMode.GetMaxReviveTimes();
-        
-        if (curRevive >= maxRevive)
+        if (lvMode.ReviveTimes >= maxRevive)
         {
             UIManager.Instance.ShowPromptWindow("已无复活次数");
             return;
         }
-        
-        var freeAdIndex = Config.GetConfig<Config_GdConstant>().GetConfigById(38).Num;
-        var curLvId = lvMode.LevelBaseData.Id;
-        if (curLvId <= freeAdIndex)
+
+        TryFreeAdRevive(lvMode);
+    }
+
+    private void TryFreeAdRevive(FightLevelModel lvMode)
+    {
+        ADing = true;
+        PlatformManager.Instance.ShowRewardedVideoAd(1, (isOk) =>
         {
-            UIManager.Instance.HideUI(this);
-            GameManager.Instance.MusicControl.PlayPickMainBGM();
-            GameManager.Instance.CurFightControl.GameContinue();
-        }
-        else
-        {
-            ADing = true;
-            PlatformManager.Instance.ShowRewardedVideoAd(1, (isOk) =>
+            GameManager.Instance.LogManager.Log_AD(1, isOk);
+            if (isOk)
             {
-                GameManager.Instance.LogManager.Log_AD(1, isOk);
-                if (isOk)
-                {
-                    UIManager.Instance.HideUI(this);
-                    GameManager.Instance.MusicControl.PlayPickMainBGM();
-                    GameManager.Instance.CurFightControl.GameContinue();
-                }
-                else
-                {
-                    ADing = false;
-                    UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
-                }
-            });
+                if (!lvMode.IsEndLess)
+                    lvMode.MarkFreeAdReviveUsed();
+
+                ContinueFight();
+            }
+            else
+            {
+                ADing = false;
+                UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
+            }
+        });
+    }
+
+    private void TryCopperRevive(FightLevelModel lvMode)
+    {
+        var cost = lvMode.GetNextCopperReviveCost();
+        if (GameManager.Instance.CurFightControl.Model.Money < cost)
+        {
+            UIManager.Instance.ShowPromptWindow("铜板不足");
+            return;
         }
+
+        GameManager.Instance.CurFightControl.Model.AddMoney(-cost);
+        lvMode.MarkCopperReviveUsed();
+        ContinueFight();
+    }
+
+    private void ContinueFight()
+    {
+        UIManager.Instance.HideUI(this);
+        GameManager.Instance.MusicControl.PlayPickMainBGM();
+        GameManager.Instance.CurFightControl.GameContinue();
     }
 
     private void OnClickAbandon(GameObject _, PointerEventData __)

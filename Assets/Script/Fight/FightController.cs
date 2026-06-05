@@ -9,6 +9,9 @@ using UnityEngine;
 
 public class FightController : BaseControl
 {
+    private const int EnemyPressureBlocksPerMonster = 3;
+    private const int MaxEnemyPressureBlocks = 12;
+
     /// <summary>
     /// 战斗结束
     /// </summary>
@@ -43,6 +46,7 @@ public class FightController : BaseControl
         ChatController = new FightChatController();
         LevelController = new FightLevelController(levelId);
         LevelController.InitCreateOrder();
+        ApplyInitialTargetColorsToHand();
         
         yield return new WaitForSeconds(0.1f);
         UIManager.Instance.PreLoadUI("UIFightMain");
@@ -54,6 +58,7 @@ public class FightController : BaseControl
         ChatController = new FightChatController();
         LevelController = new FightLevelController(levelId);
         LevelController.InitCreateOrder();
+        ApplyInitialTargetColorsToHand();
 
         _startTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         yield return new WaitForSeconds(0.1f);
@@ -72,6 +77,7 @@ public class FightController : BaseControl
         ChatController = new FightChatController();
         LevelController = new FightLevelController(levelId);
         LevelController.InitEndlessOrder(endlessConf);
+        ApplyInitialTargetColorsToHand();
         AudioManagerNew.Instance.FadeStopMusic();
         GameManager.Instance.MusicControl.PlayPickMainBGM();
         
@@ -121,6 +127,7 @@ public class FightController : BaseControl
             yield return new WaitForSeconds(0.3f);
             
             LevelController.TotalClearBlock(clearBlocks,ui); //订单数据结算
+            GrantComboColorReward();
             triggerEffect.Complete();      //更改格子数据
             ui.RefreshAllBlock();          //刷新所有方块
             triggerEffect.CompleteEnd();   //更改格子数据
@@ -130,8 +137,15 @@ public class FightController : BaseControl
                 yield return new WaitForSeconds(0.05f);
             }
         }
+        else
+        {
+            LevelController.Model.MonsterBattleState.MarkNoProgressStep();
+        }
         
         CheckRemoveBox(ui);
+        ApplyBossSpirits();
+        ApplyMonsterPressure();
+        ui.RefreshAllBlock();
         RefreshAllPuzzleItem();
         
         //如果有对话要执行 就卡住不结算
@@ -155,6 +169,37 @@ public class FightController : BaseControl
         LevelController.Model.AddLevelScore(clearConfig.Score + comboScore);
         ui.PlayComboEffect(clearConfig, comboConfig); //播放连击特效
     }
+
+    private void GrantComboColorReward()
+    {
+        var comboConfig = Config.GetConfig<Config_FighteffectBase>().GetEffectConfig(2, Model.CurCombo);
+        if (comboConfig == null || comboConfig.Num <= 1)
+            return;
+
+        if (LevelController.Model.QueueTargetColorRewards(1) <= 0)
+            return;
+
+        ApplyPendingRewardColorsToAvailableHand();
+    }
+
+    private void ApplyInitialTargetColorsToHand()
+    {
+        var neededColors = LevelController.Model.MonsterBattleState.GetActiveNeededColors();
+        if (neededColors.Count <= 0)
+            return;
+
+        var colorIndex = 0;
+        foreach (var puzzleData in Model.RandomPuzzleList)
+        {
+            if (puzzleData.bUsed)
+                continue;
+
+            puzzleData.DyeFirstBlocks(neededColors[colorIndex], 1);
+            colorIndex++;
+            if (colorIndex >= neededColors.Count)
+                break;
+        }
+    }
     
     public void RefreshAllPuzzleItem()
     {
@@ -174,27 +219,64 @@ public class FightController : BaseControl
     {
         Model.RandomPuzzleList.Clear();
         var eloCount = 1;  //规定elo只能触发一次
+        var guaranteeColor = LevelController.Model.MonsterBattleState.NeedTargetProgressGuarantee
+            ? LevelController.Model.MonsterBattleState.GetMostNeededColor()
+            : 0;
+        var guaranteeUsed = guaranteeColor <= 0;
         
         for (var i = 0; i < 3; i++)
         {
+            PuzzleData puzzleData;
             if (difficulty != 0)
             {
                 var puzzleCfg = Config.GetConfig<Config_BlockBase>().GetRandomPuzzleIndex(difficulty);
-                Model.RandomPuzzleList.Add(LevelController.GetPuzzle(puzzleCfg.Id));
+                puzzleData = LevelController.GetPuzzle(puzzleCfg.Id);
             }
             else if (eloCount > 0 && LevelController.BELO()) //触发elo
             {
                 eloCount--;
                 var puzzleId = LevelController.GetPuzzleCanComplete();
                 Debug.LogError($"触发elo    puzzleId:{puzzleId}");
-                Model.RandomPuzzleList.Add(LevelController.GetPuzzle(puzzleId));
+                puzzleData = LevelController.GetPuzzle(puzzleId);
             }
             else
             {
                 var puzzleId = LevelController.GetRandomPuzzleId();
-                Model.RandomPuzzleList.Add(LevelController.GetPuzzle(puzzleId));
+                puzzleData = LevelController.GetPuzzle(puzzleId);
             }
+
+            var rewardColor = LevelController.Model.ConsumePendingRewardColor();
+            if (rewardColor > 0)
+            {
+                puzzleData.DyeFirstBlocks(rewardColor, 1);
+            }
+            else if (!guaranteeUsed)
+            {
+                puzzleData.DyeFirstBlocks(guaranteeColor, 1);
+                guaranteeUsed = true;
+            }
+
+            Model.RandomPuzzleList.Add(puzzleData);
         }
+    }
+
+    private bool ApplyPendingRewardColorsToAvailableHand()
+    {
+        var changed = false;
+        foreach (var puzzleData in Model.RandomPuzzleList)
+        {
+            if (puzzleData.bUsed || !LevelController.Model.HasPendingRewardColor())
+                continue;
+
+            var rewardColor = LevelController.Model.ConsumePendingRewardColor();
+            if (rewardColor <= 0)
+                continue;
+
+            puzzleData.DyeFirstBlocks(rewardColor, 1);
+            changed = true;
+        }
+
+        return changed;
     }
 
 
@@ -484,6 +566,98 @@ public class FightController : BaseControl
     #endregion
 
     #region 机制
+
+    private void ApplyMonsterPressure()
+    {
+        var activeMonsterCount = LevelController.Model.MonsterBattleState.ActiveMonsterCount;
+        if (activeMonsterCount <= 0)
+            return;
+
+        var currentPressureCount = 0;
+        var candidates = new List<BlockData>();
+        foreach (var blockData in Model.MBlockList)
+        {
+            if (CheckLockEffect(blockData))
+            {
+                currentPressureCount++;
+                continue;
+            }
+
+            if (!blockData.IsOccupied
+                || blockData.ColorType <= 0
+                || blockData.ColorType > 5
+                || blockData.Effect != EffectType.None
+                || blockData.HasAttachedSpirit
+                || IsItemBlok(blockData))
+                continue;
+
+            candidates.Add(blockData);
+        }
+
+        var pressureBudget = activeMonsterCount * EnemyPressureBlocksPerMonster;
+        var pressureCount = Math.Min(pressureBudget, Math.Max(0, MaxEnemyPressureBlocks - currentPressureCount));
+        pressureCount = Math.Min(pressureCount, candidates.Count);
+        for (var i = 0; i < pressureCount; i++)
+        {
+            var index = UnityEngine.Random.Range(0, candidates.Count);
+            candidates[index].Effect = EffectType.LockTwice;
+            candidates.RemoveAt(index);
+        }
+    }
+
+    private void ApplyBossSpirits()
+    {
+        var monsterIds = LevelController.Model.MonsterBattleState.GetMonsterIdsNeedingSpirit();
+        if (monsterIds.Count <= 0)
+            return;
+
+        foreach (var monsterId in monsterIds)
+        {
+            if (HasAttachedSpirit(monsterId))
+                continue;
+
+            var target = GetRandomSpiritTargetBlock();
+            if (target == null)
+                return;
+
+            target.AttachSpirit(monsterId);
+        }
+    }
+
+    private bool HasAttachedSpirit(int monsterId)
+    {
+        foreach (var blockData in Model.MBlockList)
+        {
+            if (blockData.AttachedSpiritId == monsterId)
+                return true;
+        }
+
+        return false;
+    }
+
+    private BlockData GetRandomSpiritTargetBlock()
+    {
+        var preferredCandidates = new List<BlockData>();
+        var fallbackCandidates = new List<BlockData>();
+        foreach (var blockData in Model.MBlockList)
+        {
+            if (!blockData.IsOccupied
+                || blockData.ColorType <= 0
+                || blockData.Effect != EffectType.None
+                || blockData.HasAttachedSpirit)
+                continue;
+
+            fallbackCandidates.Add(blockData);
+            if (blockData.ColorType <= 5 && !IsItemBlok(blockData))
+                preferredCandidates.Add(blockData);
+        }
+
+        var candidates = preferredCandidates.Count > 0 ? preferredCandidates : fallbackCandidates;
+        if (candidates.Count <= 0)
+            return null;
+
+        return candidates[UnityEngine.Random.Range(0, candidates.Count)];
+    }
     
     private void CheckRemoveBox(UIFightMain ui)
     {
@@ -565,7 +739,8 @@ public class FightController : BaseControl
                 LevelController.Model.IsEndLess);
             ui.ShowWait(0.5f,action: () =>
             {
-                if (LevelController.Model.ReviveTimes >= LevelController.Model.GetMaxReviveTimes())
+                if (LevelController.Model.IsEndLess
+                    && LevelController.Model.ReviveTimes >= LevelController.Model.GetMaxReviveTimes())
                 {
                     EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_FIGHT_END);
                 }

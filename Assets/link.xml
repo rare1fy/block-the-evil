@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  IL2CPP 托管代码裁剪保护清单。
+  作用：开启 High 级别裁剪后，下列程序集靠反射访问的类型不会被误删。
+  维护说明：新增依赖反射/序列化的第三方库时，在此追加对应 <assembly>。
+-->
+<linker>
+  <!-- 业务主程序集：含所有业务脚本 + Protobuf 生成的数据类（Conf.cs）+ [Serializable] 存档类，全部靠反射序列化 -->
+  <assembly fullname="Assembly-CSharp" preserve="all"/>
+
+  <!-- Protobuf 运行时：反射注册消息类型，裁剪会导致协议解析失败 -->
+  <assembly fullname="Google.Protobuf" preserve="all"/>
+
+  <!-- UniTask：异步状态机靠反射，裁剪会导致 await 链断裂 -->
+  <assembly fullname="UniTask" preserve="all"/>
+
+  <!-- DOTween：缓动通过反射访问目标属性/字段，裁剪会导致动画失效 -->
+  <assembly fullname="DOTween" preserve="all"/>
+</linker>

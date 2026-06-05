@@ -97,7 +97,7 @@ public partial class UIFightMain : UIBase
         base.OnDestroy();
         EventDispatchCenter.Instance.UnRegistry(SDEvents.C2C_REFRESH_MAIN_BLOCK, RefreshAllBlock);
         EventDispatchCenter.Instance.UnRegistry(SDEvents.C2C_REFRESH_MAIN_All_ITEM, RefreshAllItem);
-        EventDispatchCenter.Instance.Registry(SDEvents.C2C_UPDATE_COMBO_TIME, UpdateComboEffect);
+        EventDispatchCenter.Instance.UnRegistry(SDEvents.C2C_UPDATE_COMBO_TIME, UpdateComboEffect);
         EventDispatchCenter.Instance.UnRegistry(SDEvents.C2C_GAME_CONTINUE, GameContinueEffect);
         EventDispatchCenter.Instance.UnRegistry(SDEvents.C2C_MUSIC_PROGRESS_REFRESH, RefreshMusicProgress);
         EventDispatchCenter.Instance.UnRegistry(SDEvents.C2C_MUSIC_BLOCK_ANIM, PlayMusicBlockClearAnim);

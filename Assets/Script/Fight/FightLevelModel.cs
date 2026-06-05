@@ -37,6 +37,8 @@ public class FightLevelModel : BaseModel
     /// 已复活次数
     /// </summary>
     public int ReviveTimes { get; set; }
+    public bool HasUsedFreeAdRevive { get; private set; }
+    public int CopperReviveTimes { get; private set; }
 
     /// <summary>
     /// 待完成订单列表
@@ -78,6 +80,11 @@ public class FightLevelModel : BaseModel
     /// </summary>
     public List<FightOrderData> FightOrders { get; private set; } = new List<FightOrderData>();
 
+    public MonsterBattleState MonsterBattleState { get; private set; } = new MonsterBattleState();
+
+    private int _nextBattleMonsterId = 1;
+    private readonly List<int> _pendingRewardColors = new List<int>();
+
     /// <summary>
     /// npc数据
     /// </summary>
@@ -87,6 +94,11 @@ public class FightLevelModel : BaseModel
     {
         CreateNpcInfoData();
         ReviveTimes = 0;
+        HasUsedFreeAdRevive = false;
+        CopperReviveTimes = 0;
+        _pendingRewardColors.Clear();
+        _nextBattleMonsterId = 1;
+        MonsterBattleState = new MonsterBattleState();
         LevelId = levelId;
         LevelBaseData = Config.GetConfig<Config_LevelBase>().GetConfigById(levelId);
         Target = LevelBaseData.Modletarget;
@@ -132,6 +144,77 @@ public class FightLevelModel : BaseModel
         LevelScore += score;
         EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_UPDATE_SCORE, LevelScore);
     }
+
+    public void RegisterOrderAsMonster(FightOrderData orderData)
+    {
+        if (orderData == null || orderData.NeedBlockCount <= 0)
+            return;
+
+        var isBoss = LevelBaseData != null && LevelBaseData.Boss == 1 && orderData.Index == 0;
+        var stages = new List<StageRequirement>
+        {
+            new StageRequirement(StageRequirementType.Color, orderData.NeedBlockId, orderData.NeedBlockCount)
+        };
+        if (isBoss)
+        {
+            stages.Add(new StageRequirement(StageRequirementType.Spirit, 0, 1));
+        }
+
+        orderData.BattleMonsterId = _nextBattleMonsterId++;
+        MonsterBattleState.AddMonster(
+            orderData.BattleMonsterId,
+            isBoss,
+            orderData.Index,
+            stages);
+    }
+
+    public void UnregisterOrderMonster(FightOrderData orderData)
+    {
+        if (orderData == null || orderData.BattleMonsterId <= 0)
+            return;
+
+        MonsterBattleState.RemoveMonster(orderData.BattleMonsterId);
+        orderData.BattleMonsterId = 0;
+    }
+
+    public bool IsOrderBattleComplete(FightOrderData orderData)
+    {
+        return orderData == null
+               || orderData.BattleMonsterId <= 0
+               || !MonsterBattleState.HasMonster(orderData.BattleMonsterId);
+    }
+
+    public int QueueTargetColorRewards(int count)
+    {
+        if (count <= 0)
+            return 0;
+
+        var colorType = MonsterBattleState.GetMostNeededColor();
+        if (colorType <= 0)
+            return 0;
+
+        for (var i = 0; i < count; i++)
+        {
+            _pendingRewardColors.Add(colorType);
+        }
+
+        return count;
+    }
+
+    public int ConsumePendingRewardColor()
+    {
+        if (_pendingRewardColors.Count <= 0)
+            return 0;
+
+        var colorType = _pendingRewardColors[0];
+        _pendingRewardColors.RemoveAt(0);
+        return colorType;
+    }
+
+    public bool HasPendingRewardColor()
+    {
+        return _pendingRewardColors.Count > 0;
+    }
     
     /// <summary>
     /// 创建npc数据
@@ -169,27 +252,6 @@ public class FightLevelModel : BaseModel
     }
 
     /// <summary>
-    /// 获取随机拼图创建物品数量
-    /// </summary>
-    /// <param name="count"></param>
-    /// <returns></returns>
-    public int GetRandomPuzzleCreateItemCount(int count)
-    {
-        var final = 0;
-        for (var i = 0; i < count; i++)
-        {
-            var prob = LevelBaseData.ItemPercent;
-            var r = Random.Range(0, 100);
-            if (r < prob)
-            {
-                final += 1;
-            }
-        }
-
-        return final;
-    }
-    
-    /// <summary>
     /// ELO是否生效
     /// </summary>
     /// <returns></returns>
@@ -211,13 +273,46 @@ public class FightLevelModel : BaseModel
 
         return Config.GetConfig<Config_GdConstant>().GetConfigById(26).Num;
     }
+
+    public bool CanUseFreeAdRevive()
+    {
+        return !HasUsedFreeAdRevive;
+    }
+
+    public int GetNextCopperReviveCost()
+    {
+        switch (CopperReviveTimes)
+        {
+            case 0:
+                return 100;
+            case 1:
+                return 500;
+            default:
+                return 1000;
+        }
+    }
+
+    public void MarkFreeAdReviveUsed()
+    {
+        HasUsedFreeAdRevive = true;
+    }
+
+    public void MarkCopperReviveUsed()
+    {
+        CopperReviveTimes++;
+    }
     
     public void Clear()
     {
         ReviveTimes = 0;
+        HasUsedFreeAdRevive = false;
+        CopperReviveTimes = 0;
+        _pendingRewardColors.Clear();
         ColorPool.Clear();
         FightOrders.Clear();
         FinishOrderList.Clear();
+        _nextBattleMonsterId = 1;
+        MonsterBattleState = new MonsterBattleState();
     }
 }
 
@@ -228,6 +323,7 @@ public class FightOrderData
     public int ItemId { get; private set; }  //物品
     public int NeedBlockId { get; private set; }  //需要的方块id
     public int NeedBlockCount { get; private set; }  //需要的方块数量
+    public int BattleMonsterId { get; set; }
 
     public FightOrderData(int index, int orderId)
     {
@@ -265,6 +361,7 @@ public class FightOrderData
         ItemId = data.ItemId;
         NeedBlockId = data.NeedBlockId;
         NeedBlockCount = data.NeedBlockCount;
+        BattleMonsterId = data.BattleMonsterId;
     }
 
     /// <summary>

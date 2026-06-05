@@ -54,15 +54,18 @@ public class FightEffect_CreateItem : FightEffect
         if (blockDatas.Count > 0)
         {
             System.Random random = new System.Random();
-            var Count = Config.GetConfig<Config_GdConstant>().GetConfigById(24).Num;
-            Count = Count > blockDatas.Count ? blockDatas.Count : Count;
-            for (int i = 0; i < Count; i++)
+            var itemPool = GameManager.Instance.CurFightControl.LevelController.Model.ColorItemPool;
+            if (itemPool.Count > 0)
             {
-                var blockIdx = random.Next(0, blockDatas.Count);
-                var itemPool = GameManager.Instance.CurFightControl.LevelController.Model.ColorItemPool;
-                var itemIdx = random.Next(0, itemPool.Count);
-                uiFightMain.TriggerCreateItem(item, blockDatas[blockIdx], itemPool[itemIdx]);
-                blockDatas.RemoveAt(blockIdx);
+                var Count = Config.GetConfig<Config_GdConstant>().GetConfigById(24).Num;
+                Count = Count > blockDatas.Count ? blockDatas.Count : Count;
+                for (int i = 0; i < Count; i++)
+                {
+                    var blockIdx = random.Next(0, blockDatas.Count);
+                    var itemIdx = random.Next(0, itemPool.Count);
+                    uiFightMain.TriggerCreateItem(item, blockDatas[blockIdx], itemPool[itemIdx]);
+                    blockDatas.RemoveAt(blockIdx);
+                }
             }
         }
         DOVirtual.DelayedCall(0.21f, () =>

@@ -12,7 +12,7 @@ public class CustomImporter : AssetPostprocessor
 
     void OnPostprocessTexture(Texture2D texture)
     {
-        if (!IsAtlas(assetPath) && !IsEditorTexture(assetPath))
+        if (!IsAtlas(assetPath) && !IsEditorTexture(assetPath) && !IsPixel(assetPath))
         {
             CheckTexSize(texture, assetPath, true);
         }
@@ -70,6 +70,20 @@ public class CustomImporter : AssetPostprocessor
     }
 
     /// <summary>
+    /// 是否像素资源图片。
+    /// 约定：路径（目录或文件名）含 "Pixel" 即视为像素资源，走专属像素管线。
+    /// 像素资源走 Sprite(Multiple) + PPU=1 + Point 滤镜 + 不压缩，保证清晰且按真实像素出图。
+    /// 未来换画风换皮时，只需让新资源不带 Pixel 标记（或新增独立分支），不影响此逻辑。
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static bool IsPixel(string path)
+    {
+        const string MARK = "Pixel";
+        return !string.IsNullOrEmpty(path) && path.Contains(MARK);
+    }
+
+    /// <summary>
     /// 纹理导入之前调用，针对入到的纹理进行设置  
     /// </summary>
     public void OnPreprocessTexture()
@@ -85,25 +99,38 @@ public class CustomImporter : AssetPostprocessor
         {
             return;
         }
-        var isSprite = IsAtlas(assetPath);
-        if (isSprite)
+        var isPixel = IsPixel(assetPath);
+        if (isPixel)
         {
+            // 像素资源专属管线：Sprite(Multiple) + PPU=1 + Point + 不压缩。
+            // 按真实像素出图，UI 中靠 RectTransform 做整数倍放大。
             impor.textureType = TextureImporterType.Sprite;
-            impor.spriteImportMode = SpriteImportMode.Single;
-            impor.spritePixelsPerUnit = 100;
+            impor.spriteImportMode = SpriteImportMode.Multiple;
+            impor.spritePixelsPerUnit = 1;
             impor.fadeout = false;
         }
         else
         {
-            impor.textureType = TextureImporterType.Default;
+            var isSprite = IsAtlas(assetPath);
+            if (isSprite)
+            {
+                impor.textureType = TextureImporterType.Sprite;
+                impor.spriteImportMode = SpriteImportMode.Single;
+                impor.spritePixelsPerUnit = 100;
+                impor.fadeout = false;
+            }
+            else
+            {
+                impor.textureType = TextureImporterType.Default;
+            }
         }
-        impor.textureCompression = TextureImporterCompression.Compressed;
+        impor.textureCompression = isPixel ? TextureImporterCompression.Uncompressed : TextureImporterCompression.Compressed;
         impor.textureShape = TextureImporterShape.Texture2D;
         impor.sRGBTexture = false;
         impor.alphaSource = TextureImporterAlphaSource.FromInput;
         impor.alphaIsTransparency = impor.DoesSourceTextureHaveAlpha();
         impor.isReadable = assetPath.EndsWith("_Read.png");
-        impor.filterMode = FilterMode.Bilinear;
+        impor.filterMode = isPixel ? FilterMode.Point : FilterMode.Bilinear;
         impor.mipmapEnabled = false;
 
         TextureImporterPlatformSettings webFormat = new TextureImporterPlatformSettings();
@@ -150,8 +177,9 @@ public class CustomImporter : AssetPostprocessor
                 iosFormat.format = TextureImporterFormat.RGB16;
             }
         }
-        else if (assetPath.Contains("[RGBA32]"))
+        else if (assetPath.Contains("[RGBA32]") || isPixel)
         {
+            // 像素图强制无压缩 RGBA32/RGB24，避免 ETC2/ASTC 块压缩破坏像素边缘。
             if (impor.DoesSourceTextureHaveAlpha())
             {
                 androidFormat.format = TextureImporterFormat.RGBA32;
@@ -180,6 +208,15 @@ public class CustomImporter : AssetPostprocessor
         }
 
         impor.mipmapEnabled = false;
+
+        if (isPixel)
+        {
+            // 像素图 WebGL 也强制无压缩，否则 Automatic 默认走 DXT 压缩会糊。
+            var pixelFormat = impor.DoesSourceTextureHaveAlpha()
+                ? TextureImporterFormat.RGBA32
+                : TextureImporterFormat.RGB24;
+            webFormat.format = pixelFormat;
+        }
 
         impor.SetPlatformTextureSettings(androidFormat);
         impor.SetPlatformTextureSettings(iosFormat);

@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static Cinemachine.CinemachineOrbitalTransposer;
 
 public class ScreenAdsWindow : UIBase
 {
