@@ -201,8 +201,12 @@ public class UIOrderPanel : UIItemBase
                 }
             }
             
-            var _fightController = GameManager.Instance.CurFightControl;
-            _fightController.LevelController.CheckFightOrder();
+            var fightController = GameManager.Instance.CurFightControl;
+            var finishedOrders = fightController.LevelController.CheckFightOrderAndGetFinished();
+            if (orderList.Count <= 0 && finishedOrders.Count > 0)
+            {
+                PlayFinishEffect(finishedOrders);
+            }
         }
     }
     

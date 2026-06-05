@@ -281,12 +281,19 @@ public class FightLevelController
     ///  有消除的时候返回 true
     public bool CheckFightOrder()
     {
+        return CheckFightOrderAndGetFinished().Count > 0;
+    }
+
+    public List<FightOrderData> CheckFightOrderAndGetFinished()
+    {
         var posList = new List<int>();
+        var finishList = new List<FightOrderData>();
         for (var i = Model.FightOrders.Count - 1; i >= 0; i--) //检查是否有已经完成的订单
         {
             var fightOrder = Model.FightOrders[i];
             if (fightOrder.CheckNeedListFinish() && Model.IsOrderBattleComplete(fightOrder))
             {
+                finishList.Add(new FightOrderData(fightOrder));
                 Model.FinishOrderList.Add(fightOrder);
                 Model.UnregisterOrderMonster(fightOrder);
                 Model.FightOrders.RemoveAt(i);
@@ -308,7 +315,7 @@ public class FightLevelController
             }
         }
 
-        return posList.Count > 0;
+        return finishList;
     }
 
     /// <summary>
