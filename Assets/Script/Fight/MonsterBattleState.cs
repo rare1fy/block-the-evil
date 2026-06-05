@@ -221,7 +221,7 @@ public class MonsterBattleState
             var available = 0;
             if (availableColorCounts != null)
                 availableColorCounts.TryGetValue(stage.NeedColor, out available);
-            var score = stage.RemainingCount / (float)Math.Max(1, available);
+            var score = stage.RemainingCount / (float)(available + 1);
 
             if (score > bestScore || (Math.Abs(score - bestScore) < 0.001f && monster.EnterOrder < bestEnterOrder))
             {

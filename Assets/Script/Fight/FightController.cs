@@ -185,10 +185,37 @@ public class FightController : BaseControl
         if (rewardCount <= 0)
             return;
 
-        if (LevelController.Model.QueueTargetColorRewards(rewardCount) <= 0)
+        if (LevelController.Model.QueueTargetColorRewards(rewardCount, GetAvailableHandColorCounts()) <= 0)
             return;
 
         ApplyPendingRewardColorsToAvailableHand();
+    }
+
+    private Dictionary<int, int> GetAvailableHandColorCounts()
+    {
+        var colorCounts = new Dictionary<int, int>();
+        foreach (var puzzleData in Model.RandomPuzzleList)
+        {
+            if (puzzleData.bUsed)
+                continue;
+
+            foreach (var colorType in puzzleData.PosColorList.Values)
+            {
+                if (colorType <= 0)
+                    continue;
+
+                if (colorCounts.ContainsKey(colorType))
+                {
+                    colorCounts[colorType]++;
+                }
+                else
+                {
+                    colorCounts.Add(colorType, 1);
+                }
+            }
+        }
+
+        return colorCounts;
     }
 
     private void ApplyInitialTargetColorsToHand()

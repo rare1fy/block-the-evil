@@ -190,23 +190,54 @@ public class FightLevelModel : BaseModel
                || !MonsterBattleState.HasMonster(orderData.BattleMonsterId);
     }
 
-    public int QueueTargetColorRewards(int count)
+    public int QueueTargetColorRewards(int count, IDictionary<int, int> availableColorCounts = null)
     {
         if (count <= 0)
             return 0;
 
-        var colorType = MonsterBattleState.GetMostNeededColor();
-        if (colorType <= 0)
-            return 0;
+        var combinedColorCounts = BuildCombinedAvailableColorCounts(availableColorCounts);
 
         var queuedCount = 0;
         for (var i = 0; i < count && _pendingRewardColors.Count < MaxPendingRewardColors; i++)
         {
+            var colorType = MonsterBattleState.GetMostNeededColor(combinedColorCounts);
+            if (colorType <= 0)
+                break;
+
             _pendingRewardColors.Add(colorType);
+            if (combinedColorCounts.ContainsKey(colorType))
+            {
+                combinedColorCounts[colorType]++;
+            }
+            else
+            {
+                combinedColorCounts.Add(colorType, 1);
+            }
             queuedCount++;
         }
 
         return queuedCount;
+    }
+
+    private Dictionary<int, int> BuildCombinedAvailableColorCounts(IDictionary<int, int> availableColorCounts)
+    {
+        var combinedColorCounts = availableColorCounts != null
+            ? new Dictionary<int, int>(availableColorCounts)
+            : new Dictionary<int, int>();
+
+        foreach (var colorType in _pendingRewardColors)
+        {
+            if (combinedColorCounts.ContainsKey(colorType))
+            {
+                combinedColorCounts[colorType]++;
+            }
+            else
+            {
+                combinedColorCounts.Add(colorType, 1);
+            }
+        }
+
+        return combinedColorCounts;
     }
 
     public int ConsumePendingRewardColor()
