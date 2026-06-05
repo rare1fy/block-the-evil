@@ -143,9 +143,12 @@ public class FightController : BaseControl
         }
         
         CheckRemoveBox(ui);
-        ApplyBossSpirits();
-        ApplyMonsterPressure();
-        ui.RefreshAllBlock();
+        if (!LevelController.IsLevelTargetFinish())
+        {
+            ApplyBossSpirits();
+            ApplyMonsterPressure();
+            ui.RefreshAllBlock();
+        }
         RefreshAllPuzzleItem();
         
         //如果有对话要执行 就卡住不结算
