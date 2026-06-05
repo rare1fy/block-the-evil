@@ -32,6 +32,9 @@ public partial class UIFightMain : UIBase
     [BindNode] private UIButtonExtension _Btn_Prop2;
     [BindNode] private UIButtonExtension _Btn_Prop3;
 
+    private bool _prop1Used;
+    private bool _prop2Used;
+    private bool _prop3Used;
 
     private void InitPartialOnce()
     {
@@ -48,36 +51,28 @@ public partial class UIFightMain : UIBase
     
     public void OpenProp()
     {
-        var consume = Config.GetConfig<Config_GdConstant>().GetConfigById(14).Num;
-        _Txt_Price1.text = Util.FormatNumber(consume);
-        consume = Config.GetConfig<Config_GdConstant>().GetConfigById(15).Num;
-        _Txt_Price2.text = Util.FormatNumber(consume);
-        consume = Config.GetConfig<Config_GdConstant>().GetConfigById(16).Num;
-        _Txt_Price3.text = Util.FormatNumber(consume);
         _img_Price1.SetActiveEx(false);
         _img_Price2.SetActiveEx(false);
         _img_Price3.SetActiveEx(false);
+        RefreshBattlePropState();
     }
 
     public void RefreshPropItem(object param)
     {
-        ItemConfig cfg = (ItemConfig)param;
-        var bagCtrl = GameManager.Instance.GameBagControl;
+        RefreshBattlePropState();
+    }
 
-        var num = bagCtrl.GetItemNumberById(GameBagModel.Prop1);
-        _Txt_PropCount1.text = bagCtrl.GetItemNumberById(GameBagModel.Prop1).ToString();
-        _img_Price1.SetActiveEx(num <= 0);
-        _Txt_PropName1.SetActiveEx(num >0);
-
-        num = bagCtrl.GetItemNumberById(GameBagModel.Prop2);
-        _Txt_PropCount2.text = bagCtrl.GetItemNumberById(GameBagModel.Prop2).ToString();
-        _img_Price2.SetActiveEx(num <= 0);
-        _Txt_PropName2.SetActiveEx(num > 0);
-
-        num = bagCtrl.GetItemNumberById(GameBagModel.Prop3);
-        _Txt_PropCount3.text = bagCtrl.GetItemNumberById(GameBagModel.Prop3).ToString();
-        _img_Price3.SetActiveEx(num <= 0);
-        _Txt_PropName3.SetActiveEx(num > 0);
+    private void RefreshBattlePropState()
+    {
+        _Txt_PropCount1.text = _prop1Used ? "0" : "1";
+        _Txt_PropCount2.text = _prop2Used ? "0" : "1";
+        _Txt_PropCount3.text = _prop3Used ? "0" : "1";
+        _Txt_PropName1.SetActiveEx(!_prop1Used);
+        _Txt_PropName2.SetActiveEx(!_prop2Used);
+        _Txt_PropName3.SetActiveEx(!_prop3Used);
+        _img_Price1.SetActiveEx(false);
+        _img_Price2.SetActiveEx(false);
+        _img_Price3.SetActiveEx(false);
     }
 
     private void InitRemoves()
@@ -128,8 +123,8 @@ public partial class UIFightMain : UIBase
                 var levelModel = _fightController.LevelController.Model;
                 GameManager.Instance.LogManager.Log_GameUseProp(levelModel.LevelId, GameBagModel.Prop1, levelModel.IsEndLess);
                 
-                var bagCtrl = GameManager.Instance.GameBagControl;
-                bagCtrl.UpdateItems(GameBagModel.Prop1, -1);
+                _prop1Used = true;
+                RefreshBattlePropState();
                 ResourceManagerNew.instance.LoadAssetAsync<GameObject>("FX_Tool_Chuizi", (obj) =>
                 {
                     var pos = this.transform.InverseTransformPoint(script.transform.position);
@@ -170,8 +165,8 @@ public partial class UIFightMain : UIBase
         _Obj_RemoveColumn.SetActiveEx(false);
         _Obj_PropTools.SetActiveEx(false);
         _Obj_Spwan.SetActiveEx(true);
-        var bagCtrl = GameManager.Instance.GameBagControl;
-        bagCtrl.UpdateItems(GameBagModel.Prop2, -1);
+        _prop2Used = true;
+        RefreshBattlePropState();
         ResourceManagerNew.instance.LoadAssetAsync<GameObject>("FX_Tool_Xiangbing", (obj) =>
         {
             AudioManagerNew.Instance.PlayAudio("fight_prop_champagne.ogg");
@@ -192,8 +187,8 @@ public partial class UIFightMain : UIBase
         var levelModel = _fightController.LevelController.Model;
         GameManager.Instance.LogManager.Log_GameUseProp(levelModel.LevelId, GameBagModel.Prop3, levelModel.IsEndLess);
     
-        var bagCtrl = GameManager.Instance.GameBagControl;
-        bagCtrl.UpdateItems(GameBagModel.Prop3, -1);
+        _prop3Used = true;
+        RefreshBattlePropState();
         ResourceManagerNew.instance.LoadAssetAsync<GameObject>("FX_Tool_Tiaojiu", (obj) =>
         {
             AudioManagerNew.Instance.PlayAudio("fight_prop_shake.ogg");
@@ -211,145 +206,38 @@ public partial class UIFightMain : UIBase
 
     private void OnCliCkProp1(GameObject o, PointerEventData e)
     {
-        var bagCtrl = GameManager.Instance.GameBagControl;
-        var consume = Config.GetConfig<Config_GdConstant>().GetConfigById(14).Num;
-        if (bagCtrl.GetItemNumberById(GameBagModel.Prop1) > 0)
+        if (_prop1Used)
         {
-            _Obj_PropTools.SetActiveEx(true);
-            _Btn_RemoveItem.gameObject.SetActiveEx(true);
+            UIManager.Instance.ShowPromptWindow("本局该道具已使用");
+            return;
         }
-        else if (bagCtrl.GetItemNumberById(GameBagModel.GOLD) >= consume)
-        {
-            UIManager.Instance.ShowSecondConfirm($"是否消耗{consume}钞票购买道具", () =>
-            {
-                var _fightController = GameManager.Instance.CurFightControl;
-                _fightController.Model.AddMoney(-consume);
-                AddPropAnim1(Props[0], GameBagModel.Prop1, () =>
-                {
-                    AddProp(GameBagModel.Prop1, 1, 2);
-                });
-            });
-        }
-        else
-        {
-            UIManager.Instance.ShowSecondConfirm("是否观看广告获得道具", () =>
-            {
-                PlatformManager.Instance.ShowRewardedVideoAd(3, (isOk) =>
-                {
-                    GameManager.Instance.LogManager.Log_AD(3, isOk);
-                    if (isOk)
-                    {
-                        AddPropAnim2(Props[0], GameBagModel.Prop1, () =>
-                        {
-                            var num = Config.GetConfig<Config_GdConstant>().GetConfigById(17).Num;
-                            AddProp(GameBagModel.Prop1, num, 1);
-                        });
-                    }
-                    else
-                    {
-                        UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
-                    }
 
-                });
-            }, isAd: true);
-        }
+        _Obj_PropTools.SetActiveEx(true);
+        _Btn_RemoveItem.gameObject.SetActiveEx(true);
     }
 
     private void OnCliCkProp2(GameObject o, PointerEventData e)
     {
-        var bagCtrl = GameManager.Instance.GameBagControl;
-        var consume = Config.GetConfig<Config_GdConstant>().GetConfigById(15).Num;
-        if (bagCtrl.GetItemNumberById(GameBagModel.Prop2) > 0)
+        if (_prop2Used)
         {
-            _Obj_PropTools.SetActiveEx(true);
-            _Obj_RemoveColumn.SetActiveEx(true);
-            _Obj_Spwan.SetActiveEx(false);
+            UIManager.Instance.ShowPromptWindow("本局该道具已使用");
+            return;
         }
-        else if (bagCtrl.GetItemNumberById(GameBagModel.GOLD) >= consume)
-        {
-            UIManager.Instance.ShowSecondConfirm($"是否消耗{consume}钞票购买道具", () =>
-            {
-                AddPropAnim1(Props[1], GameBagModel.Prop2, () =>
-                {
-                    AddProp(GameBagModel.Prop2, 1, 2);
-                });
-                var _fightController = GameManager.Instance.CurFightControl;
-                _fightController.Model.AddMoney(-consume);
-                
-            });
-        }
-        else
-        {
-            UIManager.Instance.ShowSecondConfirm("是否观看广告获得道具", () =>
-            {
-                PlatformManager.Instance.ShowRewardedVideoAd(4, (isOk) =>
-                {
-                    GameManager.Instance.LogManager.Log_AD(4, isOk);
-                    if (isOk)
-                    {
-                        var num = Config.GetConfig<Config_GdConstant>().GetConfigById(18).Num;
-                        AddPropAnim2(Props[1], GameBagModel.Prop2, () =>
-                        {
-                            AddProp(GameBagModel.Prop2, num, 1);
-                        });
-                    }
-                    else
-                    {
-                        UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
-                    }
 
-                });
-
-
-            },isAd: true);
-        }
+        _Obj_PropTools.SetActiveEx(true);
+        _Obj_RemoveColumn.SetActiveEx(true);
+        _Obj_Spwan.SetActiveEx(false);
     }
 
     private void OnCliCkProp3(GameObject o, PointerEventData e)
     {
-
-        var bagCtrl = GameManager.Instance.GameBagControl;
-        var consume = Config.GetConfig<Config_GdConstant>().GetConfigById(16).Num;
-        if (bagCtrl.GetItemNumberById(GameBagModel.Prop3) > 0)
+        if (_prop3Used)
         {
-            PlaySharke();
+            UIManager.Instance.ShowPromptWindow("本局该道具已使用");
+            return;
         }
-        else if (bagCtrl.GetItemNumberById(GameBagModel.GOLD) >= consume)
-        {
-            UIManager.Instance.ShowSecondConfirm($"是否消耗{consume}钞票购买道具", () =>
-            {
-                var _fightController = GameManager.Instance.CurFightControl;
-                _fightController.Model.AddMoney(-consume);
-                AddPropAnim1(Props[2], GameBagModel.Prop3, () =>
-                {
-                    AddProp(GameBagModel.Prop3, 1, 2);
-                });
-            });
-        }
-        else
-        {
 
-            UIManager.Instance.ShowSecondConfirm("是否观看广告获得道具", () =>
-            {
-                PlatformManager.Instance.ShowRewardedVideoAd(5, (isOk) =>
-                {
-                    GameManager.Instance.LogManager.Log_AD(5, isOk);
-                    if (isOk)
-                    {
-                        var num = Config.GetConfig<Config_GdConstant>().GetConfigById(19).Num;
-                        AddPropAnim2(Props[2], GameBagModel.Prop3, () =>
-                        {
-                            AddProp(GameBagModel.Prop3, num, 1);
-                        });
-                    }
-                    else
-                    {
-                        UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
-                    }
-
-                });
-            },isAd: true);
-        }
+        PlaySharke();
     }
 
     public void SetPropItemAnim(string name)
