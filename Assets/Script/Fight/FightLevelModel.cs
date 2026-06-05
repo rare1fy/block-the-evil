@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 [Serializable]
 public class FightLevelModel : BaseModel
 {
+    private const int MaxPendingRewardColors = 3;
+
     /// <summary>
     /// 章节id
     /// </summary>
@@ -193,12 +195,14 @@ public class FightLevelModel : BaseModel
         if (colorType <= 0)
             return 0;
 
-        for (var i = 0; i < count; i++)
+        var queuedCount = 0;
+        for (var i = 0; i < count && _pendingRewardColors.Count < MaxPendingRewardColors; i++)
         {
             _pendingRewardColors.Add(colorType);
+            queuedCount++;
         }
 
-        return count;
+        return queuedCount;
     }
 
     public int ConsumePendingRewardColor()
