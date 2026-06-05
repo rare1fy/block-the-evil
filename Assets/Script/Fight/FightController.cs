@@ -127,7 +127,7 @@ public class FightController : BaseControl
             yield return new WaitForSeconds(0.3f);
             
             LevelController.TotalClearBlock(clearBlocks,ui); //订单数据结算
-            GrantComboColorReward();
+            GrantTargetColorRewards(completedLineCount);
             triggerEffect.Complete();      //更改格子数据
             ui.RefreshAllBlock();          //刷新所有方块
             triggerEffect.CompleteEnd();   //更改格子数据
@@ -173,13 +173,22 @@ public class FightController : BaseControl
         ui.PlayComboEffect(clearConfig, comboConfig); //播放连击特效
     }
 
-    private void GrantComboColorReward()
+    private void GrantTargetColorRewards(CompletedLines clearData)
     {
+        var rewardCount = 0;
+        var onceClearCount = clearData.completedRows.Count + clearData.completedCols.Count;
+        var clearConfig = Config.GetConfig<Config_FighteffectBase>().GetEffectConfig(1, onceClearCount);
+        if (clearConfig != null && clearConfig.Num > 1)
+            rewardCount++;
+
         var comboConfig = Config.GetConfig<Config_FighteffectBase>().GetEffectConfig(2, Model.CurCombo);
-        if (comboConfig == null || comboConfig.Num <= 1)
+        if (comboConfig != null && comboConfig.Num > 1)
+            rewardCount++;
+
+        if (rewardCount <= 0)
             return;
 
-        if (LevelController.Model.QueueTargetColorRewards(1) <= 0)
+        if (LevelController.Model.QueueTargetColorRewards(rewardCount) <= 0)
             return;
 
         ApplyPendingRewardColorsToAvailableHand();
