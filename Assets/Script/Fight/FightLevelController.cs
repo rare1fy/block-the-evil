@@ -348,8 +348,10 @@ public class FightLevelController
 
         var fightOrderData = new FightOrderData(index, orderId);
         Model.FightOrders.Add(fightOrderData);
-        var isBoss = Model.LevelBaseData != null && Model.LevelBaseData.Boss == 1 && fightOrderData.Index == 0;
+        var isBoss = Model.ShouldCreateBossMonster();
         Model.RegisterOrderAsMonster(fightOrderData, isBoss);
+        if (isBoss)
+            Model.MarkBossMonsterCreated();
         var alreadyCreateOrder = Model.FinishOrderList.Count + Model.FightOrders.Count;
 
         if (Model.ColorUnlockDic.TryGetValue(alreadyCreateOrder, out var colorType))
@@ -495,6 +497,9 @@ public class FightLevelController
         switch (Model.LevelBaseData.Modle)
         {
             case 1:
+                if (Model.LevelBaseData.Boss == 1 && !Model.BossMonsterCreated)
+                    return false;
+
                 return Model.FinishOrderList.Count >= Model.Target;
             case 2:
                 return Model.LevelScore >= Model.Target;

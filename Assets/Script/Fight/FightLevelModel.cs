@@ -53,6 +53,7 @@ public class FightLevelModel : BaseModel
     public int ReviveTimes { get; set; }
     public bool HasUsedFreeAdRevive { get; private set; }
     public int CopperReviveTimes { get; private set; }
+    public bool BossMonsterCreated { get; private set; }
 
     /// <summary>
     /// 待完成订单列表
@@ -110,6 +111,7 @@ public class FightLevelModel : BaseModel
         ReviveTimes = 0;
         HasUsedFreeAdRevive = false;
         CopperReviveTimes = 0;
+        BossMonsterCreated = false;
         _pendingRewardColors.Clear();
         _nextBattleMonsterId = 1;
         MonsterBattleState = new MonsterBattleState();
@@ -314,13 +316,36 @@ public class FightLevelModel : BaseModel
             return 0;
 
         if (LevelBaseData.Boss == 1)
-            return Math.Min(BossWarmupMaxActiveMonsters, Math.Max(1, Target - FinishOrderList.Count - 1));
+        {
+            if (BossMonsterCreated)
+                return 1;
+
+            var warmupRemaining = Target - FinishOrderList.Count - 1;
+            if (warmupRemaining <= 0)
+                return FightOrders.Count <= 0 ? 1 : 0;
+
+            return Math.Min(BossWarmupMaxActiveMonsters, warmupRemaining);
+        }
 
         var maxSlots = GetMaxActiveMonsterSlots();
         if (maxSlots >= LateLevelMaxActiveMonsters && FinishOrderList.Count < 2)
             return MiddleLevelMaxActiveMonsters;
 
         return maxSlots;
+    }
+
+    public bool ShouldCreateBossMonster()
+    {
+        return LevelBaseData != null
+               && LevelBaseData.Boss == 1
+               && !BossMonsterCreated
+               && FinishOrderList.Count >= Target - 1
+               && FightOrders.Count <= 1;
+    }
+
+    public void MarkBossMonsterCreated()
+    {
+        BossMonsterCreated = true;
     }
     
     /// <summary>
@@ -414,6 +439,7 @@ public class FightLevelModel : BaseModel
         ReviveTimes = 0;
         HasUsedFreeAdRevive = false;
         CopperReviveTimes = 0;
+        BossMonsterCreated = false;
         _pendingRewardColors.Clear();
         ColorPool.Clear();
         FightOrders.Clear();
