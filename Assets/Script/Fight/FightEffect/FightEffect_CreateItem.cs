@@ -55,16 +55,25 @@ public class FightEffect_CreateItem : FightEffect
         {
             System.Random random = new System.Random();
             var itemPool = GameManager.Instance.CurFightControl.LevelController.Model.ColorItemPool;
-            if (itemPool.Count > 0)
+            var colorCounts = GetCurrentBoardColorCounts();
+            var Count = Config.GetConfig<Config_GdConstant>().GetConfigById(24).Num;
+            Count = Count > blockDatas.Count ? blockDatas.Count : Count;
+            for (int i = 0; i < Count; i++)
             {
-                var Count = Config.GetConfig<Config_GdConstant>().GetConfigById(24).Num;
-                Count = Count > blockDatas.Count ? blockDatas.Count : Count;
-                for (int i = 0; i < Count; i++)
+                var itemId = GetCreateItemColor(random, itemPool, colorCounts);
+                if (itemId <= 0)
+                    break;
+
+                var blockIdx = random.Next(0, blockDatas.Count);
+                uiFightMain.TriggerCreateItem(item, blockDatas[blockIdx], itemId);
+                blockDatas.RemoveAt(blockIdx);
+                if (colorCounts.ContainsKey(itemId))
                 {
-                    var blockIdx = random.Next(0, blockDatas.Count);
-                    var itemIdx = random.Next(0, itemPool.Count);
-                    uiFightMain.TriggerCreateItem(item, blockDatas[blockIdx], itemPool[itemIdx]);
-                    blockDatas.RemoveAt(blockIdx);
+                    colorCounts[itemId]++;
+                }
+                else
+                {
+                    colorCounts.Add(itemId, 1);
                 }
             }
         }
@@ -72,5 +81,44 @@ public class FightEffect_CreateItem : FightEffect
         {
             TriggerFightEffect.instance.fightEffects.Remove(this);
         });
+    }
+
+    private int GetCreateItemColor(System.Random random, List<int> itemPool, Dictionary<int, int> colorCounts)
+    {
+        var ctrl = GameManager.Instance.CurFightControl;
+        var targetColor = ctrl.LevelController.Model.MonsterBattleState.GetMostNeededColor(colorCounts);
+        if (targetColor > 0)
+            return targetColor;
+
+        if (itemPool.Count <= 0)
+            return 0;
+
+        return itemPool[random.Next(0, itemPool.Count)];
+    }
+
+    private Dictionary<int, int> GetCurrentBoardColorCounts()
+    {
+        var colorCounts = new Dictionary<int, int>();
+        var ctrl = GameManager.Instance.CurFightControl;
+        for (int i = 0; i < FightModel.GRID_HEIGHT; i++)
+        {
+            for (int j = 0; j < FightModel.GRID_WIDTH; j++)
+            {
+                var data = ctrl.Model.MBlockList[i, j];
+                if (!data.IsOccupied || data.ColorType <= 0)
+                    continue;
+
+                if (colorCounts.ContainsKey(data.ColorType))
+                {
+                    colorCounts[data.ColorType]++;
+                }
+                else
+                {
+                    colorCounts.Add(data.ColorType, 1);
+                }
+            }
+        }
+
+        return colorCounts;
     }
 }
