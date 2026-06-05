@@ -13,6 +13,10 @@ public class FightLevelModel : BaseModel
     private const int BossEnemyPressureBlocksPerMonster = 4;
     private const int NormalMaxEnemyPressureBlocks = 12;
     private const int BossMaxEnemyPressureBlocks = 16;
+    private const int EarlyLevelInitialTargetColorBlocks = 3;
+    private const int MiddleLevelInitialTargetColorBlocks = 2;
+    private const int LateLevelInitialTargetColorBlocks = 1;
+    private const int BossInitialTargetColorBlocks = 1;
 
     /// <summary>
     /// 章节id
@@ -267,6 +271,22 @@ public class FightLevelModel : BaseModel
         return LevelBaseData != null && LevelBaseData.Boss == 1
             ? BossMaxEnemyPressureBlocks
             : NormalMaxEnemyPressureBlocks;
+    }
+
+    public int GetInitialTargetColorBlockCount()
+    {
+        if (LevelBaseData == null)
+            return 0;
+
+        if (LevelBaseData.Boss == 1)
+            return BossInitialTargetColorBlocks;
+
+        if (LevelBaseData.Id <= 10)
+            return EarlyLevelInitialTargetColorBlocks;
+
+        return LevelBaseData.Id <= 30
+            ? MiddleLevelInitialTargetColorBlocks
+            : LateLevelInitialTargetColorBlocks;
     }
     
     /// <summary>

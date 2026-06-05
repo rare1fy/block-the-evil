@@ -220,19 +220,33 @@ public class FightController : BaseControl
 
     private void ApplyInitialTargetColorsToHand()
     {
-        var neededColors = LevelController.Model.MonsterBattleState.GetActiveNeededColors();
-        if (neededColors.Count <= 0)
+        var colorCount = LevelController.Model.GetInitialTargetColorBlockCount();
+        if (colorCount <= 0)
             return;
 
-        var colorIndex = 0;
+        var availableColorCounts = new Dictionary<int, int>();
+        var dyedCount = 0;
         foreach (var puzzleData in Model.RandomPuzzleList)
         {
             if (puzzleData.bUsed)
                 continue;
 
-            puzzleData.DyeFirstBlocks(neededColors[colorIndex], 1);
-            colorIndex++;
-            if (colorIndex >= neededColors.Count)
+            var colorType = LevelController.Model.MonsterBattleState.GetMostNeededColor(availableColorCounts);
+            if (colorType <= 0)
+                break;
+
+            puzzleData.DyeFirstBlocks(colorType, 1);
+            if (availableColorCounts.ContainsKey(colorType))
+            {
+                availableColorCounts[colorType]++;
+            }
+            else
+            {
+                availableColorCounts.Add(colorType, 1);
+            }
+
+            dyedCount++;
+            if (dyedCount >= colorCount)
                 break;
         }
     }
