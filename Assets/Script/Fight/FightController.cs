@@ -142,7 +142,9 @@ public class FightController : BaseControl
         CheckRemoveBox(ui);
         if (!LevelController.IsLevelTargetFinish())
         {
-            ApplyBossSpirits();
+            MoveBossSpirits();
+            if (IsMultiClear(completedLineCount))
+                TriggerBossSpirits();
             ApplyMonsterPressure();
             ui.RefreshAllBlock();
         }
@@ -168,6 +170,11 @@ public class FightController : BaseControl
         var comboScore = comboConfig?.Score ?? 0;
         LevelController.Model.AddLevelScore(clearConfig.Score + comboScore);
         ui.PlayComboEffect(clearConfig, comboConfig); //播放连击特效
+    }
+
+    private bool IsMultiClear(CompletedLines clearData)
+    {
+        return clearData.completedRows.Count + clearData.completedCols.Count > 1;
     }
 
     private void GrantTargetColorRewards(CompletedLines clearData)
@@ -657,7 +664,7 @@ public class FightController : BaseControl
         }
     }
 
-    private void ApplyBossSpirits()
+    private void TriggerBossSpirits()
     {
         var monsterIds = LevelController.Model.MonsterBattleState.GetMonsterIdsNeedingSpirit();
         if (monsterIds.Count <= 0)
@@ -673,6 +680,36 @@ public class FightController : BaseControl
                 return;
 
             target.AttachSpirit(monsterId);
+        }
+    }
+
+    private void MoveBossSpirits()
+    {
+        var attachedSpirits = new List<(int spiritId, BlockData origin)>();
+        foreach (var blockData in Model.MBlockList)
+        {
+            if (blockData.HasAttachedSpirit)
+                attachedSpirits.Add((blockData.AttachedSpiritId, blockData));
+        }
+
+        if (attachedSpirits.Count <= 0)
+            return;
+
+        foreach (var attachedSpirit in attachedSpirits)
+        {
+            attachedSpirit.origin.DetachSpirit();
+        }
+
+        foreach (var attachedSpirit in attachedSpirits)
+        {
+            var target = GetRandomSpiritTargetBlock();
+            if (target == null)
+            {
+                attachedSpirit.origin.AttachSpirit(attachedSpirit.spiritId);
+                continue;
+            }
+
+            target.AttachSpirit(attachedSpirit.spiritId);
         }
     }
 
