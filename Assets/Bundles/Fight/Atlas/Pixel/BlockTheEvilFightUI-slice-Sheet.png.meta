@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_0
+      name: UI_img_fight_bg_up
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +144,7 @@ TextureImporter:
         width: 180
         height: 320
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_1
+      name: UI_img_fight_bg_bottom
       rect:
         serializedVersion: 2
         x: 192
@@ -165,7 +165,7 @@ TextureImporter:
         width: 180
         height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,15 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_2
+      name: UI_block_color_lan
       rect:
         serializedVersion: 2
         x: 14
-        y: 219
+        y: 181
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,15 +199,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_3
+      name: UI_block_color_hong
       rect:
         serializedVersion: 2
         x: 52
-        y: 219
+        y: 181
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,15 +220,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_4
+      name: e
       rect:
         serializedVersion: 2
         x: 88
-        y: 210
-        width: 68
-        height: 26
+        y: 168
+        width: 67
+        height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,15 +241,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_5
+      name: UI_ty_icon_qian
       rect:
         serializedVersion: 2
         x: 167
-        y: 213
+        y: 165
         width: 15
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_6
+      name: UI_img_fight_qipan
       rect:
         serializedVersion: 2
         x: 192
@@ -270,7 +270,7 @@ TextureImporter:
         width: 180
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,11 +287,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 14
-        y: 181
+        y: 143
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,15 +304,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_8
+      name: UI_block_color_bai
       rect:
         serializedVersion: 2
         x: 52
-        y: 181
+        y: 143
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: BlockTheEvilFightUI-slice-Sheet_9
       rect:
         serializedVersion: 2
-        x: 86
-        y: 162
-        width: 31
-        height: 31
+        x: 88
+        y: 107
+        width: 49
+        height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,15 +346,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_10
+      name: UI_zdn_img_djdi
       rect:
         serializedVersion: 2
-        x: 136
-        y: 185
-        width: 48
-        height: 17
+        x: 150
+        y: 114
+        width: 31
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,15 +367,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_11
+      name: UI_fight_img_goal_di
       rect:
         serializedVersion: 2
-        x: 14
-        y: 143
-        width: 20
-        height: 20
+        x: 8
+        y: 100
+        width: 68
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -388,15 +388,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_12
+      name: UI_common_img_huobidi
       rect:
         serializedVersion: 2
-        x: 52
-        y: 143
-        width: 20
-        height: 20
+        x: 158
+        y: 93
+        width: 34
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -409,15 +409,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_13
+      name: UI_zdn_img_panzi
       rect:
         serializedVersion: 2
-        x: 94
-        y: 141
-        width: 34
-        height: 12
+        x: 3
+        y: 70
+        width: 55
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,15 +430,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_14
+      name: UI_js_icon_pause
       rect:
         serializedVersion: 2
-        x: 133
-        y: 131
-        width: 22
-        height: 45
+        x: 66
+        y: 50
+        width: 28
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,15 +451,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_15
+      name: UI_fight_img_taiji
       rect:
         serializedVersion: 2
-        x: 162
-        y: 130
-        width: 28
-        height: 38
+        x: 109
+        y: 73
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -472,15 +472,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_16
+      name: UI_zdn_img_sldi
       rect:
         serializedVersion: 2
-        x: 13
-        y: 105
-        width: 14
-        height: 14
+        x: 141
+        y: 70
+        width: 10
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -493,13 +493,55 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlockTheEvilFightUI-slice-Sheet_17
+      name: UI_block_color_huang
       rect:
         serializedVersion: 2
-        x: 45
-        y: 118
-        width: 10
-        height: 10
+        x: 14
+        y: 219
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a17068ba1a0b245bc49c5ddf70338b
+      internalID: -1462619837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_block_color_lv
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 219
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b92bd4813b6ee8479e6fce83256a6e6
+      internalID: 1204151275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_img_fight_boci
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 195
+        width: 22
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,8 +549,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4f6c525eee3c3e479e10bf902678ae7
-      internalID: -1462619837
+      spriteID: 08dabc542c5519e448cb6668f7763423
+      internalID: 1335339833
       vertices: []
       indices: 
       edges: []
@@ -524,24 +566,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BlockTheEvilFightUI-slice-Sheet_0: 1263308567
-      BlockTheEvilFightUI-slice-Sheet_1: -1936989033
-      BlockTheEvilFightUI-slice-Sheet_10: -1217815781
-      BlockTheEvilFightUI-slice-Sheet_11: -977595022
-      BlockTheEvilFightUI-slice-Sheet_12: -445719203
-      BlockTheEvilFightUI-slice-Sheet_13: 389624355
-      BlockTheEvilFightUI-slice-Sheet_14: -480882535
-      BlockTheEvilFightUI-slice-Sheet_15: 952072904
-      BlockTheEvilFightUI-slice-Sheet_16: -2120268541
-      BlockTheEvilFightUI-slice-Sheet_17: -1462619837
-      BlockTheEvilFightUI-slice-Sheet_2: -1683348775
-      BlockTheEvilFightUI-slice-Sheet_3: -446018622
-      BlockTheEvilFightUI-slice-Sheet_4: 2107266724
-      BlockTheEvilFightUI-slice-Sheet_5: 1515073246
-      BlockTheEvilFightUI-slice-Sheet_6: 151809780
       BlockTheEvilFightUI-slice-Sheet_7: -210396283
-      BlockTheEvilFightUI-slice-Sheet_8: 139079366
       BlockTheEvilFightUI-slice-Sheet_9: 1435592565
+      UI_block_color_bai: 139079366
+      UI_block_color_hong: -446018622
+      UI_block_color_huang: -1462619837
+      UI_block_color_lan: -1683348775
+      UI_block_color_lv: 1204151275
+      UI_common_img_huobidi: -445719203
+      UI_fight_img_goal_di: -977595022
+      UI_fight_img_taiji: 952072904
+      UI_img_fight_bg_bottom: -1936989033
+      UI_img_fight_bg_up: 1263308567
+      UI_img_fight_boci: 1335339833
+      UI_img_fight_qipan: 151809780
+      UI_js_icon_pause: -480882535
+      UI_ty_icon_qian: 1515073246
+      UI_zdn_img_djdi: -1217815781
+      UI_zdn_img_panzi: 389624355
+      UI_zdn_img_sldi: -2120268541
+      e: 2107266724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
