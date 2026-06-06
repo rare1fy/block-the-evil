@@ -89,35 +89,56 @@ mergeInto(LibraryManager.library, {
         }
     },
     WXStorageSetIntSync: function (key, value) {
-        window.WXWASMSDK.WXStorageSetIntSync(_WXPointer_stringify_adaptor(key), value);
+        key = _WXPointer_stringify_adaptor(key);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageSetIntSync(key, value);
+        localStorage.setItem(key, value.toString());
     },
     WXStorageGetIntSync: function (key, defaultValue) {
-        return window.WXWASMSDK.WXStorageGetIntSync(_WXPointer_stringify_adaptor(key), defaultValue);
+        key = _WXPointer_stringify_adaptor(key);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageGetIntSync(key, defaultValue);
+        var value = localStorage.getItem(key);
+        return value === null ? defaultValue : parseInt(value, 10);
     },
     WXStorageSetFloatSync: function (key, value) {
-        window.WXWASMSDK.WXStorageSetFloatSync(_WXPointer_stringify_adaptor(key), value);
+        key = _WXPointer_stringify_adaptor(key);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageSetFloatSync(key, value);
+        localStorage.setItem(key, value.toString());
     },
     WXStorageGetFloatSync: function (key, defaultValue) {
-        return window.WXWASMSDK.WXStorageGetFloatSync(_WXPointer_stringify_adaptor(key), defaultValue);
+        key = _WXPointer_stringify_adaptor(key);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageGetFloatSync(key, defaultValue);
+        var value = localStorage.getItem(key);
+        return value === null ? defaultValue : parseFloat(value);
     },
     WXStorageSetStringSync: function (key, value) {
-        window.WXWASMSDK.WXStorageSetStringSync(_WXPointer_stringify_adaptor(key), _WXPointer_stringify_adaptor(value));
+        key = _WXPointer_stringify_adaptor(key);
+        value = _WXPointer_stringify_adaptor(value);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageSetStringSync(key, value);
+        localStorage.setItem(key, value);
     },
     WXStorageGetStringSync: function (key, defaultValue) {
-        var returnStr = window.WXWASMSDK.WXStorageGetStringSync(_WXPointer_stringify_adaptor(key), _WXPointer_stringify_adaptor(defaultValue));
+        key = _WXPointer_stringify_adaptor(key);
+        defaultValue = _WXPointer_stringify_adaptor(defaultValue);
+        var returnStr = window.WXWASMSDK ? window.WXWASMSDK.WXStorageGetStringSync(key, defaultValue) : localStorage.getItem(key);
+        if (returnStr === null || typeof returnStr === "undefined") returnStr = defaultValue;
         var bufferSize = lengthBytesUTF8(returnStr || '') + 1;
         var buffer = _malloc(bufferSize);
         stringToUTF8(returnStr, buffer, bufferSize);
         return buffer;
     },
     WXStorageDeleteAllSync: function () {
-        window.WXWASMSDK.WXStorageDeleteAllSync();
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageDeleteAllSync();
+        localStorage.clear();
     },
     WXStorageDeleteKeySync: function (key) {
-        window.WXWASMSDK.WXStorageDeleteKeySync(_WXPointer_stringify_adaptor(key));
+        key = _WXPointer_stringify_adaptor(key);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageDeleteKeySync(key);
+        localStorage.removeItem(key);
     },
     WXStorageHasKeySync: function (key) {
-        return window.WXWASMSDK.WXStorageHasKeySync(_WXPointer_stringify_adaptor(key));
+        key = _WXPointer_stringify_adaptor(key);
+        if (window.WXWASMSDK) return window.WXWASMSDK.WXStorageHasKeySync(key);
+        return localStorage.getItem(key) !== null;
     },
     WXCheckSession: function (s, f, c) {
         window.WXWASMSDK.WXCheckSession(_WXPointer_stringify_adaptor(s), _WXPointer_stringify_adaptor(f), _WXPointer_stringify_adaptor(c));
