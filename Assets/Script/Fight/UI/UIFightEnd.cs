@@ -70,7 +70,7 @@ public partial class UIFightEnd : UIBase
     {
         var playerModel = GameManager.Instance.PlayerControl.PlayerModel;
         _Txt_RestartStamina.text = $"{playerModel.Stamina}/{playerModel.MaxStamina}";
-        _Obj_AD.SetActiveEx(playerModel.Stamina <= 0);
+        _Obj_AD.SetActiveEx(!playerModel.HasEnoughStaminaForFight() && !playerModel.CanClaimDailyStamina());
     }
 
     public override void OnOpen(object param = null)
@@ -99,7 +99,7 @@ public partial class UIFightEnd : UIBase
                 fightCtrl.FightEnd(false);
                 var playerModel = GameManager.Instance.PlayerControl.PlayerModel;
                 _Txt_RestartStamina.text = $"{playerModel.Stamina}/{playerModel.MaxStamina}";
-                _Obj_AD.SetActiveEx(playerModel.Stamina <= 0);
+                _Obj_AD.SetActiveEx(!playerModel.HasEnoughStaminaForFight() && !playerModel.CanClaimDailyStamina());
             }
         }
     }

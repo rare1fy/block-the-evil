@@ -51,7 +51,7 @@ public class PlayerControl : BaseControl
         {
             if(await <= 0)
             {
-                PlayerModel.SetStamina();
+                PlayerModel.RefreshDailyStaminaClaims();
                 PlayerModel.RefreshMainWinAD();
                 EventDispatchCenter.Instance.Dispatch(SDEvents.ACROSS_THE_DAY);
                 await = Util.GetTimeUntilNextCrossDay(null).TotalSeconds;
@@ -62,10 +62,7 @@ public class PlayerControl : BaseControl
 
     public void AddStamina(int num)
     {
-        if (PlayerModel.Stamina == PlayerModel.MaxStamina && num > 0)
-            return;
-        PlayerModel.Stamina += num;
-        PlayerDataManager.instance.StaminaSave();
+        PlayerModel.AddStamina(num);
     }
 
     #endregion
@@ -112,7 +109,7 @@ public class PlayerControl : BaseControl
         GameManager.Instance.NpcControl.ChangeNpcDatas(npcInfoList);
         if (!isEndless)
         {
-            AddStamina(1);
+            PlayerDataManager.instance.StaminaSave();
         }
 
         if (!GameManager.Instance.CurFightControl.LevelController.Model.IsEndLess)
@@ -129,41 +126,19 @@ public class PlayerControl : BaseControl
         }
         else
         {
-            if (PlayerModel.Stamina <= 0)
+            if (EnsureFightStamina())
             {
-                UIManager.Instance.ShowSecondConfirm("体力不足，是否观看广告重新开始!!!", () =>
+                UIManager.Instance.ShowSecondConfirm($"是否消耗{global::PlayerModel.FightStaminaCost}体力重新开始", () =>
                 {
-                    PlatformManager.Instance.ShowRewardedVideoAd(2, (isOk) =>
-                    {
-                        GameManager.Instance.LogManager.Log_AD(2, isOk);
-                        if (isOk)
-                        {
-                            action?.Invoke();
-                            UIManager.Instance.CloseAll(true);
-                            UIManager.Instance.ShowUI("UIFightStart", null, level + 1);
-                            AudioManagerNew.Instance.FadeStopMusic();
-                            GameManager.Instance.MusicControl.PlayPickMainBGM();
-                        }
-                        else
-                        {
-                            UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
-                        }
-                    });
-                    
+                    StartFightInternal(level, action, true);
                 });
+                return;
             }
-            else
+
+            UIManager.Instance.ShowSecondConfirm("体力不足，是否观看广告重新开始!!!", () =>
             {
-                UIManager.Instance.ShowSecondConfirm("是否消耗体力重新开始", () =>
-                {
-                    action?.Invoke();
-                    UIManager.Instance.CloseAll(true);
-                    UIManager.Instance.ShowUI("UIFightStart", null, level + 1);
-                    AudioManagerNew.Instance.FadeStopMusic();
-                    GameManager.Instance.MusicControl.PlayPickMainBGM();
-                    AddStamina(-1);
-                });
-            }
+                ShowStaminaAdAndStart(level, action);
+            });
         }
     }
 
@@ -177,24 +152,9 @@ public class PlayerControl : BaseControl
         }
         else
         {
-            if(PlayerModel.Stamina <= 0)
+            if (!EnsureFightStamina())
             {
-                PlatformManager.Instance.ShowRewardedVideoAd(2, (isOk) =>
-                {
-                    GameManager.Instance.LogManager.Log_AD(2, isOk);
-                    if (isOk)
-                    {
-                        action?.Invoke();
-                        UIManager.Instance.CloseAll(true);
-                        UIManager.Instance.ShowUI("UIFightStart", null, level + 1);
-                        AudioManagerNew.Instance.FadeStopMusic();
-                        GameManager.Instance.MusicControl.PlayPickMainBGM();
-                    }
-                    else
-                    {
-                        UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
-                    }
-                });
+                ShowStaminaAdAndStart(level, action);
                 return;
             }
 
@@ -203,22 +163,56 @@ public class PlayerControl : BaseControl
                 PlayerModel.SetAdsLv(level);
                 UIManager.Instance.ShowUI("ScreenAdsWindow", null,new Tuple<Action> (() =>
                 {
-                    action?.Invoke();
-                    UIManager.Instance.CloseAll(true);
-                    UIManager.Instance.ShowUI("UIFightStart", null, level + 1);
-                    AudioManagerNew.Instance.FadeStopMusic();
-                    GameManager.Instance.MusicControl.PlayPickMainBGM();
-                    AddStamina(-1);
+                    StartFightInternal(level, action, true);
                 }));
                 return;
             }
-            action?.Invoke();
-            UIManager.Instance.CloseAll(true);
-            UIManager.Instance.ShowUI("UIFightStart", null, level + 1);
-            AudioManagerNew.Instance.FadeStopMusic();
-            GameManager.Instance.MusicControl.PlayPickMainBGM();
-            AddStamina(-1);
+            StartFightInternal(level, action, true);
         }
+    }
+
+    private bool EnsureFightStamina()
+    {
+        if (PlayerModel.HasEnoughStaminaForFight())
+            return true;
+
+        if (!PlayerModel.ClaimDailyStamina())
+            return false;
+
+        UIManager.Instance.ShowPromptWindow("已领取本时段体力");
+        return PlayerModel.HasEnoughStaminaForFight();
+    }
+
+    private void ShowStaminaAdAndStart(int level, Action action)
+    {
+        PlatformManager.Instance.ShowRewardedVideoAd(2, (isOk) =>
+        {
+            GameManager.Instance.LogManager.Log_AD(2, isOk);
+            if (isOk)
+            {
+                PlayerModel.SetStamina();
+                StartFightInternal(level, action, true);
+            }
+            else
+            {
+                UIManager.Instance.ShowPromptWindow("观看时间不足，无法获取奖励");
+            }
+        });
+    }
+
+    private void StartFightInternal(int level, Action action, bool needConsumeStamina)
+    {
+        if (needConsumeStamina && !PlayerModel.TryConsumeFightStamina())
+        {
+            UIManager.Instance.ShowPromptWindow("体力不足");
+            return;
+        }
+
+        action?.Invoke();
+        UIManager.Instance.CloseAll(true);
+        UIManager.Instance.ShowUI("UIFightStart", null, level + 1);
+        AudioManagerNew.Instance.FadeStopMusic();
+        GameManager.Instance.MusicControl.PlayPickMainBGM();
     }
 }
 

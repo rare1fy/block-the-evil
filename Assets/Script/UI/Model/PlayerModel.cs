@@ -9,6 +9,8 @@ public class PlayerModel
     private const string PlayerData = "PlayerData";
 
     private const string PlayerMaxAdsLevel = "MaxAdsLevel";
+    public const int FightStaminaCost = 5;
+    public const int DailyStaminaClaimMaxCount = 3;
 
     private const string PlayerShareTime = "PlayerShareTime";
     private const string PlayerMainWinAdsCD = "PlayerMainWinAdsCD";
@@ -42,6 +44,8 @@ public class PlayerModel
     /// </summary>
     public long OpenTime;
     public int MaxStamina;
+    public int DailyStaminaClaimCount;
+    public int LastStaminaClaimPeriodKey;
     #endregion
 
     #region 分享时间
@@ -134,6 +138,8 @@ public class PlayerModel
         Stamina = playerData.Stamina;
         LastStaminaTime = playerData.LastStaminaTime;
         OpenTime = playerData.OpenTime;
+        DailyStaminaClaimCount = playerData.DailyStaminaClaimCount;
+        LastStaminaClaimPeriodKey = playerData.LastStaminaClaimPeriodKey;
         if (LastStaminaTime == 0) 
         {
             OpenTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
@@ -141,11 +147,7 @@ public class PlayerModel
         }
         else
         {
-            var CurrTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            if (Util.IsCrossDayInEast8(LastStaminaTime, CurrTime))
-            {
-                SetStamina();
-            }
+            RefreshDailyStaminaClaims();
         }
     }
 
@@ -154,6 +156,81 @@ public class PlayerModel
         LastStaminaTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         Stamina = MaxStamina;
         PlayerDataManager.instance.StaminaSave();
+    }
+
+    public bool HasEnoughStaminaForFight()
+    {
+        return Stamina >= FightStaminaCost;
+    }
+
+    public bool TryConsumeFightStamina()
+    {
+        if (!HasEnoughStaminaForFight())
+            return false;
+
+        Stamina -= FightStaminaCost;
+        TouchStaminaTime();
+        PlayerDataManager.instance.StaminaSave();
+        return true;
+    }
+
+    public void AddStamina(int num)
+    {
+        Stamina = Mathf.Clamp(Stamina + num, 0, MaxStamina);
+        TouchStaminaTime();
+        PlayerDataManager.instance.StaminaSave();
+    }
+
+    public bool CanClaimDailyStamina()
+    {
+        RefreshDailyStaminaClaims();
+        return DailyStaminaClaimCount < DailyStaminaClaimMaxCount
+               && LastStaminaClaimPeriodKey != GetCurrentStaminaClaimPeriodKey();
+    }
+
+    public bool ClaimDailyStamina()
+    {
+        if (!CanClaimDailyStamina())
+            return false;
+
+        Stamina = MaxStamina;
+        DailyStaminaClaimCount++;
+        LastStaminaClaimPeriodKey = GetCurrentStaminaClaimPeriodKey();
+        TouchStaminaTime();
+        PlayerDataManager.instance.StaminaSave();
+        return true;
+    }
+
+    public TimeSpan GetTimeUntilNextStaminaClaim()
+    {
+        var now = Util.GetCurrentEast8Time();
+        var nextHour = now.Hour < 8 ? 8 : now.Hour < 16 ? 16 : 24;
+        var nextTime = new DateTimeOffset(now.Year, now.Month, now.Day, 0, 0, 0, TimeSpan.FromHours(8)).AddHours(nextHour);
+        return nextTime - now;
+    }
+
+    public void RefreshDailyStaminaClaims()
+    {
+        var currTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        if (LastStaminaTime == 0 || !Util.IsCrossDayInEast8(LastStaminaTime, currTime))
+            return;
+
+        DailyStaminaClaimCount = 0;
+        LastStaminaClaimPeriodKey = 0;
+        TouchStaminaTime();
+        PlayerDataManager.instance.StaminaSave();
+    }
+
+    private int GetCurrentStaminaClaimPeriodKey()
+    {
+        var now = Util.GetCurrentEast8Time();
+        var period = now.Hour < 8 ? 0 : now.Hour < 16 ? 1 : 2;
+        return now.Year * 100000 + now.Month * 1000 + now.Day * 10 + period;
+    }
+
+    private void TouchStaminaTime()
+    {
+        LastStaminaTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
     }
 
     public void InitShare()

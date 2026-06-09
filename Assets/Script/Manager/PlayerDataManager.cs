@@ -30,6 +30,8 @@ public class PlayerData
     public int Stamina;
     public long LastStaminaTime;
     public long OpenTime;
+    public int DailyStaminaClaimCount;
+    public int LastStaminaClaimPeriodKey;
 
     #endregion
 
@@ -88,6 +90,8 @@ public class PlayerDataManager : Singleton<PlayerDataManager>
         _playerData.Stamina = GameManager.Instance.PlayerControl.PlayerModel.Stamina;
         _playerData.LastStaminaTime = GameManager.Instance.PlayerControl.PlayerModel.LastStaminaTime;
         _playerData.OpenTime = GameManager.Instance.PlayerControl.PlayerModel.OpenTime;
+        _playerData.DailyStaminaClaimCount = GameManager.Instance.PlayerControl.PlayerModel.DailyStaminaClaimCount;
+        _playerData.LastStaminaClaimPeriodKey = GameManager.Instance.PlayerControl.PlayerModel.LastStaminaClaimPeriodKey;
         SaveData();
     }
 

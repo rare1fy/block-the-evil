@@ -64,9 +64,7 @@ public partial class MainWindow : UIBase
         OnOpenSDK();
         StartStaminaTime();
         var playerModel = GameManager.Instance.PlayerControl.PlayerModel;
-        _Txt_Stamina.text = $"今日剩余：{playerModel.Stamina}/{playerModel.MaxStamina}";
-        _Obj_AD.SetActiveEx(playerModel.Stamina <= 0);
-        _Obj_StaminaTime.SetActiveEx(playerModel.Stamina <= 0);
+        RefreshStaminaDisplay(playerModel);
         GameManager.Instance.StageControl.JoinStage();
         RefreshMusicImg();
         RefreshMusicProgress();
@@ -123,9 +121,7 @@ public partial class MainWindow : UIBase
     private void OnAcrossDay(object obj)
     {
         var playerModel = GameManager.Instance.PlayerControl.PlayerModel;
-        _Txt_Stamina.text = $"今日剩余：{playerModel.Stamina}/{playerModel.MaxStamina}";
-        _Obj_AD.SetActiveEx(playerModel.Stamina <= 0);
-        _Obj_StaminaTime.SetActiveEx(playerModel.Stamina <= 0);
+        RefreshStaminaDisplay(playerModel);
         InitEndless();
     }
 
@@ -191,25 +187,39 @@ public partial class MainWindow : UIBase
         timer = TimerManager.instance.AddTimer(1f, () =>
         {
             var playerModel = GameManager.Instance.PlayerControl.PlayerModel;
-            if (playerModel.Stamina > 0)
+            RefreshStaminaDisplay(playerModel);
+            if (playerModel.HasEnoughStaminaForFight())
             {
                 return;
             }
-            _Obj_StaminaTime.SetActiveEx(playerModel.Stamina <= 0);
-            var timeSpan = Util.GetTimeUntilNextCrossDay(null);
+            if (playerModel.CanClaimDailyStamina())
+            {
+                _Txt_StaminaTime.text = "可领取本时段体力";
+                return;
+            }
+
+            var timeSpan = playerModel.GetTimeUntilNextStaminaClaim();
             if (timeSpan.TotalSeconds <= 0)
             {
-                _Txt_StaminaTime.text = $"00时00分后恢复体力";
+                _Txt_StaminaTime.text = $"00时00分后可领取";
             }
             if (timeSpan.Hours > 0)
             {
-                _Txt_StaminaTime.text = $"{timeSpan.Hours:D2}时{timeSpan.Minutes:D2}分后恢复体力";
+                _Txt_StaminaTime.text = $"{timeSpan.Hours:D2}时{timeSpan.Minutes:D2}分后可领取";
             }
             else
             {
-                _Txt_StaminaTime.text = $"{timeSpan.Minutes:D2}分{timeSpan.Seconds:D2}秒后恢复体力";
+                _Txt_StaminaTime.text = $"{timeSpan.Minutes:D2}分{timeSpan.Seconds:D2}秒后可领取";
             }
         }, true, false, -1);
+    }
+
+    private void RefreshStaminaDisplay(PlayerModel playerModel)
+    {
+        _Txt_Stamina.text = $"今日剩余：{playerModel.Stamina}/{playerModel.MaxStamina}";
+        var needHelp = !playerModel.HasEnoughStaminaForFight();
+        _Obj_AD.SetActiveEx(needHelp && !playerModel.CanClaimDailyStamina());
+        _Obj_StaminaTime.SetActiveEx(needHelp);
     }
 
     public void OnClickStart(GameObject go, PointerEventData eventData)

@@ -53,8 +53,8 @@ public class UISetPopup : UIBase
             var isEndless = GameManager.Instance.CurFightControl.LevelController.Model.IsEndLess;
 
             _Btn_cancel.SetActiveEx(true);
-            _Btn_adv.SetActiveEx(PlayerModel.Stamina <= 0 && !isEndless);
-            _Btn_go.SetActiveEx(PlayerModel.Stamina > 0 && !isEndless);
+            _Btn_adv.SetActiveEx(!PlayerModel.HasEnoughStaminaForFight() && !PlayerModel.CanClaimDailyStamina() && !isEndless);
+            _Btn_go.SetActiveEx((PlayerModel.HasEnoughStaminaForFight() || PlayerModel.CanClaimDailyStamina()) && !isEndless);
             _Txt_Stamina.text = $"今日剩余:{PlayerModel.Stamina}/ {PlayerModel.MaxStamina}";
             _Txt_Stamina1.text = $"今日剩余:{PlayerModel.Stamina}/ {PlayerModel.MaxStamina}";
         }
