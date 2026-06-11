@@ -47,14 +47,15 @@ public class FightEffect_Bomb : FightEffect
                     continue;
                 }
                 var data = ctrl.Model.GetBlockDataByPos(pos);
-                if (data.ColorType != 0 &&(data.Effect == EffectType.None || data.Effect == EffectType.LockOne || data.Effect == EffectType.LockTwice || data.Effect == EffectType.LockThrice))
+                if (data.IsOccupied && BlockData.IsBasicClearColor(data.ColorType) && (data.Effect == EffectType.None || data.Effect == EffectType.LockOne || data.Effect == EffectType.LockTwice || data.Effect == EffectType.LockThrice))
                 {
                     clearBlocks.Add(data.Pos);
                 }
             }
         }
         uiFightMain.PlayClearEffect(clearBlocks);
-        //ctrl.LevelController.TotalClearBlock(clearBlocks,uiFightMain);
+        if (clearBlocks.Count > 0)
+            ctrl.LevelController.TotalClearBlock(clearBlocks,uiFightMain);
         ctrl.Model.SetBlockDataByPosList(clearBlocks, false, 0, EffectType.None); //更改格子数据
         //uiFightMain._Obj_OrderPanel.PlayFinishEffect(ctrl.LevelController.Model.FightOrders);
         ctrl.RefreshAllPuzzleItem();

@@ -412,7 +412,7 @@ public class FightController : BaseControl
                 int y = i;
                 var pos = new Vector2Int(y, x);
                 var data = Model.GetBlockDataByPos(pos);
-                if (data.IsOccupied && data.ColorType != 0 && (data.Effect == EffectType.None || data.Effect == EffectType.LockOne || data.Effect == EffectType.LockTwice || data.Effect == EffectType.LockThrice))
+                if (data.IsOccupied && BlockData.IsBasicClearColor(data.ColorType) && (data.Effect == EffectType.None || data.Effect == EffectType.LockOne || data.Effect == EffectType.LockTwice || data.Effect == EffectType.LockThrice))
                 {
                     var trigerPos = new Vector2Int(y, x);
                     blocksToClear.Add(trigerPos);
@@ -424,8 +424,10 @@ public class FightController : BaseControl
         var triggerEffect = TriggerFightEffect.instance;
         triggerEffect.InitFightEffects(triggerCounts, ui);
         var clearBlocks = triggerEffect.CheckComplete();//获得可消除位置
-        ui.PlayClearEffect(blocksToClear);        //播放消除特效
+        ui.PlayClearEffect(clearBlocks);        //播放消除特效
         yield return new WaitForSeconds(0.5f);
+        if (clearBlocks.Count > 0)
+            LevelController.TotalClearBlock(clearBlocks, ui);
         triggerEffect.Complete();      //更改格子数据
         triggerEffect.CompleteEnd();   //更改格子数据
         triggerEffect.Destroy();       //移除触发信息
@@ -450,7 +452,7 @@ public class FightController : BaseControl
                 if (removePos.x < 0|| removePos.x >= FightModel.GRID_WIDTH || removePos.y < 0 || removePos.y >= FightModel.GRID_HEIGHT)
                     continue;
                 var data = Model.GetBlockDataByPos(removePos);
-                if (data.IsOccupied && data.ColorType != 0 && (data.Effect == EffectType.None || data.Effect == EffectType.LockOne || data.Effect == EffectType.LockTwice || data.Effect == EffectType.LockThrice))
+                if (data.IsOccupied && BlockData.IsBasicClearColor(data.ColorType) && (data.Effect == EffectType.None || data.Effect == EffectType.LockOne || data.Effect == EffectType.LockTwice || data.Effect == EffectType.LockThrice))
                 {
                     blocksToClear.Add(removePos);
                     triggerCounts.Add(removePos, 1);
@@ -460,8 +462,10 @@ public class FightController : BaseControl
         var triggerEffect = TriggerFightEffect.instance;
         triggerEffect.InitFightEffects(triggerCounts, ui);
         var clearBlocks = triggerEffect.CheckComplete();//获得可消除位置
-        ui.PlayClearEffect(blocksToClear); //播放消除特效
+        ui.PlayClearEffect(clearBlocks); //播放消除特效
         yield return new WaitForSeconds(0.5f);
+        if (clearBlocks.Count > 0)
+            LevelController.TotalClearBlock(clearBlocks, ui);
         triggerEffect.Complete();      //更改格子数据
         triggerEffect.CompleteEnd();   //更改格子数据
         triggerEffect.Destroy();       //移除触发信息
@@ -469,7 +473,6 @@ public class FightController : BaseControl
         {
             yield return new WaitForSeconds(0.05f);
         }
-        //LevelController.TotalClearBlock(blocksToClear, ui); //订单数据结算
         ui.RefreshAllBlock(); //刷新所有方块
         RefreshAllPuzzleItem();
         CheckGameEnd(ui);
