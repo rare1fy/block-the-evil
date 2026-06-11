@@ -465,7 +465,7 @@ public class FightController : BaseControl
         {
             yield return new WaitForSeconds(0.05f);
         }
-        ui.RefreshAllBlock(); //刷新所有方块
+        ResolveBoardAfterForcedClear(ui);
         RefreshAllPuzzleItem();
         CheckGameEnd(ui);
     }
@@ -503,9 +503,21 @@ public class FightController : BaseControl
         {
             yield return new WaitForSeconds(0.05f);
         }
-        ui.RefreshAllBlock(); //刷新所有方块
+        ResolveBoardAfterForcedClear(ui);
         RefreshAllPuzzleItem();
         CheckGameEnd(ui);
+    }
+
+    private void ResolveBoardAfterForcedClear(UIFightMain ui)
+    {
+        CheckRemoveBox(ui);
+        if (!LevelController.IsLevelTargetFinish())
+        {
+            MoveBossSpirits();
+            ApplyMonsterPressure();
+        }
+
+        ui.RefreshAllBlock();
     }
 
     private bool CheckLockEffect(BlockData blockData)
