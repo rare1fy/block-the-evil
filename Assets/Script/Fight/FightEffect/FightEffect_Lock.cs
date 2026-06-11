@@ -15,7 +15,7 @@ public class FightEffect_Lock :FightEffect
 
     public override bool CheckComplete(int count)
     {
-        var clone = new BlockData(blockData);
+        var previewEffect = blockData.Effect;
 
         string animName = "Ice";
         var startNum = (int)blockData.Effect;
@@ -35,21 +35,14 @@ public class FightEffect_Lock :FightEffect
 
         for (int i = 0; i < count; i++)
         {
-            switch (blockData.Effect)
+            if (previewEffect == EffectType.None)
             {
-                case EffectType.None:
-                    return true;
-                case EffectType.LockOne:
-                    clone.Effect = EffectType.None;
-                    break;
-                case EffectType.LockTwice:
-                    clone.Effect = EffectType.LockOne;
-                    break;
-                case EffectType.LockThrice:
-                    clone.Effect = EffectType.LockTwice;
-                    break;
+                return true;
             }
+
+            previewEffect = BreakLockOnce(previewEffect);
         }
+
         return false;
     }
 
@@ -57,21 +50,28 @@ public class FightEffect_Lock :FightEffect
     {
         for (int i = 0; i < count; i++)
         {
-            switch (blockData.Effect)
+            if (blockData.Effect == EffectType.None)
             {
-                case EffectType.None:
-                    blockData.Reset();
-                    break;
-                case EffectType.LockOne:
-                    blockData.Effect = EffectType.None;
-                    break;
-                case EffectType.LockTwice:
-                    blockData.Effect = EffectType.LockOne;
-                    break;
-                case EffectType.LockThrice:
-                    blockData.Effect = EffectType.LockTwice;
-                    break;
+                blockData.Reset();
+                return;
             }
+
+            blockData.Effect = BreakLockOnce(blockData.Effect);
+        }
+    }
+
+    private EffectType BreakLockOnce(EffectType effect)
+    {
+        switch (effect)
+        {
+            case EffectType.LockOne:
+                return EffectType.None;
+            case EffectType.LockTwice:
+                return EffectType.LockOne;
+            case EffectType.LockThrice:
+                return EffectType.LockTwice;
+            default:
+                return EffectType.None;
         }
     }
 
