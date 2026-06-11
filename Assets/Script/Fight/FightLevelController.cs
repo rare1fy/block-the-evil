@@ -62,7 +62,7 @@ public class FightLevelController
             }
         }
 
-        Model.MonsterBattleState.ConsumeClearedColors(blockDataList
+        var colorConsumeResult = Model.MonsterBattleState.ConsumeClearedColors(blockDataList
             .Where(blockData => BlockData.IsTargetColor(blockData.ColorType))
             .Select(blockData => blockData.ColorType));
 
@@ -74,30 +74,26 @@ public class FightLevelController
 
         Dictionary<FightOrderData, List<BlockData>> data = new();
 
-        foreach (var fightOrderData in Model.FightOrders)
+        var pendingConsumedByMonster = new Dictionary<int, int>(colorConsumeResult.ConsumedByMonsterId);
+        for (var i = blockDataList.Count - 1; i >= 0; i--)
         {
-            for (var i = blockDataList.Count - 1; i >= 0; i--)
-            {
-                var blockData = blockDataList[i];
-                if (!fightOrderData.CheckNeedListFinish()) //判断是否完成
-                {
-                    if (fightOrderData.SetNeedOrderData(blockData)) //完成订单
-                    {
-                        if (data.TryGetValue(fightOrderData, out var blockDatas))
-                        {
-                            blockDatas.Add(new BlockData(blockData));
-                        }
-                        else
-                        {
-                            blockDatas = new();
-                            data.Add(fightOrderData, blockDatas);
-                            blockDatas.Add(new BlockData(blockData));
-                        }
+            var blockData = blockDataList[i];
+            var fightOrderData = FindConsumedFightOrder(blockData, pendingConsumedByMonster);
+            if (fightOrderData == null)
+                continue;
 
-                        blockDataList.RemoveAt(i); //移除
-                    }
-                }
+            if (data.TryGetValue(fightOrderData, out var blockDatas))
+            {
+                blockDatas.Add(new BlockData(blockData));
             }
+            else
+            {
+                blockDatas = new();
+                data.Add(fightOrderData, blockDatas);
+                blockDatas.Add(new BlockData(blockData));
+            }
+
+            blockDataList.RemoveAt(i); //移除
         }
 
         ui._Obj_OrderPanel.PlayFlyEffect(data);
@@ -112,6 +108,30 @@ public class FightLevelController
 
         GameManager.Instance.MusicControl.AddBlockCount(blockDataList);
         EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_MUSIC_BLOCK_ANIM, blockDataList, false);
+    }
+
+    private FightOrderData FindConsumedFightOrder(BlockData blockData, Dictionary<int, int> pendingConsumedByMonster)
+    {
+        if (!BlockData.IsTargetColor(blockData.ColorType))
+            return null;
+
+        foreach (var fightOrderData in Model.FightOrders)
+        {
+            if (fightOrderData.BattleMonsterId <= 0
+                || fightOrderData.CheckNeedListFinish()
+                || fightOrderData.NeedBlockId != blockData.ColorType
+                || !pendingConsumedByMonster.TryGetValue(fightOrderData.BattleMonsterId, out var pendingCount)
+                || pendingCount <= 0)
+                continue;
+
+            if (!fightOrderData.SetNeedOrderData(blockData))
+                continue;
+
+            pendingConsumedByMonster[fightOrderData.BattleMonsterId] = pendingCount - 1;
+            return fightOrderData;
+        }
+
+        return null;
     }
 
     #region 生成拼图相关
