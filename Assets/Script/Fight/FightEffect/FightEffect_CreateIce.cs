@@ -43,7 +43,7 @@ public class FightEffect_CreateIce : FightEffect
             {
                 var data = ctrl.Model.MBlockList[i, j];
 
-                if (data.IsOccupied && data.Effect == EffectType.None && data.ColorType > 0)
+                if (data.IsOccupied && data.Effect == EffectType.None && BlockData.IsBasicClearColor(data.ColorType))
                 {
                     blockDatas.Add(data);
                 }

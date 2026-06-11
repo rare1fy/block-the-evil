@@ -788,7 +788,7 @@ public class FightController : BaseControl
 
     private bool IsBasicBlockColor(int colorType)
     {
-        return BlockData.IsTargetColor(colorType) || colorType == BlockData.WhiteColorType;
+        return BlockData.IsBasicClearColor(colorType);
     }
 
     public bool IsMaskBlock(Vector2Int pos)
