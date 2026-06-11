@@ -81,31 +81,32 @@ public partial class UIFightEnd : UIBase
 
     private void GetReword()
     {
-        Dictionary<int ,ItemConfig> items = new();
+        var goldReward = 0;
+        var staminaReward = 0;
         foreach (var treasureBox in treasureBoxItems)
         {
-            if (treasureBox.bReceived)
+            if (!treasureBox.bReceived)
+                continue;
+
+            if (treasureBox.rewardType == TreasureRewardType.Gold)
             {
-                if (items.TryGetValue(treasureBox.id, out ItemConfig item))
-                {
-                    item.Number += treasureBox.count;
-                }
-                else
-                {
-                    item = new ItemConfig() { Id = treasureBox.id, Number = treasureBox.count };
-                    items.Add(treasureBox.id, item);
-                }
+                goldReward += treasureBox.count;
+                continue;
             }
+
+            staminaReward += treasureBox.count;
         }
 
-        foreach (var item in items.Values)
+        if (goldReward > 0)
         {
-            if (item.Id == 1)
-            {
-                var change = GetChangeMoney((int)item.Number);
-                FlyMoney(change.value1, change.value2);
-            }
-            GameManager.Instance.GameBagControl.UpdateItems(item.Id, item.Number);
+            var change = GetChangeMoney(goldReward);
+            FlyMoney(change.value1, change.value2);
+        }
+
+        if (staminaReward > 0)
+        {
+            GameManager.Instance.PlayerControl.AddStamina(staminaReward);
+            UIManager.Instance.ShowPromptWindow($"体力+{staminaReward}");
         }
     }
 }
