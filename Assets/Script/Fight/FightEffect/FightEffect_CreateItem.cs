@@ -58,26 +58,25 @@ public class FightEffect_CreateItem : FightEffect
         if (blockDatas.Count > 0)
         {
             System.Random random = new System.Random();
-            var itemPool = GameManager.Instance.CurFightControl.LevelController.Model.ColorItemPool;
             var colorCounts = GetCurrentBoardColorCounts();
             var Count = Config.GetConfig<Config_GdConstant>().GetConfigById(24).Num;
             Count = Count > blockDatas.Count ? blockDatas.Count : Count;
             for (int i = 0; i < Count; i++)
             {
-                var itemId = GetCreateItemColor(random, itemPool, colorCounts);
-                if (itemId <= 0)
+                var colorType = GetCreateItemColor(colorCounts);
+                if (colorType <= 0)
                     break;
 
                 var blockIdx = random.Next(0, blockDatas.Count);
-                uiFightMain.TriggerCreateItem(item, blockDatas[blockIdx], itemId);
+                uiFightMain.TriggerCreateItem(item, blockDatas[blockIdx], colorType);
                 blockDatas.RemoveAt(blockIdx);
-                if (colorCounts.ContainsKey(itemId))
+                if (colorCounts.ContainsKey(colorType))
                 {
-                    colorCounts[itemId]++;
+                    colorCounts[colorType]++;
                 }
                 else
                 {
-                    colorCounts.Add(itemId, 1);
+                    colorCounts.Add(colorType, 1);
                 }
             }
         }
@@ -87,17 +86,14 @@ public class FightEffect_CreateItem : FightEffect
         });
     }
 
-    private int GetCreateItemColor(System.Random random, List<int> itemPool, Dictionary<int, int> colorCounts)
+    private int GetCreateItemColor(Dictionary<int, int> colorCounts)
     {
         var ctrl = GameManager.Instance.CurFightControl;
         var targetColor = ctrl.LevelController.Model.MonsterBattleState.GetMostNeededColor(colorCounts);
         if (targetColor > 0)
             return targetColor;
 
-        if (itemPool.Count <= 0)
-            return 0;
-
-        return itemPool[random.Next(0, itemPool.Count)];
+        return 0;
     }
 
     private Dictionary<int, int> GetCurrentBoardColorCounts()
