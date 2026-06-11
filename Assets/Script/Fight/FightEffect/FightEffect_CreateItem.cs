@@ -47,8 +47,7 @@ public class FightEffect_CreateItem : FightEffect
                 if (data.IsOccupied
                     && data.Effect == EffectType.None
                     && !ctrl.IsItemBlok(data)
-                    && data.ColorType > 0
-                    && (data.ColorType <= 5 || data.ColorType == BlockData.WhiteColorType))
+                    && BlockData.IsBasicClearColor(data.ColorType))
                 {
                     blockDatas.Add(data);
                 }
