@@ -62,15 +62,15 @@ public class FightLevelController
             }
         }
 
+        Model.MonsterBattleState.ConsumeClearedColors(blockDataList
+            .Where(blockData => blockData.ColorType > 0)
+            .Select(blockData => blockData.ColorType));
+
         foreach (var blockData in blockDataList)
         {
             if (blockData.HasAttachedSpirit)
                 Model.MonsterBattleState.ConsumeSpirit(blockData.DetachSpirit());
         }
-
-        Model.MonsterBattleState.ConsumeClearedColors(blockDataList
-            .Where(blockData => blockData.ColorType > 0)
-            .Select(blockData => blockData.ColorType));
 
         Dictionary<FightOrderData, List<BlockData>> data = new();
 
