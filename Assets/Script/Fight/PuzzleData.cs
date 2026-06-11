@@ -52,12 +52,43 @@ public class PuzzleData
         var dyedCount = 0;
         foreach (var pos in _posList)
         {
+            if (BlockData.IsTargetColor(PosColorList[pos]))
+                continue;
+
             PosColorList[pos] = colorType;
             dyedCount++;
 
             if (dyedCount >= count)
                 break;
         }
+    }
+
+    public bool HasAvailableDyeSlot()
+    {
+        foreach (var pos in _posList)
+        {
+            if (!BlockData.IsTargetColor(PosColorList[pos]))
+                return true;
+        }
+
+        return false;
+    }
+
+    public bool TryDyeFirstAvailableBlock(int colorType)
+    {
+        if (colorType <= 0)
+            return false;
+
+        foreach (var pos in _posList)
+        {
+            if (BlockData.IsTargetColor(PosColorList[pos]))
+                continue;
+
+            PosColorList[pos] = colorType;
+            return true;
+        }
+
+        return false;
     }
 
     public bool DyeBlockByOrder(int colorType, int orderIndex)

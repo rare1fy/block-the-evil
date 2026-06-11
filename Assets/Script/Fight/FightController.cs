@@ -339,12 +339,11 @@ public class FightController : BaseControl
             var rewardColor = LevelController.Model.ConsumePendingRewardColor();
             if (rewardColor > 0)
             {
-                puzzleData.DyeFirstBlocks(rewardColor, 1);
+                puzzleData.TryDyeFirstAvailableBlock(rewardColor);
             }
             else if (!guaranteeUsed)
             {
-                puzzleData.DyeFirstBlocks(guaranteeColor, 1);
-                guaranteeUsed = true;
+                guaranteeUsed = puzzleData.TryDyeFirstAvailableBlock(guaranteeColor);
             }
 
             Model.RandomPuzzleList.Add(puzzleData);
@@ -359,11 +358,16 @@ public class FightController : BaseControl
             if (puzzleData.bUsed || !LevelController.Model.HasPendingRewardColor())
                 continue;
 
+            if (!puzzleData.HasAvailableDyeSlot())
+                continue;
+
             var rewardColor = LevelController.Model.ConsumePendingRewardColor();
             if (rewardColor <= 0)
                 continue;
 
-            puzzleData.DyeFirstBlocks(rewardColor, 1);
+            if (!puzzleData.TryDyeFirstAvailableBlock(rewardColor))
+                continue;
+
             changed = true;
         }
 
