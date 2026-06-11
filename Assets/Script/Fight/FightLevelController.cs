@@ -104,7 +104,7 @@ public class FightLevelController
         for (var i = blockDataList.Count - 1; i >= 0; i--)
         {
             var blockData = blockDataList[i];
-            if (blockData.ColorType > 5)
+            if (BlockData.IsLegacyItemColor(blockData.ColorType))
             {
                 blockDataList.Remove(blockData);
             }

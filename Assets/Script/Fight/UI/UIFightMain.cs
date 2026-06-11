@@ -668,7 +668,7 @@ public partial class UIFightMain : UIBase
             flyObj.transform.localPosition = pos;
             var sequence = DOTween.Sequence();
             
-            if (blockData.ColorType > 5)
+            if (BlockData.IsLegacyItemColor(blockData.ColorType))
             {
                 var t1 = flyObj.transform.DOMove(flyObj.transform.position + new Vector3(0f, -0.5f, 0f), 0.5f);
                 var t2 = flyObj.transform.DOJump(end.position, 1.3f,1, 0.4f).SetEase(Ease.OutQuad);

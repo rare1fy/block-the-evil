@@ -30,6 +30,11 @@ public class BlockData
 {
     public const int WhiteColorType = 31;
 
+    public static bool IsLegacyItemColor(int colorType)
+    {
+        return colorType > 5 && colorType != WhiteColorType;
+    }
+
     public Vector2Int Pos { get; private set; }
     public int ColorType { get; private set; }
     public bool IsOccupied { get; private set; }   //是否被占据
