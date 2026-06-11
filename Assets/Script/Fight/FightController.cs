@@ -859,8 +859,16 @@ public class FightController : BaseControl
     
     public void CheckGameEnd(UIFightMain ui = null)
     {
+        ui ??= UIManager.Instance.GetUI("UIFightMain") as UIFightMain;
+
         if (LevelController.IsLevelTargetFinish())
         {
+            if (ui == null)
+            {
+                UIManager.Instance.ShowUI("UIFightEnd", null, true);
+                return;
+            }
+
             ui.ShowOrHideTarget(true);
             ui.PlayTargetAudio();
             ui.ShowWait(3f,action:() =>
@@ -885,7 +893,7 @@ public class FightController : BaseControl
 
             GameManager.Instance.LogManager.Log_GameDead(LevelController.Model.LevelId,
                 LevelController.Model.IsEndLess);
-            ui.ShowWait(0.5f,action: () =>
+            void ShowFailContinue()
             {
                 if (LevelController.Model.IsEndLess
                     && LevelController.Model.ReviveTimes >= LevelController.Model.GetMaxReviveTimes())
@@ -896,7 +904,16 @@ public class FightController : BaseControl
                 {
                     UIManager.Instance.ShowUI("UIFailContinue");
                 }
-            });
+            }
+
+            if (ui == null)
+            {
+                ShowFailContinue();
+            }
+            else
+            {
+                ui.ShowWait(0.5f, action: ShowFailContinue);
+            }
         }
     }
     
