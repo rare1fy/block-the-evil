@@ -524,7 +524,7 @@ public class FightOrderData
         return false;
     }
 
-    private static int ResolveTargetColorId(int sourceBlockId)
+    public static int ResolveTargetColorId(int sourceBlockId)
     {
         if (sourceBlockId >= 1 && sourceBlockId <= 5)
             return sourceBlockId;

@@ -352,8 +352,12 @@ public class FightLevelController
 
         if (Model.ColorUnlockDic.TryGetValue(alreadyCreateOrder, out var colorType))
         {
-            Model.ColorItemPool.Add(colorType); //添加一个新物品颜色
-            UIManager.Instance.ShowUI("UIFightNewColor", null, colorType);
+            var targetColorType = FightOrderData.ResolveTargetColorId(colorType);
+            if (targetColorType > 0 && !Model.ColorPool.Contains(targetColorType))
+            {
+                Model.ColorPool.Add(targetColorType);
+                UIManager.Instance.ShowUI("UIFightNewColor", null, targetColorType);
+            }
         }
 
         if (!isInit)
