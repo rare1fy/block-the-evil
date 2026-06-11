@@ -46,6 +46,7 @@ public class FightController : BaseControl
         ApplyInitialTargetColorsToHand();
         
         yield return new WaitForSeconds(0.1f);
+        ApplyInitialTargetColorsToBoard();
         UIManager.Instance.PreLoadUI("UIFightMain");
     }
 
@@ -59,6 +60,7 @@ public class FightController : BaseControl
 
         _startTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         yield return new WaitForSeconds(0.1f);
+        ApplyInitialTargetColorsToBoard();
         UIManager.Instance.ShowUI("UIFightMain");
         fightStart = true;
     }
@@ -80,6 +82,7 @@ public class FightController : BaseControl
         
         _startTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         yield return new WaitForSeconds(0.1f);
+        ApplyInitialTargetColorsToBoard();
         UIManager.Instance.ShowUI("UIFightMain");
         fightStart = true;
     }
@@ -259,6 +262,33 @@ public class FightController : BaseControl
 
             if (dyedCount >= colorCount)
                 break;
+        }
+    }
+
+    private void ApplyInitialTargetColorsToBoard()
+    {
+        if (Model.MBlockList == null)
+            return;
+
+        var availableColorCounts = GetAvailableHandColorCounts();
+        foreach (var blockData in Model.MBlockList)
+        {
+            if (!blockData.IsOccupied || !BlockData.IsTargetColor(blockData.ColorType))
+                continue;
+
+            var colorType = LevelController.Model.MonsterBattleState.GetMostNeededColor(availableColorCounts);
+            if (colorType <= 0)
+                return;
+
+            blockData.SetColorType(colorType);
+            if (availableColorCounts.ContainsKey(colorType))
+            {
+                availableColorCounts[colorType]++;
+            }
+            else
+            {
+                availableColorCounts.Add(colorType, 1);
+            }
         }
     }
     
