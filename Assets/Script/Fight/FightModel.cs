@@ -82,8 +82,9 @@ public class FightModel : BaseModel
                         boxDatas.Add(new BoxData(new Vector2Int(i, j)));
                     }
 
-                    blockData.SetColorType(d.color);
-                    blockData.SetIsOccupied(d.color > 0 || d.bUsed == 1);
+                    var colorType = NormalizeGridColor(d.color);
+                    blockData.SetColorType(colorType);
+                    blockData.SetIsOccupied(colorType > 0 || d.bUsed == 1);
                     MBlockList[i, j] = blockData;
                 }
             }
@@ -91,6 +92,14 @@ public class FightModel : BaseModel
             MasksData.Clear();
             MasksData.AddRange(saveData.masks);
         });
+    }
+
+    private int NormalizeGridColor(int colorType)
+    {
+        if (!BlockData.IsLegacyItemColor(colorType))
+            return colorType;
+
+        return FightOrderData.ResolveTargetColorId(colorType);
     }
     
     public void AddMoney(int count)

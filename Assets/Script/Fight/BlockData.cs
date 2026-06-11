@@ -32,7 +32,7 @@ public class BlockData
 
     public static bool IsLegacyItemColor(int colorType)
     {
-        return colorType > 5 && colorType != WhiteColorType;
+        return colorType >= 6 && colorType <= 30;
     }
 
     public static bool IsTargetColor(int colorType)
