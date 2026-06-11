@@ -459,7 +459,8 @@ public class FightOrderData
     public int Index  { get; private set; } //位置
     public int NpcId  { get; private set; } //人物
     public int ItemId { get; private set; }  //物品
-    public int NeedBlockId { get; private set; }  //需要的方块id
+    public int SourceBlockId { get; private set; }  //订单表原始需求块id
+    public int NeedBlockId { get; private set; }  //需要的颜色id
     public int NeedBlockCount { get; private set; }  //需要的方块数量
     public int BattleMonsterId { get; set; }
 
@@ -471,7 +472,8 @@ public class FightOrderData
         ItemId = Config.GetConfig<Config_NpcitemLibrary>().GetRandomItemId(orderConfig.Npcitem);
         var orderBlockCfg = Config.GetConfig<Config_OrderBlock>().GetConfigById(ItemId);
         var blockStr = orderBlockCfg.Block.Split("#");
-        NeedBlockId = int.Parse(blockStr[0]);
+        SourceBlockId = int.Parse(blockStr[0]);
+        NeedBlockId = ResolveTargetColorId(SourceBlockId);
         NeedBlockCount = int.Parse(blockStr[1]);
     }
 
@@ -485,7 +487,8 @@ public class FightOrderData
         ItemId = Config.GetConfig<Config_NpcitemLibrary>().GetRandomItemId(itemLibraryId);
         var orderBlockCfg = Config.GetConfig<Config_OrderBlock>().GetConfigById(ItemId);
         var blockStr = orderBlockCfg.Block.Split("#");
-        NeedBlockId = int.Parse(blockStr[0]);
+        SourceBlockId = int.Parse(blockStr[0]);
+        NeedBlockId = ResolveTargetColorId(SourceBlockId);
         NeedBlockCount = int.Parse(blockStr[1]);
     }
 
@@ -497,6 +500,7 @@ public class FightOrderData
         Index = data.Index;
         NpcId = data.NpcId;
         ItemId = data.ItemId;
+        SourceBlockId = data.SourceBlockId;
         NeedBlockId = data.NeedBlockId;
         NeedBlockCount = data.NeedBlockCount;
         BattleMonsterId = data.BattleMonsterId;
@@ -518,6 +522,17 @@ public class FightOrderData
         }
 
         return false;
+    }
+
+    private static int ResolveTargetColorId(int sourceBlockId)
+    {
+        if (sourceBlockId >= 1 && sourceBlockId <= 5)
+            return sourceBlockId;
+
+        if (sourceBlockId >= 6)
+            return ((sourceBlockId - 6) % 5) + 1;
+
+        return 0;
     }
 
     /// <summary>
