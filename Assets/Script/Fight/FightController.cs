@@ -388,6 +388,7 @@ public class FightController : BaseControl
     /// </summary>
     public void UseShaker()
     {
+        LevelController.Model.QueueTargetColorRewards(3);
         Model.RandomPuzzleList.Clear(); //清空现有的拼图
         CreateNewRandomPuzzleList(1); //生成一些新的
         EventDispatchCenter.Instance.Dispatch(SDEvents.C2C_REFRESH_MAIN_All_ITEM);
