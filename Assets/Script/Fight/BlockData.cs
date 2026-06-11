@@ -28,6 +28,8 @@ public enum EffectType
 
 public class BlockData
 {
+    public const int WhiteColorType = 31;
+
     public Vector2Int Pos { get; private set; }
     public int ColorType { get; private set; }
     public bool IsOccupied { get; private set; }   //是否被占据

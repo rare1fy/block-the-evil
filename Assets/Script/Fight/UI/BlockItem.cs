@@ -110,6 +110,11 @@ public class BlockItem : UIItemBase
             ResourceManagerNew.instance.LoadSpriteAsset("UI_zdn_img_touming", _Img_Color);
             return;
         }
+        if (colorType == BlockData.WhiteColorType)
+        {
+            ResourceManagerNew.instance.LoadSpriteAsset(Config.GetConfig<Config_BlockColor>().GetColorImg(colorType), _Img_Color);
+            return;
+        }
         var colorCfg = Config.GetConfig<Config_BlockColor>().GetConfigById(colorType);
         ResourceManagerNew.instance.LoadSpriteAsset(colorCfg.Img, _Img_Color);
     }
@@ -125,6 +130,9 @@ public class BlockItem : UIItemBase
             {
                 transform.transform.DOScale(Vector3.one * 0.9f, 0.05f).SetLoops(2, LoopType.Yoyo);
                 var curBlockData = GameManager.Instance.CurFightControl.GetDragTempData(Pos);
+                if (curBlockData.ColorType == BlockData.WhiteColorType)
+                    return;
+
                 var colorCfg = Config.GetConfig<Config_BlockColor>().GetConfigById(curBlockData.ColorType);
                 // ResourceManagerNew.instance.LoadAssetAsync<GameObject>(colorCfg.Fx, fxObj =>
                 // {
@@ -155,6 +163,9 @@ public class BlockItem : UIItemBase
                 }
                 
                 var curBlockData = GameManager.Instance.CurFightControl.GetDragTempData(Pos);
+                if (curBlockData.ColorType == BlockData.WhiteColorType)
+                    return;
+
                 var colorCfg = Config.GetConfig<Config_BlockColor>().GetConfigById(curBlockData.ColorType);
                 if (!string.IsNullOrEmpty(colorCfg.Fx))
                 {

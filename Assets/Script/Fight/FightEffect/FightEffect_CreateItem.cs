@@ -44,7 +44,11 @@ public class FightEffect_CreateItem : FightEffect
             {
                 var data = ctrl.Model.MBlockList[i, j];
 
-                if (data.IsOccupied && data.Effect == EffectType.None && !ctrl.IsItemBlok(data) && data.ColorType <= 5 && data.ColorType > 0)
+                if (data.IsOccupied
+                    && data.Effect == EffectType.None
+                    && !ctrl.IsItemBlok(data)
+                    && data.ColorType > 0
+                    && (data.ColorType <= 5 || data.ColorType == BlockData.WhiteColorType))
                 {
                     blockDatas.Add(data);
                 }

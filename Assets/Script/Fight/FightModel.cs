@@ -46,7 +46,6 @@ public class FightModel : BaseModel
         money = GameManager.Instance.GameBagControl.GetItemNumberById(GameBagModel.GOLD);
         var levelBaseData = Config.GetConfig<Config_LevelBase>().GetConfigById(levelId);
         var puzzleDataStrList = levelBaseData.InitialBlock.Split(';');
-        var defaultColor = GetDefaultInitialColor(levelBaseData);
         RandomPuzzleList.Clear();
         for (var i = 0; i < 3; i++)
         {
@@ -54,20 +53,11 @@ public class FightModel : BaseModel
             var puzzleData = puzzleDataStr.Split("#");
             var id = int.Parse(puzzleData[0]);
             var puzzle = new PuzzleData(id);
-            puzzle.SetPuzzleData(defaultColor, 0, 0);
+            puzzle.SetPuzzleData(BlockData.WhiteColorType, 0, 0);
             RandomPuzzleList.Add(puzzle);
         }
 
         LoadGridData(levelBaseData.LevelMap);
-    }
-
-    private int GetDefaultInitialColor(LevelBase levelBaseData)
-    {
-        if (levelBaseData == null || string.IsNullOrEmpty(levelBaseData.BaseColor))
-            return 0;
-
-        var colorStrList = levelBaseData.BaseColor.Split(";");
-        return int.TryParse(colorStrList[0], out var colorType) ? colorType : 0;
     }
 
     private void LoadGridData(string fileName)

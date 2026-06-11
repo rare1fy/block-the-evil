@@ -647,7 +647,7 @@ public class FightController : BaseControl
 
             if (!blockData.IsOccupied
                 || blockData.ColorType <= 0
-                || blockData.ColorType > 5
+                || !IsBasicBlockColor(blockData.ColorType)
                 || blockData.Effect != EffectType.None
                 || blockData.HasAttachedSpirit
                 || IsItemBlok(blockData))
@@ -742,7 +742,7 @@ public class FightController : BaseControl
                 continue;
 
             fallbackCandidates.Add(blockData);
-            if (blockData.ColorType <= 5 && !IsItemBlok(blockData))
+            if (IsBasicBlockColor(blockData.ColorType) && !IsItemBlok(blockData))
                 preferredCandidates.Add(blockData);
         }
 
@@ -784,6 +784,11 @@ public class FightController : BaseControl
     public bool IsItemBlok(BlockData blockData)
     {
         return LevelController.Model.ColorItemPool.Contains(blockData.ColorType);
+    }
+
+    private bool IsBasicBlockColor(int colorType)
+    {
+        return colorType > 0 && (colorType <= 5 || colorType == BlockData.WhiteColorType);
     }
 
     public bool IsMaskBlock(Vector2Int pos)

@@ -119,11 +119,7 @@ public class FightLevelController
     //获取随机颜色
     private int GetRandomColorFromPool()
     {
-        var colorPool = Model.ColorPool;
-        if (colorPool.Count <= 0)
-            return 0;
-
-        return colorPool[0];
+        return BlockData.WhiteColorType;
     }
 
     /// <summary>

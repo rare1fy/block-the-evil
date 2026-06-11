@@ -3,6 +3,8 @@ using UnityEngine;
 
 public partial class Config_BlockColor
 {
+    private const string WhiteBlockImg = "UI_zdn_img_bai";
+
     /// <summary>
     /// 获取颜色图片
     /// </summary>
@@ -15,6 +17,10 @@ public partial class Config_BlockColor
         if (colorType == 0)
         {
             colorStr = "UI_zdn_img_touming";
+        }
+        else if (colorType == BlockData.WhiteColorType)
+        {
+            colorStr = WhiteBlockImg;
         }
         else
         {
