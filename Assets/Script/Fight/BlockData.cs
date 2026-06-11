@@ -35,6 +35,11 @@ public class BlockData
         return colorType > 5 && colorType != WhiteColorType;
     }
 
+    public static bool IsTargetColor(int colorType)
+    {
+        return colorType >= 1 && colorType <= 5;
+    }
+
     public Vector2Int Pos { get; private set; }
     public int ColorType { get; private set; }
     public bool IsOccupied { get; private set; }   //是否被占据

@@ -105,7 +105,7 @@ public class FightEffect_CreateItem : FightEffect
             for (int j = 0; j < FightModel.GRID_WIDTH; j++)
             {
                 var data = ctrl.Model.MBlockList[i, j];
-                if (!data.IsOccupied || data.ColorType <= 0)
+                if (!data.IsOccupied || !BlockData.IsTargetColor(data.ColorType))
                     continue;
 
                 if (colorCounts.ContainsKey(data.ColorType))

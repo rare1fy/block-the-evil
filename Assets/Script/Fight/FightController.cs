@@ -208,7 +208,7 @@ public class FightController : BaseControl
 
             foreach (var colorType in puzzleData.PosColorList.Values)
             {
-                if (colorType <= 0)
+                if (!BlockData.IsTargetColor(colorType))
                     continue;
 
                 if (colorCounts.ContainsKey(colorType))
@@ -788,7 +788,7 @@ public class FightController : BaseControl
 
     private bool IsBasicBlockColor(int colorType)
     {
-        return colorType > 0 && (colorType <= 5 || colorType == BlockData.WhiteColorType);
+        return BlockData.IsTargetColor(colorType) || colorType == BlockData.WhiteColorType;
     }
 
     public bool IsMaskBlock(Vector2Int pos)

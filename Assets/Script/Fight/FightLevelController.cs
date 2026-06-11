@@ -63,7 +63,7 @@ public class FightLevelController
         }
 
         Model.MonsterBattleState.ConsumeClearedColors(blockDataList
-            .Where(blockData => blockData.ColorType > 0)
+            .Where(blockData => BlockData.IsTargetColor(blockData.ColorType))
             .Select(blockData => blockData.ColorType));
 
         foreach (var blockData in blockDataList)
