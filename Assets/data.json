@@ -3,13 +3,14 @@
   "PickMusicId": 1,
   "MainMusicId": 0,
   "UnlockMusicIds": [
+    1,
     1
   ],
   "MusicBlockDic": {
     "1": 21,
-    "2": 26,
+    "2": 39,
     "3": 0,
-    "4": 78,
+    "4": 88,
     "5": 71
   },
   "StagePreAddition": [],
@@ -17,8 +18,8 @@
   "StageSpecialJoined": [
     4
   ],
-  "Stamina": 0,
-  "LastStaminaTime": 1780549243,
+  "Stamina": 3,
+  "LastStaminaTime": 1780969692,
   "OpenTime": 1762404782,
   "VolumeBlend": 1.0,
   "BShake": true
